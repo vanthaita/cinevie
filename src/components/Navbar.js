@@ -3,7 +3,7 @@ import { Search } from 'lucide-react';
 
 export default function Navbar() {
   return (
-    <nav className="h-24 w-full flex items-center justify-between px-20 mx-auto text-white z-[9999] shadow-md">
+    <nav className="h-20 w-full flex items-center justify-between px-20 mx-auto text-white z-[9999] shadow-md">
       <Link href="/" className="font-extrabold text-3xl">CineVie</Link>
       <ul className="hidden md:flex gap-x-8 cursor-pointe font-medium ">
         <li className="hover:text-gray-600 cursor-pointer">Showtime</li>
@@ -24,8 +24,12 @@ export default function Navbar() {
         </div>
 
         <div className="md:flex gap-x-2">
-          <button className="text-white border font-semibold px-6 py-2 rounded-full hover:bg-gray-500">Log in</button>
-          <button className="text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300">Sign Up</button>
+          <Link href="/login">
+            <button className="text-white border font-semibold px-6 py-2 rounded-full hover:bg-gray-500">Log in</button>
+          </Link>
+          <Link href='/signup'>
+            <button className="text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300">Sign Up</button>
+          </Link>
         </div>
 
       </div>

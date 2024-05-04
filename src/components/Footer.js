@@ -6,16 +6,16 @@ import { Youtube } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 export default function Footer() {
     return (
-        <footer className=" bg-black px-20 flex flex-col justify-center h-full w-full mt-10 py-20">
+        <footer className=" bg-black px-20 flex flex-col justify-center h-full w-full py-10">
             <div className="flex flex-row justify-start items-center gap-36 w-full">
             <div className="flex flex-col justify-center items-start flex-grow w-full md:w-auto md:flex-initial md:mr-8 gap-y-1">
                 <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" className="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
                 <p className=" font-bold text-2xl text-white">CineVie</p>
-                <p className=" font-medium text-xs text-white">ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+                <p className=" font-medium text-xs text-white">CineVie Ltd.<br/>Providing reliable tech since 2004</p>
             </div> 
             <div className=" flex flex-row items-start justify-between w-[70%]">
                 <div className="flex flex-col justify-center items-start flex-grow w-full gap-y-1 md:w-auto md:flex-initial md:mr-8 text-gray-500">
-                    <p className="text-xl text-white font-semibold">Meet at Cinefi</p> 
+                    <p className="text-xl text-white font-semibold">Meet at CineVie</p> 
                     <div className='flex flex-row items-center gap-2 mt-4'>
                         <a className="link link-hover">About us</a>
                     </div>
@@ -82,9 +82,9 @@ export default function Footer() {
             </div>
             <div className="flex flex-row justify-between items-center mt-10">
                 <div className=" flex flex-row justify-start items-center gap-x-10">
-                    <p>@ 2025 flow-ui. ALL rights reserved</p>
-                    <p className="ml-4">Security</p>
-                    <p className="ml-4">Sitemap</p>
+                    <p>@ 2024 CineVie. ALL rights reserved</p>
+                    <p className="ml-4 cursor-pointer hover:underline">Security</p>
+                    <p className="ml-4 cursor-pointer hover:underline">Sitemap</p>
                 </div>
                 <div className="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-10">
                     <button className="bg-black inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-900 focus:outline-none border">

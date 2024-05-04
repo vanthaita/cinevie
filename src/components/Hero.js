@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="relative" style={{height: 'calc(100vh - 96px)'}}>
+    <div className="relative" style={{height: 'calc(100vh - 80px)'}}>
      <video className="absolute top-0 left-0 w-full h-full object-cover" src="/video.mp4" autoPlay muted loop />
      <div className="absolute top-0 left-0 w-full h-full bg-black/[.4]"></div>
     
