@@ -1,5 +1,4 @@
 import DropDownButton from "@/components/DropDownButton";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MovieCard from "@/components/MovieCard";
 import MovieGrid from "@/components/MovieGrid";
@@ -20,7 +19,6 @@ export default function Home() {
             <p className=" text-xl font-semibold">Tomorrow</p>
             <p className=" text-xl font-semibold">Coming Soon</p>
           </div>
-
           <div className=" flex justify-between items-center gap-x-5">
             <DropDownButton title={"Cinema"}/>
             <DropDownButton title={"Language"}/>
@@ -78,7 +76,6 @@ export default function Home() {
 
 
       <section>
-          <Footer />
       </section>
     </main>
   );
