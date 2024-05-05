@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Login() {
     return (
         <section className=" relative">
@@ -6,8 +8,8 @@ export default function Login() {
                     <img src="https://cdn.galaxycine.vn/media/2023/11/22/1200_1700638319306.jpg" className=" w-full h-full"/>
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full bg-black/[.6]"></div>
-                <div className=" h-[520px] w-[500px] rounded-[2rem] flex- flex-col justify-between items-center  bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg p-10 z-30">
-                    <div className="  h-[35%] rounded-t-[2rem] flex flex-col items-center justify-center">
+                <div className=" h-[520px] w-[540px] rounded-[2rem] flex- flex-col justify-between items-center bg-glass p-10 z-30">
+                    <div className="  h-[28%] rounded-t-[2rem] flex flex-col items-center justify-center">
                         <h1 className=" font-semibold text-2xl mb-4">Log In to CineVie</h1>
                         <div className="flex flex-row gap-x-8">
                             <div className=" w-14 h-14 rounded-full bg-white flex justify-center items-center cursor-pointer">
@@ -28,18 +30,20 @@ export default function Login() {
                                 <hr className=" absolute border w-[30%] right-0 "/>
                         </div>
                      </div>
-                     <div className="  h-[37%] flex flex-col items-center justify-center w-full gap-y-2">
+                     <div className="  h-[42%] flex flex-col items-center justify-center w-full gap-y-2">
                         <div className=" flex flex-col justify-center items-center w-full gap-y-6 text-black">
-                            <input type="text" placeholder="Enter username" className="w-full bg-white rounded-xl border shadow-md p-[0.7rem]" />
-                            <input type="password" placeholder="Enter password" className="w-full bg-white rounded-xl border shadow-md p-[0.7rem]" />
+                            <input type="text" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
+                            <input type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
                         </div>
                         <div className=" w-full relative">
+                            <Link href="/forgetpwd">
                             <p className=" font-normal text-md right-0 absolute cursor-pointer hover:underline">Forget Password?</p>
+                            </Link> 
                         </div>
                      </div>
                      
                      
-                     <div className="h-[32%] rounded-b-[2rem] flex flex-col items-center justify-center w-full mt-4">
+                     <div className="h-[32%] rounded-b-[2rem] flex flex-col items-center justify-center w-full mt-2">
                         <div className=" flex-col justify-between items-center w-full gap-y-4 text-black flex">
                             <div className="w-full relative pb-[1.5em]">  
                                 <div className="w-full absolute flex flex-row items-center justify-start gap-x-2 left-0">
@@ -52,7 +56,7 @@ export default function Login() {
                                 <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full">Log In</button>
                             </div>
                             <div className=" w-full justify-center items-center flex mt-2">
-                                <p className=" text-white text-sm font-normal">New to CineVie? <span className=" cursor-pointer hover:underline">Join now</span></p>
+                                <p className=" text-white text-sm font-normal">New to CineVie? <Link href="/signup"><span className=" cursor-pointer hover:underline">Join now</span></Link></p>
                             </div>
                         </div>
                      </div>

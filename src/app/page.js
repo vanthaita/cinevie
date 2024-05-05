@@ -1,3 +1,4 @@
+'use client'
 import DropDownButton from "@/components/DropDownButton";
 import Hero from "@/components/Hero";
 import MovieCard from "@/components/MovieCard";
@@ -5,7 +6,15 @@ import MovieGrid from "@/components/MovieGrid";
 import MovieTopCard from "@/components/MovieTopCard";
 import News from "@/components/News";
 import movie from '@/constant/movie'
+import { useState } from "react";
+import DropDownButtonCalender from "@/components/DropDownButtonCalender";
 export default function Home() {
+  const [selected, setSelected] = useState('Today');
+  
+  const handleSelect = (value) => {
+      setSelected(value);
+  };
+
   return (
     <main>
       <section>
@@ -14,15 +23,30 @@ export default function Home() {
 
       <section className="mx-20">
         <div className=" flex justify-between items-center mt-8 mb-16">
-          <div className=" flex justify-between items-center gap-x-12 text-white">
-            <p className=" text-xl font-semibold">Today</p>
-            <p className=" text-xl font-semibold">Tomorrow</p>
-            <p className=" text-xl font-semibold">Coming Soon</p>
-          </div>
+        <div className="flex justify-between items-center gap-x-12 text-white">
+      <p
+        className={`text-xl font-medium cursor-pointer ${selected === 'Today' ? 'text-white' : 'text-gray-400'} `}
+        onClick={() => handleSelect('Today')}
+      >
+        Today
+      </p>
+      <p
+        className={`text-xl font-medium cursor-pointer ${selected === 'Tomorrow' ? 'text-white-500' : 'text-gray-400'}`}
+        onClick={() => handleSelect('Tomorrow')}
+      >
+        Tomorrow
+      </p>
+      <p
+        className={`text-xl font-medium cursor-pointer ${selected === 'Coming Soon' ? 'text-white' : 'text-gray-400'}`}
+        onClick={() => handleSelect('Coming Soon')}
+      >
+        Coming Soon
+      </p>
+    </div>
           <div className=" flex justify-between items-center gap-x-5">
             <DropDownButton title={"Cinema"}/>
             <DropDownButton title={"Language"}/>
-            <DropDownButton title={"Date"}/>
+            <DropDownButtonCalender title={"Date"}/>
           </div>
 
 
