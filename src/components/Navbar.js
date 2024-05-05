@@ -7,7 +7,7 @@ export default function Navbar() {
       <Link href="/" className="font-extrabold text-3xl">CineVie</Link>
       <ul className="hidden md:flex gap-x-8 cursor-pointe font-medium ">
         <Link href="/showtimes"><li className="hover:text-gray-600 cursor-pointer">Showtime</li></Link>
-        <li className="hover:text-gray-600 cursor-pointer">Cinemas</li>
+        <Link href="/cinemas"><li className="hover:text-gray-600 cursor-pointer">Cinemas</li></Link>
         <li className="hover:text-gray-600 cursor-pointer">Promotions & Offers</li>
         <li className="hover:text-gray-600 cursor-pointer">News</li>
         <li className="hover:text-gray-600 cursor-pointer">About Us</li>

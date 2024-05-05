@@ -31,7 +31,7 @@ export default function Login() {
                         </div>
                      </div>
                      <div className="  h-[42%] flex flex-col items-center justify-center w-full gap-y-2">
-                        <div className=" flex flex-col justify-center items-center w-full gap-y-6 text-black">
+                        <div className=" flex flex-col justify-center items-center w-full gap-y-6 ">
                             <input type="text" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
                             <input type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
                         </div>
@@ -44,10 +44,10 @@ export default function Login() {
                      
                      
                      <div className="h-[32%] rounded-b-[2rem] flex flex-col items-center justify-center w-full mt-2">
-                        <div className=" flex-col justify-between items-center w-full gap-y-4 text-black flex">
+                        <div className=" flex-col justify-between items-center w-full gap-y-4 flex">
                             <div className="w-full relative pb-[1.5em]">  
                                 <div className="w-full absolute flex flex-row items-center justify-start gap-x-2 left-0">
-                                    <input type="checkbox" className="checkbox rounded-full border-white w-4 h-4"/>
+                                    <input type="checkbox" className="checkbox rounded-full border-white w-4 h-4 "/>
                                     <p className=" font-normal text-md text-white"><span className=" text-gray-500">Accept</span> Terms & Conditions</p>
                                 </div>
                             </div>

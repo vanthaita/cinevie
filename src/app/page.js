@@ -21,8 +21,8 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section className="mx-20">
-        <div className=" flex justify-between items-center mt-8 mb-16">
+      <section className="mx-[77px]">
+        <div className=" flex justify-between items-center mt-8 mb-16 w-full">
         <div className="flex justify-between items-center gap-x-12 text-white">
       <p
         className={`text-xl font-medium cursor-pointer ${selected === 'Today' ? 'text-white' : 'text-gray-400'} `}
@@ -43,16 +43,16 @@ export default function Home() {
         Coming Soon
       </p>
     </div>
-          <div className=" flex justify-between items-center gap-x-5">
-            <DropDownButton title={"Cinema"}/>
-            <DropDownButton title={"Language"}/>
-            <DropDownButtonCalender title={"Date"}/>
+          <div className=" flex justify-end flex-row gap-x-2">
+            <DropDownButton title={"Cinema"} value={['Aeon Mail', 'Vincom']}/>
+            <DropDownButton title={"Language"} value={['English', 'Vietnamese']}/>
+            <DropDownButtonCalender/>
           </div>
 
 
         </div>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-4 gap-4">
             {movie.map((movie, index) => (
             <MovieCard
               key={index + 1}
@@ -86,7 +86,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
 
       <section>
