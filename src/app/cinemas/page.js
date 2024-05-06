@@ -3,7 +3,7 @@ export default function Cinemas() {
         <main >
             <section className="relative">
                 <div className="relative bg-black flex justify-start items-start" style={{height: 'calc(100vh - 80px)'}}>
-                    <div className=" w-full h-full absolute" style={{height: 'calc(100vh - 96px)'}}>
+                    <div className=" w-full h-full absolute" style={{height: 'calc(100vh - 80px)'}}>
                         <img src="https://cdn.galaxycine.vn/media/2023/11/22/1200_1700638319306.jpg" className=" w-full h-full"/>
                     </div>
                     <div className="absolute top-0 left-0 w-full h-full bg-black/[.6]"></div>

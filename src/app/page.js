@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import MovieCard from "@/components/MovieCard";
 import MovieGrid from "@/components/MovieGrid";
 import MovieTopCard from "@/components/MovieTopCard";
-import News from "@/components/News";
+import News from "@/components/NewsDashboard";
 import movie from '@/constant/movie'
 import { useState } from "react";
 import DropDownButtonCalender from "@/components/DropDownButtonCalender";
@@ -67,17 +67,20 @@ export default function Home() {
       </section>
 
       {/* For kids */}
-      <section>
-        <div className=" w-full bg-[#B16CEA] h-[650px]">
-          <div className=" flex  justify-start mx-20 flex-col">
-            <h1 className=" font-extrabold text-white text-2xl mt-8 mb-8">For kids</h1>
-              <MovieGrid />
-            
-          </div>
+      <section className=" h-[100vh] relative z-[1] bg-[#B16CEA]">
+        {/* Background */}
+        <div className=" w-full absolute h-full z-[-1]"> 
+          <div className=" h-[130px] bg-gradient-to-b from-orange-300 to-pink-400 absolute w-full -skew-y-[10deg]" style={{top: 'calc(90vh -  50vh - 130px)'}}/>
+          <div className=" h-[130px] bg-gradient-to-b from-orange-300 to-pink-400 absolute w-full skew-y-[10deg]" style={{top: 'calc(140vh -  50vh - 220px)'}}/>
+        </div>
+        {/* ----- */}
+        <div className=" flex justify-start mx-20 flex-col z-[4]">
+          <h1 className=" font-extrabold text-white text-2xl mt-8 mb-8">For kids</h1>
+            <MovieGrid />
         </div>
       </section>
 
-
+      {/*  */}
       <section>
         <div className=" w-full">
           <div className=" flex justify-start mx-20 flex-col mt-4">

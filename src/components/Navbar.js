@@ -8,8 +8,8 @@ export default function Navbar() {
       <ul className="hidden md:flex gap-x-8 cursor-pointe font-medium ">
         <Link href="/showtimes"><li className="hover:text-gray-600 cursor-pointer">Showtime</li></Link>
         <Link href="/cinemas"><li className="hover:text-gray-600 cursor-pointer">Cinemas</li></Link>
-        <li className="hover:text-gray-600 cursor-pointer">Promotions & Offers</li>
-        <li className="hover:text-gray-600 cursor-pointer">News</li>
+        <Link href="/promotions-offers"><li className="hover:text-gray-600 cursor-pointer">Promotions & Offers</li></Link>
+        <Link href="/news"><li className="hover:text-gray-600 cursor-pointer">News</li></Link>
         <li className="hover:text-gray-600 cursor-pointer">About Us</li>
       </ul>
 
@@ -17,7 +17,7 @@ export default function Navbar() {
         <Search className="w-8 h-8 text-gray-500 hover:text-gray-700" />
 
         <div>
-        <select className="  text-white p-2  font-bold" >
+        <select className="text-white p-2  font-bold" >
             <option value="en" className=" text-white">EN</option>
             <option value="vi" className="text-white">VI</option>
         </select>
@@ -30,6 +30,8 @@ export default function Navbar() {
           <Link href='/signup'>
             <button className="text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300">Sign Up</button>
           </Link>
+
+          
         </div>
 
       </div>
