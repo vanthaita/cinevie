@@ -1,4 +1,4 @@
-import NewsCardBento from "./NewCardBento";
+import NewsCardBento from "./NewsCardBento";
 import NewsCard from "./NewsCard";
 
 export default function Bento() {

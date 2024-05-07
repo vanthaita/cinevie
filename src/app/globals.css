@@ -96,3 +96,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+
+.text-gradient {
+  font-size: 270px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

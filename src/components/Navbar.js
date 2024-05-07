@@ -6,11 +6,11 @@ export default function Navbar() {
     <nav className="h-20 w-full flex items-center justify-between px-20 mx-auto text-white z-[9999] shadow-md">
       <Link href="/" className="font-extrabold text-3xl">CineVie</Link>
       <ul className="hidden md:flex gap-x-8 cursor-pointe font-medium ">
-        <Link href="/showtimes"><li className="hover:text-gray-600 cursor-pointer">Showtime</li></Link>
+        <Link href="/showtimes"><li className="hover:text-gray-600 cursor-pointer">Showtimes</li></Link>
         <Link href="/cinemas"><li className="hover:text-gray-600 cursor-pointer">Cinemas</li></Link>
         <Link href="/promotions-offers"><li className="hover:text-gray-600 cursor-pointer">Promotions & Offers</li></Link>
         <Link href="/news"><li className="hover:text-gray-600 cursor-pointer">News</li></Link>
-        <li className="hover:text-gray-600 cursor-pointer">About Us</li>
+        <Link href="/about-us"><li className="hover:text-gray-600 cursor-pointer">About Us</li></Link>
       </ul>
 
       <div className="flex items-center gap-4 md:gap-x-8">
