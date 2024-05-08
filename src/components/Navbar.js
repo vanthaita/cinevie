@@ -16,11 +16,11 @@ export default function Navbar() {
       <div className="flex items-center gap-4 md:gap-x-8">
         <Search className="w-8 h-8 text-gray-500 hover:text-gray-700" />
 
-        <div>
-        <select className="text-white p-2  font-bold" >
-            <option value="en" className=" text-white">EN</option>
-            <option value="vi" className="text-white">VI</option>
-        </select>
+        <div className="border-none ">
+          <select className="text-white p-2  font-bold bg-transparent border-none " >
+              <option value="en" className=" text-black">EN</option>
+              <option value="vi" className="text-black">VI</option>
+          </select>
         </div>
 
         <div className="md:flex gap-x-2">

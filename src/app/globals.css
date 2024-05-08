@@ -103,3 +103,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1496px; /* Giới hạn width tối đa */
+  /* margin: 0 auto; Căn giữa trang */
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    max-width: 90%; /* Giảm width trên màn hình nhỏ */
+  }
+}
