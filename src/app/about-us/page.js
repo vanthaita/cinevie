@@ -10,7 +10,9 @@ export default function AboutUs() {
                     <h1 className=" z-[30] text-white absolute mt-[65px] ml-12 font-extrabold text-6xl">For the love of cinema</h1>
                     <div className=" w-full h-full z-[2] gap-y-8 px-20 flex mt-[100px] flex-col bg-red-300 rounded-tr-[17rem] rounded-tl-[5rem] rounded-bl-[10rem] justify-center items-center" style={{height: 'calc(90vh - 80px)'}}>
                         <div className=" w-full h-[70%] flex flex-row justify-between items-center gap-x-8">
-                            <div className=" bg-blue-500 w-[45%] h-full rounded-tr-[18rem] rounded-tl-[3rem] rounded-bl-[12rem] rounded-br-[4rem]"></div>
+                            <div className=" w-[45%] h-full rounded-tr-[18rem] rounded-tl-[3rem] rounded-bl-[12rem] rounded-br-[4rem]">
+                                <img alt="" src="https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className=" w-full h-full rounded-tr-[18rem] rounded-tl-[3rem] rounded-bl-[12rem] rounded-br-[4rem]"/>
+                            </div>
                        
                             <div className=" flex h-full w-[50%] justify-center items-start flex-col p-4 gap-y-4">
                                 <h1 className=" text-2xl font-bold">Welcome to cineVie</h1>
