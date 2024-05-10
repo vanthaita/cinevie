@@ -1,7 +1,12 @@
+'use client'
 import Link from "next/link";
 import { Search } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import useUserInfo from "@/Hooks/useUserInfo";
 
 export default function Navbar() {
+  const userInfo = useUserInfo();    
+  
   return (
     <nav className="h-20 w-full flex items-center justify-between px-20 mx-auto text-white z-[9999] shadow-md">
       <Link href="/" className="font-extrabold text-3xl">CineVie</Link>
@@ -23,16 +28,25 @@ export default function Navbar() {
           </select>
         </div>
 
-        <div className="md:flex gap-x-2">
-          <Link href="/login">
-            <button className="text-white border font-semibold px-6 py-2 rounded-full hover:bg-gray-500">Log in</button>
+        {userInfo ? (
+          <Link href="/settings">
+            <div className="flex gap-x-2 items-center w-10 h-10 rounded-full">
+              <Avatar>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </div>
           </Link>
-          <Link href='/signup'>
-            <button className="text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300">Sign Up</button>
-          </Link>
-
-          
-        </div>
+        ) : (
+          <div className="md:flex gap-x-2">
+            <Link href="/login">
+              <button className="text-white border font-semibold px-6 py-2 rounded-full hover:bg-gray-500">Log in</button>
+            </Link>
+            <Link href='/signup'>
+              <button className="text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300">Sign Up</button>
+            </Link>
+          </div>
+        )}
 
       </div>
     </nav>

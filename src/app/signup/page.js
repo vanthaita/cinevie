@@ -1,6 +1,40 @@
+'use client'
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function SignUp() {
+    const router = useRouter();
+
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        console.log(formData);
+        const userInfo = {
+            username: formData.username,
+            email: formData.email,
+            password: formData.password
+        };
+
+        await localStorage.setItem('User-Info', JSON.stringify(userInfo));
+        router.push('/login');
+
+    };
+    
+
     return (
         <section>
             <div className="relative bg-black flex justify-center items-center" style={{height: 'calc(100vh - 80px)'}}>
@@ -30,13 +64,12 @@ export default function SignUp() {
                                 <hr className=" absolute border w-[30%] right-0 "/>
                         </div>
                      </div>
-                     <div className="  h-[43%] flex flex-col items-center justify-center w-full gap-y-2 mt-2">
-                        <div className=" flex flex-col justify-center items-center w-full gap-y-6">
-                            <input type="email" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
-                            <input type="text" placeholder="Enter email" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
-                            <input type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
-                        </div>
-                        
+                     <div className="h-[43%] flex flex-col items-center justify-center w-full gap-y-2 mt-2">
+                          <form className="flex flex-col justify-center items-center w-full gap-y-6">
+                            <input name="username" type="email" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange}/>
+                            <input name="email" type="text" placeholder="Enter email" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange}/>
+                            <input name="password" type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange}/>
+                          </form>
                      </div>
                      
                      
@@ -50,7 +83,7 @@ export default function SignUp() {
                             </div>
 
                             <div className="w-full">
-                                <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full">Log In</button>
+                                <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full" onClick={handleSignUp}>Sign Up</button>
                             </div>
                             <div className=" w-full justify-center items-center flex mt-2">
                                 <p className=" text-white text-sm font-normal">Already have an account? <Link href="/login"><span className=" cursor-pointer hover:underline">Log In</span></Link></p>
@@ -60,6 +93,5 @@ export default function SignUp() {
                 </div>
             </div>
         </section>
-        
     )
 }

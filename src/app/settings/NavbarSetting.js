@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 export const navItems = [ 
     {
       name: 'Personal data',
@@ -25,6 +26,11 @@ export const navItems = [
     },
   ];
 export default function NavbarSetting() {
+    const router = new Router();
+    const handleLogut = () => {
+        localStorage.clear();
+        router.push('/');
+    }
     const pathname = usePathname();
     if (!Array.isArray(navItems) || navItems.length === 0) {
         return null; // or handle empty case gracefully
@@ -38,7 +44,7 @@ export default function NavbarSetting() {
                     )}>{item.name}</h2>
                 </Link>
             ))}
-            <h2 className=" font-bold text-xl cursor-pointer">Log out</h2>
+            <h2 className=" font-bold text-xl cursor-pointer" onClick={handleLogut}>Log out</h2>
         </div>
         
     )

@@ -9,7 +9,10 @@ export const metadata = {
   title: "CineVie",
 };
 
+
+
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body className={inter.className}>

@@ -1,6 +1,43 @@
+'use client'
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
+import { useEffect, useState } from 'react';
 export default function Login() {
+    const router = useRouter();
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+  
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const userInfoString = window.localStorage.getItem('User-Info');
+        console.log(typeof userInfoString); 
+    
+        if (userInfoString) {
+            const userInfo = JSON.parse(userInfoString); 
+            console.log(typeof userInfo); 
+    
+            if (userInfo.username === formData.username && userInfo.password === formData.password) {
+                router.push('/');
+            } else {
+                console.log("Login failed");
+            }
+        } else {
+            console.log("User info not found");
+        }
+    }
+    
+
     return (
         <section className=" relative">
             <div className="relative bg-black flex justify-center items-center" style={{height: 'calc(100vh - 80px)'}}>
@@ -32,8 +69,8 @@ export default function Login() {
                      </div>
                      <div className="  h-[42%] flex flex-col items-center justify-center w-full gap-y-2">
                         <div className=" flex flex-col justify-center items-center w-full gap-y-6 ">
-                            <input type="text" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
-                            <input type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" />
+                            <input name="username" type="text" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange} />
+                            <input name="password" type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange} />
                         </div>
                         <div className=" w-full relative">
                             <Link href="/forgetpwd">
@@ -41,7 +78,6 @@ export default function Login() {
                             </Link> 
                         </div>
                      </div>
-                     
                      
                      <div className="h-[32%] rounded-b-[2rem] flex flex-col items-center justify-center w-full mt-2">
                         <div className=" flex-col justify-between items-center w-full gap-y-4 flex">
@@ -53,7 +89,7 @@ export default function Login() {
                             </div>
 
                             <div className="w-full">
-                                <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full">Log In</button>
+                                    <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full" onClick={handleLogin}>Log In</button>
                             </div>
                             <div className=" w-full justify-center items-center flex mt-2">
                                 <p className=" text-white text-sm font-normal">New to CineVie? <Link href="/signup"><span className=" cursor-pointer hover:underline">Join now</span></Link></p>
