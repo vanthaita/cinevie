@@ -1,5 +1,4 @@
 import BookingCast from "./BookingCast";
-
 export default function BookingCastSection() {
   return (
     <div className="relative px-20" style={{ height: 'calc(90vh - 80px)' }}>
@@ -22,4 +21,5 @@ export default function BookingCastSection() {
     </div>
   )
 }
+
 

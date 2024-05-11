@@ -13,10 +13,10 @@ import {
       <Pagination>
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#" />
+            <PaginationPrevious href="" />
           </PaginationItem>
           <PaginationItem>
-            <PaginationLink href="#" isActive className=" text-white">1</PaginationLink>
+            <PaginationLink href="" isActive className=" text-white">1</PaginationLink>
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href="#"  className="text-white">

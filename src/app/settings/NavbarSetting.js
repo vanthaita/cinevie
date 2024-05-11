@@ -26,7 +26,7 @@ export const navItems = [
     },
   ];
 export default function NavbarSetting() {
-    const router = new Router();
+    const router = useRouter();
     const handleLogut = () => {
         localStorage.clear();
         router.push('/');

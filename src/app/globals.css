@@ -105,7 +105,7 @@
 }
 
 
-body {
+/* body {
   margin: 0;
   padding: 0;
 }
@@ -113,10 +113,8 @@ body {
 main {
   max-width: 1496px; /* Giới hạn width tối đa */
   /* margin: 0 auto; Căn giữa trang */
-}
 
-@media screen and (max-width: 768px) {
+
+/* @media screen and (max-width: 768px) {
   main {
     max-width: 90%; /* Giảm width trên màn hình nhỏ */
-  }
-}
