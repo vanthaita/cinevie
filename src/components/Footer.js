@@ -92,8 +92,8 @@ export default function Footer() {
         </div>
       </div>
       <div className='flex flex-row flex-wrap justify-center sm:justify-between items-center gap-y-12 mt-10'>
-        <div className=' flex flex-row flex-wrap gap-y-6 justify-center sm:justify-start items-center gap-x-10'>
-          <p className='line-clamp-1'>@ 2024 CineVie. ALL rights reserved</p>
+        <div className=' lg:flex flex-row flex-wrap hidden gap-y-6 justify-center sm:justify-start items-center gap-x-10'>
+          <p className='line-clamp-1 md:line-clamp-none'>@ 2024 CineVie. ALL rights reserved</p>
           <p className='cursor-pointer hover:underline'>Security</p>
           <p className='cursor-pointer hover:underline'>Sitemap</p>
         </div>
@@ -131,6 +131,7 @@ export default function Footer() {
             </span>
           </button>
         </div>
+        <p className=' text-sm md:hidden'>@2024 CineVie. ALL rights reserved</p>
       </div>
     </footer>
   );
