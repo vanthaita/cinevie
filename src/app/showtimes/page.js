@@ -5,7 +5,7 @@ import ShowTimeDropDown from "@/components/ShowtimeDropdown";
 export default function ShowTimes() {
     return (
         <section>
-            <div className=" px-20 mt-10 flex flex-col w-full" style={{height: 'calc(370vh - 80px)'}}>
+            <div className=" px-20 mt-10 flex flex-col w-full overflow-y-auto" style={{height: 'calc(370vh - 80px)'}}>
                 <div className=" flex flex-row gap-x-2 justify-center items-center w-full">
                 {/* Drop down */}
                 <ShowTimeDropDown title={"Cinemas"} value={['Aeon Mail', 'Vincom']}/>

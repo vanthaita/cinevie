@@ -4,18 +4,18 @@ export default function BoxMovie({title, genre, image_url}) {
     return (
         <>
         <div className=" w-full flex flex-col gap-1">
-        <div className=" w-full h-[20rem] flex flex-row justify-between items-center">
-                <div className="w-[185px] rounded-xl h-[250px] justify-center items-center flex">
-                    <img src={image_url} alt="" className=" rounded-2xl w-full h-full"/>
+        <div className=" w-full xl:h-[20rem] flex flex-col md:flex-row gap-6 justify-between items-center">
+                <div className="w-[80%] max-w-[200px] md:w-[185px] rounded-xl xl:h-[250px] justify-center items-center flex">
+                    <img src={image_url} alt="" className=" rounded-2xl w-full" style={{ aspectRatio: 2/3 }}/>
                 </div>
-                <div className="w-[62%] h-[250px] flex flex-col justify-start items-start gap-y-4">
+                <div className="xl:w-[62%] xl:h-[250px] flex flex-col justify-start items-start gap-y-4">
                     <div className=" flex flex-col justify-start items-start">
                         <p className=" font-bold text-xl ">{title}</p>
                         <p className=" font-normal text-sm text-gray-500">{genre}</p>
                     </div>
-                    <div class="flex flex-row justify-between items-start w-full mt-2">
+                    <div class="flex flex-col xl:flex-row  gap-6 justify-between items-start w-full mt-2">
                         <p class="font-bold text-xl ">Aeon Mail</p>
-                        <div class="grid grid-cols-6 gap-2">
+                        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-2">
                             <div class="border rounded-xl  p-4 py-2 flex justify-center items-center cursor-pointer">
                                 <p>09:20 EN</p>
                             </div>
@@ -45,7 +45,7 @@ export default function BoxMovie({title, genre, image_url}) {
                         </div>
                     </div>
                 </div>
-                <div className="h-[250px] w-[18%] flex justify-end items-center mb-[3.7rem]">
+                <div className="xl:h-[250px] xl:w-[18%] flex justify-end items-center mb-[3.7rem]">
                     <button className="btn text-white font-medium  px-12 bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 border-none rounded-full ">Book a session</button>
                 </div>
             </div>
