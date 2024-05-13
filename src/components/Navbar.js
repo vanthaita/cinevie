@@ -37,14 +37,14 @@ export default function Navbar() {
       {isOpen && (
         <div className='flex w-auto flex-col px-8 md:hidden z-[9999] gap-y-4 top-20 absolute left-0 right-0 bg-white text-black p-4 shadow-md'>
           <div className="items-center justify-between flex md:hidden">
-            {!userInfo ? (
+            {userInfo ? (
               <Link href="/settings" passHref>
                 <div className="flex flex-row gap-x-4 gap-x-2 items-center w-10 h-10 rounded-full">
                   <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
-                  <p className=' font-bold text-xl'>{userInfo.username}</p>
+                  <p className=' font-bold text-xl'>{userInfo?.username}</p>
                 </div>
 
               </Link>
