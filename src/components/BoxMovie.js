@@ -6,12 +6,12 @@ export default function BoxMovie({ title, genre, image_url }) {
                     <div className="w-[350px] md:w-[185px] h-[450px] md:h-[250px] rounded-xl mb-4 md:mb-0 ">
                         <img src={image_url} alt="" className="rounded-2xl w-full h-full" />
                     </div>
-                    <div className="w-full md:w-[62%] md:h-[250px] mb-10 flex flex-col justify-start items-start md:gap-y-4 gap-y-2">
+                    <div className="w-full md:w-[62%] md:h-[250px] flex flex-col justify-start items-start md:gap-y-6 gap-y-2">
                         <div className="flex flex-col justify-start items-start">
                             <p className="font-bold text-xl">{title}</p>
                             <p className="font-normal text-sm  text-gray-500">{genre}</p>
                         </div>
-                        <div className="flex flex-col md:flex-row justify-start items-start w-full mt-2 gap-y-4 gap-x-8">
+                        <div className="flex flex-col md:flex-row justify-start items-start w-full mt-2 gap-y-4 gap-x-12">
                             <p className="font-bold text-xl">Aeon Mail</p>
                             <div className="grid grid-cols-4 md:grid-cols-6 gap-2">
                                 <div className="border rounded-xl md:p-2 flex justify-center items-center cursor-pointer">
@@ -43,7 +43,7 @@ export default function BoxMovie({ title, genre, image_url }) {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full md:w-[18%] flex justify-center mb-10">
+                    <div className="w-full md:w-[18%] flex justify-center my-10 md:my-0 md:items-center h-full">
                         <button className="btn text-white font-medium px-8 w-[80%] py-2 bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 border-none rounded-full">Book a session</button>
                     </div>
                 </div>

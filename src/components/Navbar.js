@@ -1,53 +1,132 @@
 'use client'
+import React, { useState } from 'react';
 import Link from "next/link";
 import { Search } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import useUserInfo from "@/Hooks/useUserInfo";
 
 export default function Navbar() {
   const userInfo = useUserInfo();    
+  const [isOpen, setIsOpen] = useState(false);
   
+
   return (
-    <nav className="h-20 w-full flex items-center justify-between px-20 mx-auto text-white z-[9999] shadow-md">
-      <Link href="/" className="font-extrabold text-3xl">CineVie</Link>
-      <ul className="hidden md:flex gap-x-8 cursor-pointe font-medium ">
-        <Link href="/showtimes"><li className="hover:text-gray-600 cursor-pointer">Showtimes</li></Link>
-        <Link href="/cinemas"><li className="hover:text-gray-600 cursor-pointer">Cinemas</li></Link>
-        <Link href="/promotions-offers"><li className="hover:text-gray-600 cursor-pointer">Promotions & Offers</li></Link>
-        <Link href="/news"><li className="hover:text-gray-600 cursor-pointer">News</li></Link>
-        <Link href="/about-us"><li className="hover:text-gray-600 cursor-pointer">About Us</li></Link>
+    <nav className="h-20 w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">
+      <div className=' flex flex-row justify-center items-end gap-x-2'>
+        <Link href="/" passHref>
+          <p className="font-extrabold text-3xl">CineVie</p>
+        </Link>
+      </div>
+
+
+      <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+            {isOpen ? (
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+
+
+      {isOpen && (
+        <div className='flex w-auto flex-col px-8 md:hidden z-[9999] gap-y-4 top-20 absolute left-0 right-0 bg-white text-black p-4 shadow-md'>
+          <div className="items-center justify-between flex md:hidden">
+            {!userInfo ? (
+              <Link href="/settings" passHref>
+                <div className="flex flex-row gap-x-4 gap-x-2 items-center w-10 h-10 rounded-full">
+                  <Avatar>
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <p className=' font-bold text-xl'>{userInfo.username}</p>
+                </div>
+
+              </Link>
+            ) : (
+              <div className="flex gap-x-2">
+                <Link href="/login" passHref>
+                  <p className="text-black text-xl font-semibold rounded-xl hover:bg-gray-500">Log in</p>
+                </Link>
+              </div>
+            )}
+            <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700" />
+            
+          </div>
+          <ul className="flex w-auto flex-col gap-y-4 top-20 left-0 right-0 text-black">
+              <Link href="/showtimes" passHref>
+                <p className="hover:text-gray-600 cursor-pointer">Showtimes</p>
+              </Link>
+              <Link href="/cinemas" passHref>
+                <p className="hover:text-gray-600 cursor-pointer">Cinemas</p>
+              </Link>
+              <Link href="/promotions-offers" passHref>
+                <p className="hover:text-gray-600 cursor-pointer">Promotions & Offers</p>
+              </Link>
+              <Link href="/news" passHref>
+                <p className="hover:text-gray-600 cursor-pointer">News</p>
+              </Link>
+              <Link href="/about-us" passHref>
+                <p className="hover:text-gray-600 cursor-pointer">About Us</p>
+              </Link>
+            </ul>
+
+          
+      </div>
+        
+      )}
+
+      <ul className="hidden md:flex gap-x-8 cursor-pointer font-medium">
+        <Link href="/showtimes" passHref>
+          <p className="hover:text-gray-600 cursor-pointer">Showtimes</p>
+        </Link>
+        <Link href="/cinemas" passHref>
+          <p className="hover:text-gray-600 cursor-pointer">Cinemas</p>
+        </Link>
+        <Link href="/promotions-offers" passHref>
+          <p className="hover:text-gray-600 cursor-pointer">Promotions & Offers</p>
+        </Link>
+        <Link href="/news" passHref>
+          <p className="hover:text-gray-600 cursor-pointer">News</p>
+        </Link>
+        <Link href="/about-us" passHref>
+          <p className="hover:text-gray-600 cursor-pointer">About Us</p>
+        </Link>
       </ul>
 
-      <div className="flex items-center gap-4 md:gap-x-8">
-        <Search className="w-8 h-8 text-gray-500 hover:text-gray-700" />
-
-        <div className="border-none ">
-          <select className="text-white p-2  font-bold bg-transparent border-none " >
-              <option value="en" className=" text-black">EN</option>
-              <option value="vi" className="text-black">VI</option>
+      <div className="items-center gap-4 md:gap-x-8 md:flex hidden">
+        <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700" />
+        <div className="border-none">
+          <select className="text-white p-2 font-bold bg-transparent border-none">
+            <option value="en" className="text-black">EN</option>
+            <option value="vi" className="text-black">VI</option>
           </select>
         </div>
 
         {userInfo ? (
-          <Link href="/settings">
+          <Link href="/settings" passHref>
             <div className="flex gap-x-2 items-center w-10 h-10 rounded-full">
               <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </div>
           </Link>
         ) : (
           <div className="md:flex gap-x-2">
-            <Link href="/login">
+            <Link href="/login" passHref>
               <button className="text-white border font-semibold px-6 py-2 rounded-full hover:bg-gray-500">Log in</button>
             </Link>
-            <Link href='/signup'>
+            <Link href='/signup' passHref>
               <button className="text-white font-semibold px-6 py-2 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300">Sign Up</button>
             </Link>
           </div>
         )}
-
       </div>
     </nav>
   );
