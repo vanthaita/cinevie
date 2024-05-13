@@ -45,12 +45,12 @@ export default function NewsPage() {
                 </div>
             </section>
             <section>
-                <div className="relative flex justify-start items-start bg-black" style={{height: 'calc(210vh - 80px)'}}>
-                    <div className=" w-full absolute px-20 mt-10 gap-y-8 flex flex-col rounded-xl h-full justify-center">
+                <div className="relative flex justify-start items-start bg-black">
+                    <div className=" w-full px-20 mt-10 gap-y-8 flex flex-col rounded-xl h-full justify-center">
                         <h1 className=" font-bold text-3xl">Latest news</h1>
                         <div className=" flex flex-col justify-start gap-y-12 h-full w-full">
                             <div className=" flex flex-col gap-x-[24px] w-full gap-y-14">
-                                <div className=" grid grid-cols-3 justify-between gap-x-4 gap-y-16">
+                                <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between gap-x-4 gap-y-16">
                                     {news.slice(0,9).map((item, index) => (
                                         <div className=" flex flex-col justify-start gap-y-2" key={index}>
                                             <div className=" w-full h-64 rounded-2xl">
