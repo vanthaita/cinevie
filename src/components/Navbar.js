@@ -8,6 +8,7 @@ import useUserInfo from "@/Hooks/useUserInfo";
 export default function Navbar() {
   const userInfo = useUserInfo();    
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenSearch, setIsOpenSearch] = useState(false);
   
 
   return (
@@ -39,7 +40,7 @@ export default function Navbar() {
           <div className="items-center justify-between flex md:hidden">
             {userInfo ? (
               <Link href="/settings" passHref>
-                <div className="flex flex-row gap-x-4 gap-x-2 items-center w-10 h-10 rounded-full">
+                <div className="flex flex-row gap-x-4 items-center w-10 h-10 rounded-full">
                   <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>CN</AvatarFallback>
@@ -55,12 +56,12 @@ export default function Navbar() {
                 </Link>
               </div>
             )}
-            <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700" />
+            <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" />
             
           </div>
-          <ul className="flex w-auto flex-col gap-y-4 top-20 left-0 right-0 text-black">
+          <ul className="flex w-auto flex-col gap-y-4 top-20 left-0 right-0 text-black text-lg">
               <Link href="/showtimes" passHref>
-                <p className="hover:text-gray-600 cursor-pointer">Showtimes</p>
+                <p className="hover:text-gray-600 cursor-pointer ">Showtimes</p>
               </Link>
               <Link href="/cinemas" passHref>
                 <p className="hover:text-gray-600 cursor-pointer">Cinemas</p>
@@ -75,8 +76,6 @@ export default function Navbar() {
                 <p className="hover:text-gray-600 cursor-pointer">About Us</p>
               </Link>
             </ul>
-
-          
       </div>
         
       )}
@@ -100,7 +99,7 @@ export default function Navbar() {
       </ul>
 
       <div className="items-center gap-4 md:gap-x-8 md:flex hidden">
-        <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700" />
+        <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" />
         <div className="border-none">
           <select className="text-white p-2 font-bold bg-transparent border-none">
             <option value="en" className="text-black">EN</option>
