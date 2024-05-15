@@ -38,6 +38,7 @@ export default function Places({ selectedSeats }) {
             }
         });
     };
+   
 
     const seatPrices = {
         'Adult': 20,
@@ -54,11 +55,21 @@ export default function Places({ selectedSeats }) {
     const totalFoodDrinkPrice = foodDrinkSelections.reduce((total, item) => total + foodDrinkPrices[item], 0);
     const totalPrice = totalSeatPrice + totalFoodDrinkPrice;
     const discountedPrice = totalPrice * (1 - discount);
+    const CalculatorTotal = isPromocodeApplied ? `${discountedPrice.toFixed(2)}$` : `${totalPrice}$`
 
+
+    const handleApplyToCheckout = () => {
+        localStorage.setItem('promocode', promocode);
+        localStorage.setItem('discount', discount.toString());
+        localStorage.setItem('ticketType', ticketType);
+        localStorage.setItem('foodDrinkSelections', JSON.stringify(foodDrinkSelections));
+        localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
+        localStorage.setItem('Total', CalculatorTotal);
+    };
     return (
-        <div className="h-[400px] w-2/3 bg-glass p-8 flex mb-4 rounded-lg shadow-md mx-auto">
+        <div className="h-[400px] w-2/3 p-8 flex rounded-lg shadow-md mx-auto">
             <div className="w-1/2 h-full p-4 border-r-2 border-gray-300 flex flex-col gap-y-2">
-                <p className="font-bold text-2xl mb-4">Booking Information</p>
+                <p className="font-bold text-2xl mb-4">Options</p>
                 <div className="flex flex-col space-y-2 h-2/3">
                     <div className='flex flex-col'>
                         <label htmlFor="ticketType" className="block mb-2">Ticket Type:</label>
@@ -84,6 +95,7 @@ export default function Places({ selectedSeats }) {
                                         name={item} 
                                         className="mr-2"
                                         onChange={handleFoodDrinkChange}
+                                        checked={foodDrinkSelections.includes(item)}
                                     />
                                     {item} - {foodDrinkPrices[item]}$
                                 </label>
@@ -98,6 +110,7 @@ export default function Places({ selectedSeats }) {
                         value={promocode}
                         onChange={handlePromocodeChange}
                     />
+                    
                 </div>
             </div>
             <div className="w-1/2 h-full p-4 flex flex-col gap-y-2">
@@ -114,10 +127,11 @@ export default function Places({ selectedSeats }) {
                 </div>
                 <div className="flex justify-between items-center ">
                     <p className="font-bold text-xl">Total:</p>
-                    <p className="text-xl">{isPromocodeApplied ? `${discountedPrice.toFixed(2)}$` : `${totalPrice}$`}</p>
+                    <p className="text-xl">{CalculatorTotal}</p>
                 </div>
                 <button 
                     className="bg-green-500 text-white p-3 rounded w-full hover:bg-green-600 transition duration-200"
+                    onClick={handleApplyToCheckout}
                 >
                     Apply to Checkout
                 </button>

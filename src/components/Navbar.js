@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from "next/link";
-import { Search } from 'lucide-react';
+import { Search, SearchIcon } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import useUserInfo from "@/Hooks/useUserInfo";
 
@@ -20,7 +20,7 @@ export default function Navbar() {
       </div>
 
 
-      <div className="md:hidden">
+      <div className="md:hidden flex justify-end items-end w-full ">
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
             {isOpen ? (
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ export default function Navbar() {
 
 
       {isOpen && (
-        <div className='flex w-auto flex-col px-8 md:hidden z-[9999] gap-y-4 top-20 absolute left-0 right-0 bg-white text-black p-4 shadow-md'>
+        <div className='flex w-auto  flex-col px-8 md:hidden z-[9999]  gap-y-4 top-20 absolute left-0 right-0 bg-white text-black p-4 shadow-md'>
           <div className="items-center justify-between flex md:hidden">
             {userInfo ? (
               <Link href="/settings" passHref>
@@ -56,10 +56,11 @@ export default function Navbar() {
                 </Link>
               </div>
             )}
-            <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" />
+            <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" onClick={() => {setIsOpenSearch(true)}}/>
             
           </div>
-          <ul className="flex w-auto flex-col gap-y-4 top-20 left-0 right-0 text-black text-lg">
+
+          <ul className="flex w-auto flex-col gap-y-4 top-20  left-0 right-0 text-black text-lg">
               <Link href="/showtimes" passHref>
                 <p className="hover:text-gray-600 cursor-pointer ">Showtimes</p>
               </Link>
@@ -80,26 +81,38 @@ export default function Navbar() {
         
       )}
 
-      <ul className="hidden md:flex gap-x-8 cursor-pointer font-medium">
-        <Link href="/showtimes" passHref>
-          <p className="hover:text-gray-600 cursor-pointer">Showtimes</p>
-        </Link>
-        <Link href="/cinemas" passHref>
-          <p className="hover:text-gray-600 cursor-pointer">Cinemas</p>
-        </Link>
-        <Link href="/promotions-offers" passHref>
-          <p className="hover:text-gray-600 cursor-pointer">Promotions & Offers</p>
-        </Link>
-        <Link href="/news" passHref>
-          <p className="hover:text-gray-600 cursor-pointer">News</p>
-        </Link>
-        <Link href="/about-us" passHref>
-          <p className="hover:text-gray-600 cursor-pointer">About Us</p>
-        </Link>
-      </ul>
+      <div>
+        <ul className="hidden md:flex gap-x-8 cursor-pointer font-medium">
+          <Link href="/showtimes" passHref>
+            <p className="hover:text-gray-600 cursor-pointer">Showtimes</p>
+          </Link>
+          <Link href="/cinemas" passHref>
+            <p className="hover:text-gray-600 cursor-pointer">Cinemas</p>
+          </Link>
+          <Link href="/promotions-offers" passHref>
+            <p className="hover:text-gray-600 cursor-pointer">Promotions & Offers</p>
+          </Link>
+          <Link href="/news" passHref>
+            <p className="hover:text-gray-600 cursor-pointer">News</p>
+          </Link>
+          <Link href="/about-us" passHref>
+            <p className="hover:text-gray-600 cursor-pointer">About Us</p>
+          </Link>
+        </ul>
+      </div>
 
       <div className="items-center gap-4 md:gap-x-8 md:flex hidden">
-        <Search className="md:w-8 md:h-8 w-6 h-6 text-gray-500 hover:text-gray-700 cursor-pointer" />
+      <div className="relative">
+        <div className='flex items-center w-42'>
+          <SearchIcon className="w-6 h-6 mr-2 text-gray-300" />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="flex-1 p-2 rounded-xl bg-gray-800 text-gray-300 focus:outline-none"
+          />
+        </div>
+
+        </div>
         <div className="border-none">
           <select className="text-white p-2 font-bold bg-transparent border-none">
             <option value="en" className="text-black">EN</option>
@@ -127,6 +140,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
+      
     </nav>
   );
 }
