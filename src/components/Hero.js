@@ -21,10 +21,8 @@ export default function Hero() {
                  culpa autem voluptuas ullam?
             </p>
             <div className=" flex flex-row justify-center items-center gap-5">
-              <button className="btn text-white font-medium  px-6 bg-red-500">Book a session</button>
-              
+              <button className="rounded-xl text-white font-medium  px-8 py-4 color-1">Book a session</button>
             </div>
-            
             </div>
         </div>
       </div>

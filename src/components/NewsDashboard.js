@@ -9,6 +9,7 @@ export default function News() {
                         key={index + 1}
                         title={news.title}
                         image_url={news.urlToImage}
+                        url={news.url}
                     />
                 ))}
             </div>

@@ -1,3 +1,4 @@
+
 export default function CreditCard() {
     return (
         <div className="w-[360px] h-56 m-auto bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">

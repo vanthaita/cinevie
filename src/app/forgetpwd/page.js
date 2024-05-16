@@ -24,10 +24,10 @@ export default function Login() {
                      <div className="h-[40%] rounded-b-[2rem] flex flex-col items-center justify-center w-full">
                         <div className=" flex-col justify-between items-center w-full gap-y-4 text-black flex">
                             <div className="w-full">
-                                <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full">Request reset link</button>
+                                <button className="text-white font-semibold py-3 rounded-full color-1 hover:to-pink-300 w-full">Request reset link</button>
                             </div>
                             <div className=" w-full justify-center items-center flex">
-                                <p className=" text-white text-sm font-normal">Back to <Link href="/login"><span className=" cursor-pointer hover:underline">Log in</span></Link></p>
+                                <p className=" text-white text-sm font-normal">Back to <Link href="/login"><span className=" cursor-pointer hover:underline text-color-1 font-bold">Log in</span></Link></p>
                             </div>
                         </div>
                      </div>

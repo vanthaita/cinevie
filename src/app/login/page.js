@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 
 import { useEffect, useState } from 'react';
 export default function Login() {
@@ -28,7 +28,8 @@ export default function Login() {
             console.log(typeof userInfo); 
     
             if (userInfo.username === formData.username && userInfo.password === formData.password) {
-                router.push('/');
+                redirect('/');
+                // router.push('/');
             } else {
                 console.log("Login failed");
             }
@@ -89,10 +90,10 @@ export default function Login() {
                             </div>
 
                             <div className="w-full">
-                                    <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full" onClick={handleLogin}>Log In</button>
+                                    <button className="text-white font-semibold py-3 rounded-full color-1 w-full" onClick={handleLogin}>Log In</button>
                             </div>
                             <div className=" w-full justify-center items-center flex mt-2">
-                                <p className=" text-white text-sm font-normal">New to CineVie? <Link href="/signup"><span className=" cursor-pointer hover:underline">Join now</span></Link></p>
+                                <p className=" text-white text-sm font-normal">New to CineVie? <Link href="/signup"><span className=" cursor-pointer hover:underline text-color-1 font-bold">Join now</span></Link></p>
                             </div>
                         </div>
                      </div>

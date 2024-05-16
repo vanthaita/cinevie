@@ -1,6 +1,6 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
   @layer base {
     :root {
@@ -64,6 +64,7 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
+     
   }
 
   @layer base {
@@ -118,3 +119,40 @@ main {
   /* margin: 0 auto; Căn giữa trang */
 }
 
+.color-1 {
+  background-image: linear-gradient(to right, #ffa84b, #ff8a56, #ff5e69, #B16cea);
+}
+
+.color-2 {
+  background-image: linear-gradient(to right, #B16cea, #ff8a56, #ff5e69, #B16cea);
+}
+
+.text-color-1 {
+  background-image: linear-gradient(to right, #B16cea, #ff8a56, #ff5e69, #B16cea);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@layer utilities {
+  .border-gradient {
+    border-width: 3px;
+    border-style: solid; 
+    border-image-source: linear-gradient(to right, #B16cea, #ff8a56, #ff5e69, #B16cea); 
+  }
+}
+.box {
+  position: relative;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px; 
+  padding: 3px; 
+  background: linear-gradient(to right, #B16cea, #ff8a56, #ff5e69, #B16cea); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}

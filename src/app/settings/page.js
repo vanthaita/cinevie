@@ -32,7 +32,7 @@ export default function Settings() {
                     <p className=" font-normal text-lg">NULL</p>
                 </div>
             </div>
-            <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-1/2">Save Changes</button>
+            <button className="text-white font-semibold py-3 rounded-full color-1 w-1/2">Save Changes</button>
         </div>
     )
 }

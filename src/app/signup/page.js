@@ -83,10 +83,10 @@ export default function SignUp() {
                             </div>
 
                             <div className="w-full">
-                                <button className="text-white font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-full" onClick={handleSignUp}>Sign Up</button>
+                                <button className="text-white font-semibold py-3 rounded-full color-1 w-full" onClick={handleSignUp}>Sign Up</button>
                             </div>
                             <div className=" w-full justify-center items-center flex mt-2">
-                                <p className=" text-white text-sm font-normal">Already have an account? <Link href="/login"><span className=" cursor-pointer hover:underline">Log In</span></Link></p>
+                                <p className=" text-white text-sm font-normal">Already have an account? <Link href="/login"><span className=" cursor-pointer hover:underline text-color-1 font-bold">Log In</span></Link></p>
                             </div>
                         </div>
                      </div>
