@@ -17,21 +17,21 @@ export default function NewsPage() {
 
             {/*  */}
             <section>
-                <div className="relative flex justify-start items-start" style={{height: 'calc(165vh - 80px)'}}>
-                    <div className=" w-full absolute px-20 mt-10 gap-y-8 flex flex-col rounded-xl h-auto" >
+                <div className="relative flex justify-start items-start">
+                    <div className=" w-full px-8 sm:px-20 pb-12 mt-10 gap-y-8 flex flex-col rounded-xl h-auto" >
                         <h1 className=" font-bold text-3xl">Trending news</h1>
                         
                         <div className=" flex flex-col justify-start gap-y-12">
                         {/* 0 */}
                         {news.slice(0,3).map((item, index) => (
                             <div className=" w-full h-full" key={index}>
-                                <div className=" w-full h-[256px] flex flex-row justify-between gap-x-8">
-                                    <div className=" w-[428px] h-full rounded-2xl">
+                                <div className=" w-full lg:h-[256px] flex flex-col md:flex-row justify-between gap-8">
+                                    <div className="w-full md:w-[428px] h-full rounded-2xl" style={{ aspectRatio: 2 }}>
                                         <NewsCardBento image_url={item.urlToImage}/>
                                     </div>
-                                        <div className=" h-full w-[65%] flex flex-col justify-start gap-y-4 ">
-                                            <h2 className=" font-bold text-2xl">{item.title}</h2>
-                                            <p className=" font-normal text-xl text-gray-500">
+                                        <div className=" h-full w-full md:w-[65%] flex flex-col justify-start gap-y-4 ">
+                                            <h2 className=" font-bold text-2xl line-clamp-2">{item.title}</h2>
+                                            <p className=" font-normal text-xl text-gray-500 line-clamp-3">
                                                 {item.description}
                                             </p>
                                         </div>
