@@ -21,20 +21,21 @@ export default function PaymentMethod() {
         <div
           key={method.name}
           className={`flex items-center p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg 
-            ${selectedMethod === method.name ? `bg-${method.color} text-white` : 'bg-gray-100 text-gray-700'}`}
+            ${selectedMethod === method.name ? `color-1 text-white` : 'bg-gray-100 text-gray-700'}`}
           onClick={() => handlePaymentMethodClick(method.name)}
         >
           <img src={method.icon} alt={method.name} className='w-8 h-8' />
           <p className='ml-2 text-sm font-medium'>{method.name}</p>
         </div>
       ))}
+
       {selectedMethod === 'Credit Card' && (
         <div className='payment-details flex flex-col gap-4 p-4 rounded-lg shadow-md'>
           <h2 className='text-lg font-semibold'>Payment</h2>
           <div className=' w-full grid grid-cols-2 gap-4'>
             <div className="col-span-2 sm:col-span-1">
                 <label for="full_name" className="mb-2 block text-sm font-medium text-gray-300"> Full name (as displayed on card)* </label>
-                <input type="text" id="full_name" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" placeholder="Bonnie Green" required />
+                <input type="text" id="full_name" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 " placeholder="Bonnie Green" required />
             </div>
             <div className="col-span-2 sm:col-span-1">
               <label for="card-number-input" className="mb-2 block text-sm font-medium text-gray-300"> Card number* </label>
@@ -76,7 +77,7 @@ export default function PaymentMethod() {
             </div>
 
           </div>
-          <button type="submit" className="flex w-full items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Pay now</button>
+          <button type="submit" className="flex w-full items-center justify-center rounded-lg color-1 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Pay now</button>
 
         </div>
       )}

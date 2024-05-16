@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Button } from "@/components/ui/button";
 
 
@@ -30,7 +31,7 @@ export default function PromotionsAndOffers() {
                                 <p className=" font-normal text-sm">Does not apply to holidays, Tet, or screenings with surcharges from the film distributor.</p>
                             </div>
                             <div className="w-full">
-                                <button className=" bg-gradient-to-b from-orange-300 to-pink-400 px-12 py-4 rounded-lg"> Book tickets now</button>
+                                <button className=" color-1 px-12 py-4 rounded-lg"> Book tickets now</button>
                             </div>
                         </div>
                         <div className="w-1/2 h-full">
@@ -62,7 +63,7 @@ export default function PromotionsAndOffers() {
                                 <p className=" font-normal text-sm">Does not apply to holidays, Tet, or screenings with surcharges from the film distributor.</p>
                             </div>
                             <div className="w-full">
-                                <button className=" bg-gradient-to-b from-orange-300 to-pink-400 px-12 py-4 rounded-lg"> Buy tickets now</button>
+                                <button className=" color-1 px-12 py-4 rounded-lg"> Buy tickets now</button>
                             </div>
                         </div>
                     </div>
@@ -89,7 +90,7 @@ export default function PromotionsAndOffers() {
                                 <p className=" font-normal text-sm">Does not apply to holidays, Tet, or screenings with surcharges from the film distributor.</p>
                             </div>
                             <div className="w-full">
-                                <button className=" bg-gradient-to-b from-orange-300 to-pink-400 px-12 py-4 rounded-lg"> Buy tickets now</button>
+                                <button className=" color-1 px-12 py-4 rounded-lg"> Buy tickets now</button>
                             </div>
                         </div>
                         <div className="w-1/2 h-full">

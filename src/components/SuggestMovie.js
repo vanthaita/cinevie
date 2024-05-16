@@ -22,7 +22,6 @@ export default function SuggestMovie() {
                 </div>
             </div>
         </div>
-        
     </div>
     )
 }

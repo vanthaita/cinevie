@@ -1,39 +1,40 @@
-import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious,
-  } from "@/components/ui/pagination"
-  
-  export default function PaginationNews() {
-    return (
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="" isActive className=" text-white">1</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#"  className="text-white">
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" className="text-white">3</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
-    )
-  }
-  
+import React from 'react';
+
+export default function PaginationNews({ start, setStart, totalPages }) {
+  const renderPreviousButton = () => {
+    if (start > 0) {
+      return (
+        <p
+          onClick={() => setStart(start - 10)}
+          className="cursor-pointer btn-pagination"
+        >
+          &lt; Previous
+        </p>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  const renderNextButton = () => {
+    if (start + 10 < totalPages * 10) {
+      return (
+        <p
+          onClick={() => setStart(start + 10)}
+          className="cursor-pointer btn-pagination"
+        >
+          Next &gt;
+        </p>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  return (
+    <div className="flex justify-between gap-4">
+      {renderPreviousButton()}
+      {renderNextButton()}
+    </div>
+  );
+}

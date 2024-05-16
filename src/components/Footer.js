@@ -4,34 +4,37 @@ import { Mail } from 'lucide-react';
 import { Instagram } from 'lucide-react';
 import { Youtube } from 'lucide-react';
 import { Facebook } from 'lucide-react';
+import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className=' bg-black px-20 flex flex-col justify-center h-full w-full py-10'>
       <div className='flex flex-row flex-wrap justify-center sm:justify-start items-center gap-x-36 gap-y-12 w-full'>
         <div className='flex flex-col justify-center items-center sm:items-start flex-grow w-full md:w-auto md:flex-initial md:mr-8 gap-y-1'>
-          <svg
-            width='50'
-            height='50'
-            viewBox='0 0 24 24'
-            xmlns='http://www.w3.org/2000/svg'
-            fillRule='evenodd'
-            clipRule='evenodd'
-            className='fill-current'
-          >
-            <path d='M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z'></path>
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" 
+              viewBox='0 0 24 24'
+              fillRule='evenodd'
+              clipRule='evenodd'
+              className='fill-current'
+              width='50'
+              height='50'
+          ><g data-name="36-Ticket"><path d="M27 29H5a5.006 5.006 0 0 1-5-5 1.006 1.006 0 0 1 .168-.555L2 20.7v-6.464L.105 10.447A1 1 0 0 1 0 10a5.006 5.006 0 0 1 5-5h22a5.006 5.006 0 0 1 5 5 1 1 0 0 1-.105.447L30 14.236V20.7l1.832 2.748A1.006 1.006 0 0 1 32 24a5.006 5.006 0 0 1-5 5zM2.014 24.283A3 3 0 0 0 5 27h22a3 3 0 0 0 2.986-2.717l-1.818-2.728A1.006 1.006 0 0 1 28 21v-7a1 1 0 0 1 .105-.447l1.887-3.773A3 3 0 0 0 27 7H5a3 3 0 0 0-2.992 2.78L3.9 13.553A1 1 0 0 1 4 14v7a1.006 1.006 0 0 1-.168.555z"/><circle cx="22" cy="11" r="1"/><circle cx="22" cy="15" r="1"/><circle cx="22" cy="19" r="1"/><circle cx="22" cy="23" r="1"/><path d="M10 21a1 1 0 0 1-1-1v-6a1 1 0 0 1 1.447-.895l6 3a1 1 0 0 1 0 1.79l-6 3A1 1 0 0 1 10 21zm1-5.382v2.764L13.764 17zM29 15h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2zM29 22h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2z"/></g></svg>
+
+
+
           <p className=' font-bold text-2xl text-white'>CineVie</p>
           <p className=' font-medium text-center sm:text-left text-xs text-white'>
             CineVie Ltd.
             <br />
-            Providing reliable tech since 2004
+            Providing reliable tech since 2024
           </p>
         </div>
         <div className=' flex flex-row flex-wrap gap-12 items-start justify-between sm:w-[70%]'>
           <div className='flex flex-col justify-center items-center sm:items-start flex-grow w-full gap-y-1 md:w-auto md:flex-initial md:mr-8 text-gray-500'>
             <p className='text-xl text-white font-semibold'>Meet at CineVie</p>
             <div className='flex flex-row items-center gap-2 mt-4'>
-              <a className='link link-hover'>About us</a>
+              <Link href='/about-us'>
+                <p className='link link-hover'>About us</p>
+              </Link>
             </div>
             <div className='flex flex-row items-center gap-2 mt-4'>
               <a className='link link-hover'>Career</a>

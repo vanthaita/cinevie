@@ -46,8 +46,8 @@ export default function Places({ selectedSeats }) {
     };
 
     const foodDrinkPrices = {
-        'Compo 1': 5,
-        'Compo 2': 2,
+        'Popcorn': 5,
+        'Coca': 2,
     };
 
     const seatPrice = seatPrices[ticketType];
@@ -67,7 +67,7 @@ export default function Places({ selectedSeats }) {
         localStorage.setItem('Total', CalculatorTotal);
     };
     return (
-        <div className="h-[400px] w-2/3 p-8 flex rounded-lg shadow-md mx-auto">
+        <div className="h-[400px] w-2/3 p-8 flex rounded-lg shadow-md mx-auto glass">
             <div className="w-1/2 h-full p-4 border-r-2 border-gray-300 flex flex-col gap-y-2">
                 <p className="font-bold text-2xl mb-4">Options</p>
                 <div className="flex flex-col space-y-2 h-2/3">
@@ -130,7 +130,7 @@ export default function Places({ selectedSeats }) {
                     <p className="text-xl">{CalculatorTotal}</p>
                 </div>
                 <button 
-                    className="bg-green-500 text-white p-3 rounded w-full hover:bg-green-600 transition duration-200"
+                    className="color-1 text-white p-3 rounded w-full transition duration-200"
                     onClick={handleApplyToCheckout}
                 >
                     Apply to Checkout

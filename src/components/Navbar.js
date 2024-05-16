@@ -14,14 +14,23 @@ export default function Navbar() {
 
   return (
     <nav className="h-20 w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">
-      <div className=' flex flex-row justify-start items-center gap-x-8  w-[60%] '>
-        <div className='flex flex-row justify-center items-center h-20 '>
-          <Link href="/" passHref>
-            <p className="font-extrabold text-3xl">CineVie</p>
+      <div className=' flex flex-row justify-start items-center gap-x-8  w-[65%] '>
+        <div className=' '>
+          <Link href="/" passHref className='flex flex-row gap-x-1'>
+            <svg xmlns="http://www.w3.org/2000/svg" 
+              viewBox='0 0 24 24'
+              fillRule='evenodd'
+              clipRule='evenodd'
+              className='fill-current'
+              width='30'
+              height='30'
+          ><g data-name="36-Ticket"><path d="M27 29H5a5.006 5.006 0 0 1-5-5 1.006 1.006 0 0 1 .168-.555L2 20.7v-6.464L.105 10.447A1 1 0 0 1 0 10a5.006 5.006 0 0 1 5-5h22a5.006 5.006 0 0 1 5 5 1 1 0 0 1-.105.447L30 14.236V20.7l1.832 2.748A1.006 1.006 0 0 1 32 24a5.006 5.006 0 0 1-5 5zM2.014 24.283A3 3 0 0 0 5 27h22a3 3 0 0 0 2.986-2.717l-1.818-2.728A1.006 1.006 0 0 1 28 21v-7a1 1 0 0 1 .105-.447l1.887-3.773A3 3 0 0 0 27 7H5a3 3 0 0 0-2.992 2.78L3.9 13.553A1 1 0 0 1 4 14v7a1.006 1.006 0 0 1-.168.555z"/><circle cx="22" cy="11" r="1"/><circle cx="22" cy="15" r="1"/><circle cx="22" cy="19" r="1"/><circle cx="22" cy="23" r="1"/><path d="M10 21a1 1 0 0 1-1-1v-6a1 1 0 0 1 1.447-.895l6 3a1 1 0 0 1 0 1.79l-6 3A1 1 0 0 1 10 21zm1-5.382v2.764L13.764 17zM29 15h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2zM29 22h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2z"/></g></svg>
+
+            <p className="font-bold text-3xl">Cine<span className=' font-extrabold text-color-1'>Vie</span></p>
           </Link>
         </div>
-          <div className='px-10 mt-2'>
-            <ul className="hidden md:flex gap-x-8 cursor-pointer font-medium">
+          <div className='px-10'>
+            <ul className="hidden md:flex gap-x-8 cursor-pointer font-medium text-[16.4px]">
               <Link href="/showtimes" passHref>
                 <p className="hover:text-gray-600 cursor-pointer">Showtimes</p>
               </Link>
@@ -79,7 +88,7 @@ export default function Navbar() {
             
           </div>
 
-          <ul className="flex w-auto flex-col gap-y-4 top-20  left-0 right-0 text-black text-lg">
+          <ul className="flex w-auto flex-col gap-y-4 top-20  left-0 right-0 text-black text-xl">
               <Link href="/showtimes" passHref>
                 <p className="hover:text-gray-600 cursor-pointer ">Showtimes</p>
               </Link>
@@ -114,7 +123,7 @@ export default function Navbar() {
               ) : (
                 <div className="flex gap-x-2">
                   <Link href="/login" passHref>
-                    <p className="text-black text-xl font-semibold rounded-xl hover:bg-gray-500">Log in</p>
+                    <p className="text-black text-xl font-semibold rounded-xl hover:bg-gray-500">Sign in</p>
                   </Link>
                 </div>
               )}
@@ -157,11 +166,8 @@ export default function Navbar() {
           </Link>
         ) : (
           <div className="md:flex gap-x-2">
-            <Link href="/login" passHref>
-              <button className="text-white border font-semibold px-6 py-2 rounded-full hover:bg-gray-500">Log in</button>
-            </Link>
-            <Link href='/signup' passHref>
-              <button className="text-white font-semibold px-6 py-2 rounded-full color-1">Sign Up</button>
+            <Link href='/login' passHref>
+              <button className="text-white font-semibold px-6 py-2 rounded-full color-1">Sign in</button>
             </Link>
           </div>
         )}

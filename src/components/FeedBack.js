@@ -30,10 +30,10 @@ export default function Feedbacks() {
                     </div>
 
                 </div>
-                <div className=" text-black flex flex-col gap-y-2 w-full  h-1/2 justify-end mb-2">
-                    <p className=" text-gray-700 font-normal text-[15.7px]">I love how easy Cinevie makes it to plan my movie nights. The interface is so intuitive, and I can quickly find the latest releases and book tickets for my favorite theaters. 
-                    It has become my go-to platform for a seamless movie-going experience!</p>
-                    <p className="text-[20px]"><span className=" font-bold">Sarah H</span> - Movie Enthusiast</p>
+                <div className=" text-black flex flex-col gap-y-2 w-full  h-2/3 justify-start mb-1">
+                    <p className=" text-gray-700 font-normal text-[15px] mb-2"> &quot;I love how easy Cinevie makes it to plan my movie nights. The interface is so intuitive, and I can quickly find the latest releases and book tickets for my favorite theaters. 
+                    It has become my go-to platform for a seamless movie-going experience!&quot;</p>
+                    <p className="text-[20px]"><span className=" font-bold">Ta Thai</span> - Movie Enthusiast</p>
                 </div>
             </div>
         </div>

@@ -1,9 +1,14 @@
+'use client'
 import Bento from "@/components/Bento";
 import NewsCard from "@/components/NewsCard";
 import NewsCardBento from "@/components/NewsCardBento";
 import PaginationNews from "@/components/Pagination";
 import news from "@/constant/News";
+import Link from "next/link";
+import { useState } from "react";
 export default function NewsPage() {    
+    const [start, setStart] = useState(0);
+
     return (
         <main>
             <section className=" bg-black">
@@ -27,10 +32,12 @@ export default function NewsPage() {
                             <div className=" w-full h-full" key={index}>
                                 <div className=" w-full lg:h-[256px] flex flex-col md:flex-row justify-between gap-8">
                                     <div className="w-full md:w-[428px] h-full rounded-2xl" style={{ aspectRatio: 2 }}>
-                                        <NewsCardBento image_url={item.urlToImage}/>
+                                        <NewsCardBento image_url={item.urlToImage} />
                                     </div>
                                         <div className=" h-full w-full md:w-[65%] flex flex-col justify-start gap-y-4 ">
-                                            <h2 className=" font-bold text-2xl line-clamp-2">{item.title}</h2>
+                                            <Link href={item.url}>
+                                                <h2 className=" font-bold text-2xl line-clamp-2 cursor-pointer hover:underline">{item.title}</h2>
+                                            </Link>
                                             <p className=" font-normal text-xl text-gray-500 line-clamp-3">
                                                 {item.description}
                                             </p>
@@ -38,8 +45,6 @@ export default function NewsPage() {
                                 </div>
                             </div>
                         ))}
-
-                                
                         </div>
                     </div>
                 </div>
@@ -51,20 +56,22 @@ export default function NewsPage() {
                         <div className=" flex flex-col justify-start gap-y-12 h-full w-full">
                             <div className=" flex flex-col gap-x-[24px] w-full gap-y-14">
                                 <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between gap-x-4 gap-y-16">
-                                    {news.slice(0,9).map((item, index) => (
+                                    {news.slice(start, start + 9).map((item, index) => (
                                         <div className=" flex flex-col justify-start gap-y-2" key={index}>
                                             <div className=" w-full rounded-2xl overflow-hidden" style={{ aspectRatio: 2/1 }}>
                                                 <NewsCardBento image_url={item.urlToImage}/>
                                             </div>
                                             <div className=" flex flex-col justify-start">
                                                 <p className=" text-sm text-gray-500">23hr ago</p>
-                                                <p className=" text-sm ">{item.title}</p>
+                                                <Link href={item.url}>
+                                                    <p className=" text-sm hover:underline cursor-pointer">{item.title}</p>
+                                                </Link>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
-                            <PaginationNews/>
+                            <PaginationNews start={start} setStart={setStart} totalPages={3}/>
                         </div>
                     </div>
                 </div>

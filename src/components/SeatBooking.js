@@ -38,8 +38,8 @@ const SeatBooking = ({ selectedSeats, setSelectedSeats }) => {
               key={`${row}-${col}`}
               className={`rounded cursor-pointer ${
                 isSeatSelected(row, col)
-                  ? 'bg-green-500'
-                  : 'hover:text-red-500'
+                  ? 'bg-[#8B5CF6]'
+                  : 'hover:text-[#8B5CF8]'
               }`}
               onClick={() => toggleSeat(row, col)}
             >
@@ -62,13 +62,13 @@ const SeatBooking = ({ selectedSeats, setSelectedSeats }) => {
   return (
     <div className=" flex flex-col items-start gap-y-4 ">
         <div className='rounded-lg w-[480px] px-6 '>
-            <div className='w-full justify-between gap-x-4 px-6 flex-row flex text-sm bg-gray-300 rounded-lg'>
+            <div className='w-full justify-between gap-x-4 px-6 flex-row flex text-sm glass rounded-lg'>
                 <div className=' flex flex-row justify-center items-center gap-x-2'>
-                    <Armchair className=' w-8 h-8 text-blue-400'/>
+                    <Armchair className=' w-8 h-8 text-[#8B5CF6]'/>
                     <p>Selected</p>
                 </div>
                 <div className=' flex flex-row justify-center items-center gap-x-2'>
-                    <Armchair className=' w-8 h-8 text-red-400'/>
+                    <Armchair className=' w-8 h-8 text-white'/>
                     <p>Availiable seats</p>
                 </div>
                 <div className=' flex flex-row justify-center items-center gap-x-2'>

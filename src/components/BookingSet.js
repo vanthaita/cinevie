@@ -21,7 +21,7 @@ export default function BookingSet() {
                     <div><BookingTimeCinemas /></div>
                 </div>
                 <div className=" w-full flex justify-center items-center flex-row">
-                    <button className="text-white flex flex-row justify-center items-center  gap-x-4 font-semibold py-3 rounded-full bg-gradient-to-b from-orange-300 to-pink-400 hover:to-pink-300 w-[240px]">
+                    <button className="text-white flex flex-row justify-center items-center  gap-x-4 font-semibold py-3 rounded-full color-1 w-[240px]">
                         <Armchair className=" w-6 h-6"/>
                         Select seat
                     </button>

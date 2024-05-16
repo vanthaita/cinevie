@@ -58,6 +58,7 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
+
 PaginationPrevious.displayName = "PaginationPrevious"
 
 const PaginationNext = ({

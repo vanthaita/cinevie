@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 'use client'
 import Link from "next/link";
 import { redirect, useRouter } from 'next/navigation';
@@ -90,7 +91,7 @@ export default function Login() {
                             </div>
 
                             <div className="w-full">
-                                    <button className="text-white font-semibold py-3 rounded-full color-1 w-full" onClick={handleLogin}>Log In</button>
+                                    <button className="text-white font-semibold py-3 rounded-full color-1 w-full" onClick={handleLogin}>Sign In</button>
                             </div>
                             <div className=" w-full justify-center items-center flex mt-2">
                                 <p className=" text-white text-sm font-normal">New to CineVie? <Link href="/signup"><span className=" cursor-pointer hover:underline text-color-1 font-bold">Join now</span></Link></p>
