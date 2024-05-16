@@ -7,8 +7,8 @@ export default function NewsPage() {
     return (
         <main>
             <section className=" bg-black">
-                <div className="relative flex justify-start items-start" style={{height: 'calc(100vh - 80px)'}}>
-                    <div className=" w-full h-full absolute px-20 mt-10 gap-y-8 flex flex-col rounded-xl" style={{height: 'calc(100vh - 80px)'}}>
+                <div className="relative flex justify-start items-start">
+                    <div className=" w-full h-full px-8 sm:px-20 pb-12 mt-10 gap-y-8 flex flex-col rounded-xl">
                         <h1 className=" font-bold text-3xl">Today news</h1>
                         <Bento />
                     </div>
