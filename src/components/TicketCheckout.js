@@ -56,7 +56,7 @@ export default function Checkout() {
                                 />
                             </div>
                             <button 
-                                className='p-4 bg-blue-300 w-full rounded-lg text-xl font-bold'
+                                className='p-4 color-1 w-full rounded-lg text-xl font-bold'
                                 onClick={handlePayButtonClick}
                             >
                                 Pay

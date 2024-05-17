@@ -19,13 +19,13 @@ export default function OrderDetail() {
   };
 
   return (
-    <div className="w-[45%] absolute flex flex-col justify-between glass right-0 p-8 gap-y-4  rounded-lg shadow-lg">
+    <div className="w-[45%] absolute flex flex-col justify-between glass right-0 p-6 gap-y-4  rounded-lg shadow-lg">
       <div className="flex flex-row justify-start items-start gap-x-4 ">
         {/* <div className="w-[180px] h-[220px] rounded-lg overflow-hidden">
           <img src="https://image.tmdb.org/t/p/original/uo9YugJrnsa1v2aH2Ye7LcmaTbZ.jpg" alt="Movie Poster" className="w-full h-full rounded-lg object-cover" />
         </div> */}
         <div>
-            <h1 className="font-bold text-xl mt-4">Chua te Gorila</h1>
+            <h1 className="font-bold text-xl mt-4">The Gorila</h1>
             <p className="text-lg text-gray-300">1h 44m</p>
         </div>
       </div>

@@ -29,8 +29,7 @@ export default function Login() {
             console.log(typeof userInfo); 
     
             if (userInfo.username === formData.username && userInfo.password === formData.password) {
-                redirect('/');
-                // router.push('/');
+                router.push('/');
             } else {
                 console.log("Login failed");
             }
@@ -49,7 +48,7 @@ export default function Login() {
                 <div className="absolute top-0 left-0 w-full h-full bg-black/[.6]"></div>
                 <div className=" h-[520px] w-[540px] rounded-[2rem] flex- flex-col justify-between items-center bg-glass p-10 z-30">
                     <div className="  h-[28%] rounded-t-[2rem] flex flex-col items-center justify-center">
-                        <h1 className=" font-semibold text-2xl mb-4">Log In to CineVie</h1>
+                        <h1 className=" font-semibold text-2xl mb-4">Sign In to CineVie</h1>
                         <div className="flex flex-row gap-x-8">
                             <div className=" w-14 h-14 rounded-full bg-white flex justify-center items-center cursor-pointer">
                                 <img src="https://www.svgrepo.com/show/353817/google-icon.svg" alt="Google" className="w-8 h-8"/>

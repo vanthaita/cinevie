@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { SearchIcon } from 'lucide-react';
+import { SendHorizontal } from 'lucide-react';
 export default function ComingSoon() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -49,7 +49,7 @@ export default function ComingSoon() {
                             required
                         />
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <SearchIcon className="w-[1.2rem] h-[1.2rem] mr-2 text-gray-300" />
+                            <SendHorizontal className="w-[1.2rem] h-[1.2rem] mr-2 text-gray-300" />
                         </div>
                     </div>
                 </div>

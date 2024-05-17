@@ -5,7 +5,9 @@ export default function NewsCardBento({title, image_url, url}) {
     return (
         <div className="relative w-full h-full rounded-xl overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-black/[.4]"></div>
-            <img src={image_url} alt="News image" className="w-full h-full object-cover rounded-xl" />
+            <Link href={url}>
+                <img src={image_url} alt="News image" className="w-full h-full object-cover rounded-xl cursor-pointer" />
+            </Link>
             <div className="absolute bottom-0 left-0 right-0 p-4 text-white flex justify-between z-50">
                 <div className=' w-[65%]'>
                     <Link href={url || ''}>

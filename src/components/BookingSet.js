@@ -4,6 +4,7 @@ import DatePicker from "./DatePicker"
 import ScheduleDrop from "./ScheduleDrop"
 import BookingTimeCinemas from "./BookingTimeCinemas"
 import { Armchair } from 'lucide-react';
+import Link from "next/link";
 export default function BookingSet() {
     return (
         <div className="relative px-20 mt-10" style={{ height: 'calc(100vh - 80px)' }}>
@@ -21,10 +22,12 @@ export default function BookingSet() {
                     <div><BookingTimeCinemas /></div>
                 </div>
                 <div className=" w-full flex justify-center items-center flex-row">
-                    <button className="text-white flex flex-row justify-center items-center  gap-x-4 font-semibold py-3 rounded-full color-1 w-[240px]">
-                        <Armchair className=" w-6 h-6"/>
-                        Select seat
-                    </button>
+                    <Link href="/booking/ticket">
+                        <button className="text-white flex flex-row justify-center items-center  gap-x-4 font-semibold py-3 rounded-full color-1 w-[240px]">
+                            <Armchair className=" w-6 h-6"/>
+                            Select seat
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

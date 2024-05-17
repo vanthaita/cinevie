@@ -5,13 +5,14 @@ import Link from "next/link";
 import { LogOutIcon, Search, SearchIcon } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import useUserInfo from "@/Hooks/useUserInfo";
+import MovieSearch from './MovieSearch';
 
 export default function Navbar() {
   const userInfo = useUserInfo();    
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
-
-
+  const [isOpenSearchBox, setIsOpenSearchBox] = useState(false);
+  const [search, setSearch] = useState('');
   return (
     <nav className="h-20 w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">
       <div className=' flex flex-row justify-start items-center gap-x-8  w-[65%] '>
@@ -136,24 +137,8 @@ export default function Navbar() {
       </div>
         
       )}
-
-      
-
       <div className="items-center gap-4 md:gap-x-8 md:flex hidden ">
-        <div className="relative">
-          <div className='flex items-center w-42'>
-            <input
-              type="text"
-              placeholder="Search..."
-              className="flex-1 p-2 pl-10 rounded-xl bg-gray-800 text-gray-300 focus:outline-none"
-            />
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <SearchIcon className="w-[1.2rem] h-[1.2rem] mr-2 text-gray-300" />
-            </div>
-          </div>
-        </div>
-
-        
+        <MovieSearch />
 
         {userInfo ? (
           <Link href="/settings" passHref>

@@ -21,7 +21,7 @@ export default function Footer() {
 
 
 
-          <p className=' font-bold text-2xl text-white'>CineVie</p>
+          <p className=' font-bold text-2xl text-white'>Cine<span className=' font-extrabold text-color-1'>Vie</span></p>
           <p className=' font-medium text-center sm:text-left text-xs text-white'>
             CineVie Ltd.
             <br />
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
         <div className=' flex flex-row flex-wrap gap-12 items-start justify-between sm:w-[70%]'>
           <div className='flex flex-col justify-center items-center sm:items-start flex-grow w-full gap-y-1 md:w-auto md:flex-initial md:mr-8 text-gray-500'>
-            <p className='text-xl text-white font-semibold'>Meet at CineVie</p>
+            <p className='text-xl text-white font-semibold'>Meet at Cine<span className=' font-extrabold text-color-1'>Vie</span></p>
             <div className='flex flex-row items-center gap-2 mt-4'>
               <Link href='/about-us'>
                 <p className='link link-hover'>About us</p>

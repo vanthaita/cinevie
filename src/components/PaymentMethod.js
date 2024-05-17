@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function PaymentMethod() {
@@ -18,7 +19,8 @@ export default function PaymentMethod() {
   return (
     <div className='grid grid-cols-1 gap-4 md:grid-rows-2 lg:grid-rows-4'>
       {paymentMethods.map((method) => (
-        <div
+        <Link href={`${method.name == 'Credit Card' ? '' : '/booking/ticket/order/confirmation'}`} key={method.name}>
+          <div
           key={method.name}
           className={`flex items-center p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg 
             ${selectedMethod === method.name ? `color-1 text-white` : 'bg-gray-100 text-gray-700'}`}
@@ -27,6 +29,7 @@ export default function PaymentMethod() {
           <img src={method.icon} alt={method.name} className='w-8 h-8' />
           <p className='ml-2 text-sm font-medium'>{method.name}</p>
         </div>
+        </Link>
       ))}
 
       {selectedMethod === 'Credit Card' && (
@@ -77,8 +80,9 @@ export default function PaymentMethod() {
             </div>
 
           </div>
-          <button type="submit" className="flex w-full items-center justify-center rounded-lg color-1 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Pay now</button>
-
+          <Link href="/booking/ticket/order/confirmation">
+            <button type="submit" className="flex w-full items-center justify-center rounded-lg color-1 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Pay now</button>
+          </Link>
         </div>
       )}
     </div>

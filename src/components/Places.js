@@ -1,5 +1,6 @@
 'use client';
 import { Armchair } from 'lucide-react';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function Places({ selectedSeats }) {
@@ -129,12 +130,14 @@ export default function Places({ selectedSeats }) {
                     <p className="font-bold text-xl">Total:</p>
                     <p className="text-xl">{CalculatorTotal}</p>
                 </div>
-                <button 
-                    className="color-1 text-white p-3 rounded w-full transition duration-200"
-                    onClick={handleApplyToCheckout}
-                >
-                    Apply to Checkout
-                </button>
+                <Link href="/booking/ticket/order">
+                    <button 
+                        className="color-1 text-white p-3 rounded w-full transition duration-200"
+                        onClick={handleApplyToCheckout}
+                    >
+                        Apply to Checkout
+                    </button>
+                </Link>
             </div>
         </div>
     );

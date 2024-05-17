@@ -99,8 +99,6 @@ export default function Home() {
           <News />
         </div>
       </section>
-
-
       <section>
       </section>
     </main>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <div className="relative" style={{height: 'calc(100vh - 80px)'}}>
@@ -21,7 +23,9 @@ export default function Hero() {
                  culpa autem voluptuas ullam?
             </p>
             <div className=" flex flex-row justify-center items-center gap-5">
-              <button className="rounded-xl text-white font-medium  px-8 py-4 color-1">Book a session</button>
+              <Link href="/booking">
+                <button className="rounded-xl text-white font-medium  px-8 py-4 color-1">Book a session</button>
+              </Link>
             </div>
             </div>
         </div>

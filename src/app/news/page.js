@@ -59,7 +59,7 @@ export default function NewsPage() {
                                     {news.slice(start, start + 9).map((item, index) => (
                                         <div className=" flex flex-col justify-start gap-y-2" key={index}>
                                             <div className=" w-full rounded-2xl overflow-hidden" style={{ aspectRatio: 2/1 }}>
-                                                <NewsCardBento image_url={item.urlToImage}/>
+                                                <NewsCardBento image_url={item.urlToImage} url={item.url}/>
                                             </div>
                                             <div className=" flex flex-col justify-start">
                                                 <p className=" text-sm text-gray-500">23hr ago</p>
