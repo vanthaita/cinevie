@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* For kids */}
-      <section className=" h-[100vh] relative z-[1] bg-[#B16CEA]">
+      <section className=" h-[100vh] relative z-[1] bg-[#8B5CF6]">
         {/* Background */}
         <div className=" w-full absolute h-full z-[-1]"> 
           <div className=" h-[130px] color-2 absolute w-full -skew-y-[10deg]" style={{top: 'calc(90vh -  50vh - 130px)'}}/>
