@@ -6,12 +6,12 @@ export default function NewsCardBento({title, image_url, url}) {
         <div className="relative w-full h-full rounded-xl overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-black/[.4]"></div>
             <Link href={url}>
-                <img src={image_url} alt="News image" className="w-full h-full object-cover rounded-xl cursor-pointer" />
+                <img src={image_url} alt="News image" className="w-full h-full object-fit rounded-xl cursor-pointer" />
             </Link>
             <div className="absolute bottom-0 left-0 right-0 p-4 text-white flex justify-between z-50">
                 <div className=' w-[65%]'>
                     <Link href={url || ''}>
-                        <h3 className="text-xl font-medium mb-2 cursor-pointer hover:underline">{title}</h3>
+                        <h3 className="md:text-xl text-lg font-medium mb-2 cursor-pointer hover:underline">{title}</h3>
                     </Link>
                 </div>
                 <button className="flex items-center text-sm text-white">

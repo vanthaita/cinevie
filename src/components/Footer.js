@@ -149,7 +149,7 @@ export default function Footer() {
             </button>
           </Link>
         </div>
-        <p className=' text-sm md:hidden'>@2024 CineVie. ALL rights reserved</p>
+        <p className=' text-sm md:hidden mb-10'>@2024 CineVie. ALL rights reserved</p>
       </div>
     </footer>
   );

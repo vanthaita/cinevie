@@ -6,7 +6,7 @@ import ShowTimeDropDown from "@/components/ShowtimeDropdown";
 export default function ShowTimes() {
     return (
         <section>
-            <div className=" md:px-20 px-10 mt-10 ">
+            <div className=" md:px-20 px-10 md:mt-10 mt-4">
                 <div className="md:flex flex-col md:flex-row gap-2 justify-center items-center w-full hidden">
                     {/* Drop down */}
                     <ShowTimeDropDown title={"Cinemas"} value={['Aeon Mail', 'Vincom']} />

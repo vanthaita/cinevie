@@ -8,12 +8,12 @@ import Link from "next/link";
 import { useState } from "react";
 export default function NewsPage() {    
     const [start, setStart] = useState(0);
-
+    const dynamicHeight = window.innerWidth < 768 ? 'calc(90vh - 80px)' : 'calc(100vh - 80px)';
     return (
         <main>
             <section className=" bg-black">
-                <div className="relative flex justify-start items-start" style={{height: 'calc(100vh - 80px)'}}>
-                    <div className=" w-full h-full absolute px-20 mt-10 gap-y-8 flex flex-col rounded-xl" style={{height: 'calc(100vh - 80px)'}}>
+                <div className="relative flex justify-start items-start" style={{height: dynamicHeight}}>
+                    <div className=" w-full h-full absolute px-8 md:px-20 md:mt-16 mt-10 gap-y-8 flex flex-col rounded-xl" style={{height: 'calc(100vh - 80px)'}}>
                         <h1 className=" font-bold text-3xl">Today news</h1>
                         <Bento />
                     </div>
