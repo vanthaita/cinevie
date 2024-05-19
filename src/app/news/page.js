@@ -8,7 +8,24 @@ import Link from "next/link";
 import { useState } from "react";
 export default function NewsPage() {    
     const [start, setStart] = useState(0);
-    const dynamicHeight = window.innerWidth < 768 ? 'calc(90vh - 80px)' : 'calc(100vh - 80px)';
+    const [dynamicHeight, setDynamicHeight] = useState('calc(100vh - 80px)');
+
+    useEffect(() => {
+        const handleResize = () => {
+            const height = window.innerWidth < 768 ? 'calc(90vh - 80px)' : 'calc(100vh - 80px)';
+            setDynamicHeight(height);
+        };
+
+        handleResize(); 
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    
     return (
         <main>
             <section className=" bg-black">
