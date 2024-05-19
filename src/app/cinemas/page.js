@@ -1,4 +1,7 @@
 'use client'
+
+
+import { ChevronRightIcon } from "lucide-react"
 export default function Cinemas() {
     
     return (
@@ -46,7 +49,7 @@ export default function Cinemas() {
                         </div>
                     </div>
 
-                    <div className="flex justify-start flex-col md:mt-6 w-full">
+                    <div className="flex justify-start flex-col md:mt-6 w-full relative">
                         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
                             <div className="flex md:space-x-12 gap-x-4">
                                 <div className="md:w-[380px] w-[360px] rounded-xl md:h-[290px] h-[270px]">
@@ -71,6 +74,9 @@ export default function Cinemas() {
                                     <figure className=" h-full"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4c/9a/6c/caption.jpg?w=1200&h=-1&s=1" alt="" className="rounded-2xl w-full h-full object-cover"/></figure>
                                 </div>
                             </div>
+                        </div>
+                        <div className="absolute flex flex-row z-[9999px] top-[40%] right-2 transform -translate-y-1/2 p-2 rounded-full md:hidden fa fa-arrow-right">
+                            <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
                         </div>
                     </div>
                 </div>
@@ -98,7 +104,7 @@ export default function Cinemas() {
                         </div>
                     </div>
 
-                    <div className="flex justify-start flex-col md:mt-6 w-full">
+                    <div className="flex justify-start flex-col md:mt-6 w-full relative">
                         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
                             <div className="flex md:space-x-12 gap-x-4">
                                 <div className="md:w-[380px] w-[360px] rounded-xl md:h-[290px] h-[270px]">
@@ -123,6 +129,9 @@ export default function Cinemas() {
                                     <figure className=" h-full"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4c/9a/6c/caption.jpg?w=1200&h=-1&s=1" alt="" className="rounded-2xl w-full h-full object-cover"/></figure>
                                 </div>
                             </div>
+                        </div>
+                        <div className="absolute flex flex-row z-[9999px] top-[40%] right-2 transform -translate-y-1/2 p-2 rounded-full md:hidden fa fa-arrow-right">
+                            <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
                         </div>
                     </div>
                 </div>
@@ -149,7 +158,7 @@ export default function Cinemas() {
                         </div>
                     </div>
 
-                    <div className="flex justify-start flex-col md:mt-6 w-full">
+                    <div className="flex justify-start flex-col md:mt-6 w-full relative">
                         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
                             <div className="flex md:space-x-12 gap-x-4">
                                 <div className="md:w-[380px] w-[360px] rounded-xl md:h-[290px] h-[270px]">
@@ -174,6 +183,9 @@ export default function Cinemas() {
                                     <figure className=" h-full"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4c/9a/6c/caption.jpg?w=1200&h=-1&s=1" alt="" className="rounded-2xl w-full h-full object-cover"/></figure>
                                 </div>
                             </div>
+                        </div>
+                        <div className="absolute flex flex-row z-[9999px] top-[40%] right-2 transform -translate-y-1/2 p-2 rounded-full md:hidden fa fa-arrow-right">
+                            <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
                         </div>
                     </div>
                 </div>

@@ -17,8 +17,8 @@ export default function ComingSoon() {
 
   return (
     <section style={{ height: 'calc(100vh - 80px)' }}>
-      <div className="py-2 px-4 mx-auto max-w-screen-xl lg:py-4 lg:px-6 h-full flex justify-center items-start">
-        <div className="w-2/3 text-center lg:px-12 mt-10">
+      <div className="py-2 px-4 md:mx-auto max-w-screen-xl lg:py-4 lg:px-6 h-full flex justify-center md:items-start items-center">
+        <div className="md:w-2/3 w-full text-center lg:px-12 md:mt-10 mb-10 md:mb-0">
             <div className='w-full h-2/3 justify-center items-center flex'>
                 <Image 
                     src="/mobile.svg" 
@@ -28,17 +28,17 @@ export default function ComingSoon() {
                     className="mx-auto mb-6"
                 />
             </div>
-          <p className="mb-4 text-2xl tracking-tight font-bold text-color-1 md:text-4xl">Our Mobile App is Coming Soon!</p>
-          <p className="mb-4 w-full font-bold text-white text-xl">Stay tuned for the launch on the App Store and Google Play. <br/> Enter your email to get notified:</p>
+          <p className="mb-4 tracking-tight font-bold text-color-1 text-4xl">Our Mobile App is Coming Soon!</p>
+          <p className="mb-4 w-full font-bold text-white md:text-xl text-2xl">Stay tuned for the launch on the App Store and Google Play. <br/> <span className=' md:text-xl text-base'>Enter your email to get notified:</span></p>
           <div className="mb-4">
             {submitted ? (
-                <div className='w-full h-2/3 justify-center items-center flex flex-row gap-x-8'>
+                <div className='w-full h-2/3 justify-center items-center flex md:flex-row flex-col gap-x-8'>
                     <p className="text-color-1 text-lg font-medium">Thank you! You will be notified.</p>
                     <Link href="/" className="inline-flex text-white color-1 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-12 py-4 text-center my-4">Done</Link>
                 </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-row  justify-center gap-x-4 items-center">
-                <div className="relative w-1/2">
+              <form onSubmit={handleSubmit} className="flex md:flex-row flex-col gap-y-6  justify-center gap-x-4 items-center">
+                <div className="relative md:w-1/2 w-[90%]">
                     <div className='flex items-center w-full'>
                         <input
                             type="email"
@@ -55,7 +55,7 @@ export default function ComingSoon() {
                 </div>
                     <button
                     type="submit"
-                    className="color-1 text-white font-medium rounded-lg text-sm p-[0.785rem]"
+                    className="color-1 text-white font-medium rounded-lg text-sm p-[0.785rem] md:w-[15%] w-1/2"
                     >
                         Notify Me
                     </button>

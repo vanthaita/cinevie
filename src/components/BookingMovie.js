@@ -3,12 +3,12 @@ export default function BookingMovie() {
         <div className="relative px-20" style={{ height: 'calc(100vh - 80px)' }}>
             <div className=" w-full h-full flex flex-row justify-between items-center gap-x-4">
                 <div className="h-[80%] w-[25%] rounded-xl">
-                    <img alt="" src="https://play-lh.googleusercontent.com/VdKhlve-p7WMDvUv0QyHUj7nz3Pby826zTKDKf-4_YEL4qK_Tqk2fE0An4TlkNr6zYAi=w240-h480-rw" className=" w-full h-full object-cover rounded-xl"/>
+                    <img alt="" src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/596878.jpg" className=" w-full h-full object-cover rounded-xl"/>
                 </div>
                 <div className="h-[80%] w-[75%] px-4 py-8 flex flex-col gap-y-4 justify-start items-start">
                     <div className=" flex flex-row justify-center items-end gap-4">
-                        <h1 className=" font-bold text-2xl">The Snowman</h1>
-                        <p className="font-medium text-lg"> | 18+ |</p>
+                        <h1 className=" font-bold text-2xl">Nobita and the Earth Symphony Orchestra</h1>
+                        <p className="font-medium text-lg"> | 16+ |</p>
                         <p className=" font-medium text-lg">2D</p>
                     </div>
                     <div className=" flex flex-col items-start gap-y-2">

@@ -19,10 +19,10 @@ export default function AboutUs() {
                                     <p className="text-lg">
                                         At <span className="font-extrabold">cineVie</span>, we are passionate about bringing the magic of
                                         cinema to your together. Our platform is designed to make your 
-                                        movie-going experience seamless, enjoyable, and hassle-free. Whether you're a film enthusiast,
+                                        movie-going experience seamless, enjoyable, and hassle-free. Whether you&aposre a film enthusiast,
                                         a casual moviegoer, or someone planning a night out with friends, 
                                     </p>
-                                    <p className="font-bold text-lg">We've got you covered</p>
+                                    <p className="font-bold text-lg">We&aposve got you covered</p>
                                 </div>
                             </div>
                         </div>
@@ -71,8 +71,8 @@ export default function AboutUs() {
                                         <h1 className="font-bold text-xl md:text-2xl">Extensive Movie Selection</h1>
                                         <p className="font-normal text-[16px] md:text-[19px] leading-[26px] mt-2 text-gray-300">
                                             Our platform boasts a comprehensive catalog of movies
-                                            from different genres. Whether you're a fan of action,
-                                            romance, comedy, or indie films, we've got something for you.
+                                            from different genres. Whether you&aposre a fan of action,
+                                            romance, comedy, or indie films, we&aposve got something for you.
                                         </p>
                                     </div>
                                 </div>
