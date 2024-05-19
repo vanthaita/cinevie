@@ -5,7 +5,7 @@ import NewsCardBento from "@/components/NewsCardBento";
 import PaginationNews from "@/components/Pagination";
 import news from "@/constant/News";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export default function NewsPage() {    
     const [start, setStart] = useState(0);
     const [dynamicHeight, setDynamicHeight] = useState('calc(100vh - 80px)');
@@ -25,7 +25,7 @@ export default function NewsPage() {
         };
     }, []);
 
-    
+
     return (
         <main>
             <section className=" bg-black">
