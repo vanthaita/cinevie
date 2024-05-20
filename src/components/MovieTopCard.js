@@ -22,7 +22,7 @@ function Card({title, image_url, genre, runtime, year}) {
 export default function MovieTopCard() {
     return (
         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
-            <div className="flex md:space-x-12 ">
+            <div className="flex md:space-x-4 ">
             {movie.slice(0, 5).map((movie, index) => (
                 <Card
                     key={index + 1}

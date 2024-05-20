@@ -2,16 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 export default function PurchaseConfirmation() {
   return (
-    <section className='mt-4' style={{height: 'calc(100vh -  80px'}}>
+    <section className='md:mt-4 mt-10 h-[calc(100vh-80px)] md:h-[calc(100vh-80px)]'>
     <div className="py-2 px-4 mx-auto max-w-screen-xl lg:py-4 lg:px-6 h-full flex justify-center items-start">
-        <div className="w-2/3 text-center lg:px-12 mt-10">
+        <div className="md:w-2/3 w-full text-center lg:px-12 mt-10">
         <div className="mb-10">
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 512 512"
-            className="mx-auto w-64 h-64"
+            className="mx-auto md:w-64 md:h-64 w-72 h-72"
             xmlSpace="preserve"
           >
               <defs>
@@ -76,9 +76,9 @@ export default function PurchaseConfirmation() {
 
           
         </div>
-        <p className="mb-4 text-2xl tracking-tight font-bold text-white md:text-4xl">Your purchase <br/> <span className=' text-color-1'>completed successfully!</span></p>
-        <p className=" mb-4 w-full font-bold text-gray-500 text-sm ">Tickets have been sent to your email address</p>
-          <Link href="/" className="inline-flex text-white color-1 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-12 py-4 text-center my-4">Done</Link>
+        <p className="mb-4 text-3xl tracking-tight font-bold text-white md:text-4xl">Your purchase <br/> <span className=' text-color-1'>completed successfully!</span></p>
+        <p className=" mb-4 w-full font-bold text-gray-500 md:text-sm text-base ">Tickets have been sent to your email address</p>
+          <Link href="/" className="inline-flex text-white color-1 focus:ring-4 focus:outline-none font-medium rounded-lg md:text-sm text-xl px-12 py-4 text-center my-4">Done</Link>
         </div>   
     </div>
     </section>

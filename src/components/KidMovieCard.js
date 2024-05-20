@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function KidMovieCard({title, image_url, genre, runtime, year}) {
     if(image_url === undefined) image_url = ''
     return (
-        <div className="md:w-[290px] w-[200px] rounded-xl bg-glass-card p-4 bg-white">
+        <div className="md:w-[290px] w-[220px] rounded-xl bg-glass-card p-4 bg-white">
         <Link href="/booking">
             <figure><img src={image_url} alt="" className=" rounded-2xl w-full h-full cursor-pointer"/></figure>
         </Link>

@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* For kids */}
-      <section className=" md:h-[100vh] h-[60vh] relative z-[1] bg-[#8B5CF6]">
+      <section className=" md:h-[100vh] h-[65vh] relative z-[1] bg-[#8B5CF6]">
         {/* Background */}
         <div className=" w-full absolute h-full z-[-1]"> 
           <div className=" h-[130px] color-2 absolute w-full -skew-y-[10deg] md:top-[calc(90vh-50vh-130px)] top-[calc(75vh-50vh-130px)]"/>
@@ -92,7 +92,6 @@ export default function Home() {
           <h1 className=" font-extrabold text-white text-2xl mt-8 mb-8">Top 5 to this week</h1>
               <MovieTopCard />
           </div>
-         
           <div className="absolute flex flex-row z-[9999px] md:top-[37%] top-[45%] right-2 transform -translate-y-1/2 p-2 rounded-full fa fa-arrow-right">
             <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
           </div>
