@@ -28,7 +28,7 @@ export default function Cinemas() {
 
             
             {/* 0 */}
-            <section className="w-full  md:px-20 px-8 flex flex-col justify-center items-center mt:mb-36 h-[calc(90vh-80px)] md:h-[calc(100vh-80px)]" >
+            <section className="w-full md:px-20 px-8 flex flex-col justify-center items-center md:mb-36 h-[calc(90vh-80px)] md:h-[calc(100vh-80px)]" >
                 <div className="h-full z-30 w-full flex flex-col justify-start items-start gap-y-4 mt-20">
                     <h1 className="font-bold md:text-2xl text-xl mb-4">Aeon Mall Cinema</h1>
                     <p className="font-normal md:text-xl text-sm text-gray-400">
@@ -83,7 +83,7 @@ export default function Cinemas() {
             </section>
 
             {/* 1 */}
-            <section className="w-full  md:px-20 px-8 flex flex-col justify-center items-center mt:mb-36 h-[calc(90vh-80px)] md:h-[calc(100vh-80px)]" >
+            <section className="w-full  md:px-20 px-8 flex flex-col justify-center items-center md:mb-36 h-[calc(90vh-80px)] md:h-[calc(100vh-80px)]" >
                 <div className="h-full z-30 w-full flex flex-col justify-start items-start gap-y-4 mt-20">
                     <h1 className="font-bold md:text-2xl text-xl mb-4">Aeon Mall Cinema</h1>
                     <p className="font-normal md:text-xl text-sm text-gray-400">
@@ -137,7 +137,7 @@ export default function Cinemas() {
                 </div>
             </section>
             {/* 2 */}
-            <section className="w-full  md:px-20 px-8 flex flex-col justify-center items-center mt:mb-36  h-[calc(90vh-80px)] md:h-[calc(100vh-80px)]" >
+            <section className="w-full  md:px-20 px-8 flex flex-col justify-center items-center md:mb-36  h-[calc(90vh-80px)] md:h-[calc(100vh-80px)]" >
                 <div className="h-full z-30 w-full flex flex-col justify-start items-start gap-y-4 mt-20">
                     <h1 className="font-bold md:text-2xl text-xl mb-4">Aeon Mall Cinema</h1>
                     <p className="font-normal md:text-xl text-sm text-gray-400">

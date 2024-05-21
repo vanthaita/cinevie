@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export default function PromotionsAndOffers() {
     return (
-        <main className=" relative h-[270vh] md:h-[300vh]">
+        <main className=" relative h-[270vh] md:h-[285vh]">
             <section className="relative">
-                <div className="relative flex justify-start items-start h-[calc(70vh-80px)] md:h-[calc(100vh-80px)] md:mt-10" >
+                <div className="relative flex justify-start items-start h-[calc(70vh-80px)] md:h-[calc(100vh-80px)]" >
                     <div className=" w-full absolute md:px-20 mt-10 md:rounded-xl h-[calc(80vh-80px)]" >
                         <img src="/8185679.jpg" className=" w-full md:h-full h-2/3 md:rounded-xl"/>
                     </div>
@@ -14,7 +14,7 @@ export default function PromotionsAndOffers() {
             </section>
 
             <section className="relative">
-                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(100vh-80px)]">
+                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
                     <div className="w-full h-full absolute md:px-20 px-8 md:mt-10  mt-6 rounded-xl flex md:flex-row flex-col-reverse md:justify-between justify-center items-center" style={{height: 'calc(65vh - 80px)'}}>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 md:block hidden">
                             <img src="/8185679.jpg" className="w-full h-full rounded-xl object-cover"/>
@@ -51,7 +51,7 @@ export default function PromotionsAndOffers() {
 
             {/* 2 */}
             <section className="relative">
-                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(100vh-80px)]">
+                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
                     <div className="w-full h-full absolute md:px-20 px-8 md:mt-10  mt-6 rounded-xl flex md:flex-row flex-col-reverse md:justify-between justify-center items-center" style={{height: 'calc(65vh - 80px)'}}>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 md:block hidden">
                             <img src="/8185679.jpg" className="w-full h-full rounded-xl object-cover"/>
@@ -85,7 +85,7 @@ export default function PromotionsAndOffers() {
             </section>
 
             <section className="relative">
-                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(100vh-80px)]">
+                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
                     <div className="w-full h-full absolute md:px-20 px-8 md:mt-10  mt-6 rounded-xl flex md:flex-row flex-col-reverse md:justify-between justify-center items-center" style={{height: 'calc(65vh - 80px)'}}>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 md:block hidden">
                             <img src="/8185679.jpg" className="w-full h-full rounded-xl object-cover"/>

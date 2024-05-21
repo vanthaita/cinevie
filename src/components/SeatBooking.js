@@ -61,7 +61,7 @@ const SeatBooking = ({ selectedSeats, setSelectedSeats }) => {
 
   return (
     <div className=" flex flex-col items-start gap-y-4 ">
-        <div className='rounded-lg w-[480px] px-6 '>
+        <div className='rounded-lg md:w-[480px] px-6 '>
             <div className='w-full justify-between gap-x-4 px-6 flex-row flex text-sm glass rounded-lg'>
                 <div className=' flex flex-row justify-center items-center gap-x-2'>
                     <Armchair className=' w-8 h-8 text-[#8B5CF6]'/>

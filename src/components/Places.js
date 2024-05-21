@@ -68,8 +68,8 @@ export default function Places({ selectedSeats }) {
         localStorage.setItem('Total', CalculatorTotal);
     };
     return (
-        <div className="h-[400px] w-2/3 p-8 flex rounded-lg shadow-md mx-auto glass">
-            <div className="w-1/2 h-full p-4 border-r-2 border-gray-300 flex flex-col gap-y-2">
+        <div className="md:h-[400px] h-[800px] md:w-2/3 w-full md:p-8 flex rounded-lg shadow-md mx-auto glass flex-col md:flex-row">
+            <div className="md:w-1/2 w-full h-2/3 p-4 md:border-r-2 border-gray-300 flex flex-col md:gap-y-2 ">
                 <p className="font-bold text-2xl mb-4">Options</p>
                 <div className="flex flex-col space-y-2 h-2/3">
                     <div className='flex flex-col'>
@@ -114,7 +114,7 @@ export default function Places({ selectedSeats }) {
                     
                 </div>
             </div>
-            <div className="w-1/2 h-full p-4 flex flex-col gap-y-2">
+            <div className="md:w-1/2 w-full h-full p-4 flex flex-col gap-y-2">
                 <h2 className="font-bold text-2xl mb-4">Selected Seats</h2>
                 <div className="space-y-4 overflow-y-auto max-h-60 h-[80%] ">
                     <div className="grid grid-cols-4 gap-y-2">

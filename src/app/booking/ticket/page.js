@@ -8,10 +8,10 @@ export default function Home() {
   
   return (
     <>
-      <section className="mt-10">
+      <section className="md:mt-10 mt-4">
         <TicketMovie />
       </section>
-      <section className="mt-10 flex flex-row justify-between items-center px-16 mb-20 gap-x-8">
+      <section className=" px-8 mt-10 flex md:flex-row flex-col justify-between items-center md:px-16 mb-20 md:gap-x-8 gap-y-8">
         <SeatBooking selectedSeats={selectedSeats} setSelectedSeats={setSelectedSeats} />
         <Places selectedSeats={selectedSeats} />
       </section>

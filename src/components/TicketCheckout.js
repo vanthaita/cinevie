@@ -18,8 +18,12 @@ export default function Checkout() {
     };
 
     return (
-        <div className=' flex flex-row gap-x-12 relative'>
-        <div className=" absolute left-0 glass p-8 w-1/2 rounded-xl">
+        <div className=' flex md:flex-row flex-col md:gap-x-12 gap-y-8 relative md:mt-0 mt-4'>
+            <div className=' md:hidden block'>
+                <OrderDetail />
+            </div>
+        <div className=" md:absolute left-0 glass p-8 md:w-1/2 w-full rounded-xl md:mb-0 mb-10">
+            
             <h2 className="text-2xl font-bold mb-4 w-[60%]">Order</h2>
             <div className="flex space-x-10">
                 <div className="flex-1">
@@ -70,7 +74,10 @@ export default function Checkout() {
                 </div>
             </div>
         </div>
-            <OrderDetail />
+            <div className=' hidden md:block'>
+                <OrderDetail />
+            </div>
       </div>
     );
 }
+
