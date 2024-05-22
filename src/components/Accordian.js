@@ -8,7 +8,7 @@ import {
 export default function AccordionComponent() {
     return (
         <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
+            <AccordionItem value="item-1" >
                 <AccordionTrigger>How do I book tickets on your website?</AccordionTrigger>
                 <AccordionContent>
                     Yes. It adheres to the WAI-ARIA design pattern.

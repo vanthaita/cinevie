@@ -3,12 +3,13 @@ import Feedbacks from "@/components/FeedBack";
 
 export default function AboutUs() {
     return (
+        <>
         <main>
-            <section>
-                <div className="relative flex justify-start items-start px-4 md:px-20" style={{height: 'calc(110vh - 80px)'}}>
-                    <h1 className="z-[30] text-white absolute mt-[65px] ml-4 md:ml-12 font-extrabold text-4xl md:text-6xl">For the love of cinema</h1>
-                    <div className="w-full h-full z-[2] gap-y-8 px-4 md:px-20 flex mt-[100px] flex-col color-1 rounded-tr-[3rem] md:rounded-tr-[17rem] rounded-tl-[2rem] md:rounded-tl-[5rem] rounded-bl-[3rem] md:rounded-bl-[10rem] justify-center items-center" style={{height: 'calc(90vh - 80px)'}}>
-                        <div className="w-full h-[70%] flex flex-col md:flex-row justify-between items-center gap-x-8">
+            <section className=" md:mt-0 mt-10">
+                <div className="relative flex justify-start items-start px-8 md:px-20 h-[calc(70vh-80px)] md:h-[calc(110vh-80px)]">
+                    <h1 className="z-[30] text-white absolute mt-[65px] ml-4 md:ml-12 font-extrabold text-4xl md:text-6xl md:block hidden">For the love of cinema</h1>
+                    <div className="w-full h-full z-[2] gap-y-8 px-4 md:px-20 md:flex hidden mt-[100px] flex-col color-1 rounded-tr-[3rem] md:rounded-tr-[17rem] rounded-tl-[2rem] md:rounded-tl-[5rem] rounded-bl-[3rem] md:rounded-bl-[10rem] justify-center items-center" style={{height: 'calc(90vh - 80px)'}}>
+                        <div className="w-full h-[70%] flex flex-col md:flex-row justify-between items-center gap-x-8 ">
                             <div className="w-full md:w-[45%] h-full rounded-tr-[3rem] md:rounded-tr-[18rem] rounded-tl-[2rem] md:rounded-tl-[3rem] rounded-bl-[3rem] md:rounded-bl-[12rem] rounded-br-[3rem] md:rounded-br-[4rem]">
                                 <img alt="" src="https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="w-full h-full rounded-tr-[3rem] md:rounded-tr-[18rem] rounded-tl-[2rem] md:rounded-tl-[3rem] rounded-bl-[3rem] md:rounded-bl-[12rem] rounded-br-[3rem] md:rounded-br-[4rem]" />
                             </div>
@@ -22,16 +23,33 @@ export default function AboutUs() {
                                         movie-going experience seamless, enjoyable, and hassle-free. Whether you&aposre a film enthusiast,
                                         a casual moviegoer, or someone planning a night out with friends, 
                                     </p>
-                                    <p className="font-bold text-lg">We&aposve got you covered</p>
+                                    <p className="font-bold text-lg">We&apos;ve got you covered</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className=" flex flex-col md:hidden gap-y-4">
+                        <div className="w-full h-full rounded-xl">
+                            <img alt="" src="https://images.unsplash.com/photo-1612544409025-e1f6a56c1152?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="w-full h-full rounded-xl" />
+                        </div>
+                        <div className="flex h-full w-full md:w-[50%] justify-center items-start flex-col gap-y-4 md:hidden">
+                            <h1 className="text-4xl md:text-2xl font-bold">Welcome to <span className=" text-color-1">cineVie</span></h1>
+                            <div className="flex flex-col">
+                                <p className="text-lg">
+                                    At <span className="font-extrabold">cineVie</span>, we are passionate about bringing the magic of
+                                    cinema to your together. Our platform is designed to make your 
+                                    movie-going experience seamless, enjoyable, and hassle-free. Whether you&aposre a film enthusiast,
+                                    a casual moviegoer, or someone planning a night out with friends, 
+                                </p>
+                                <p className="font-bold text-lg">We&apos;ve got you covered</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section className="mt-10">
-                <div className="relative flex justify-start items-start px-4 md:px-20" style={{height: 'calc(50vh - 80px)'}}>
+            <section className="md:mt-10">
+                <div className="relative flex justify-start items-start px-8 md:px-20 h-[calc(45vh-80px)] md:h-[calc(50vh-80px)]">
                     <div className="flex flex-col gap-y-4 justify-start items-start">
                         <h1 className="z-[30] text-white mt-[65px] font-bold text-2xl md:text-3xl">Who we are?</h1>
                         <p className="font-normal text-lg text-gray-300">
@@ -45,16 +63,18 @@ export default function AboutUs() {
             </section>
 
             <section>
-                <div className="relative flex justify-start items-start px-4 md:px-20" style={{height: 'calc(200vh - 80px)'}}>
+                <div className="relative flex justify-start items-start px-8 md:px-20 h-[calc(165vh-80px)] md:h-[calc(200vh-80px)]">
                     <div className="flex flex-col gap-y-4 justify-start items-start w-full">
                         <h1 className="z-[30] mt-[65px] font-bold text-2xl md:text-3xl w-full h-full mb-10">Why choose us?</h1>
+                        
                         <div className="flex flex-col justify-between w-full h-full px-4 md:px-20">
-                            <div className="flex flex-row justify-start items-start w-full mb-8">
+                            
+                            <div className="flex flex-row justify-start items-start w-full mb-8 md:mb-0">
                                 <div className="h-[18rem] flex flex-row justify-between w-full md:w-[50%] ml-0 md:ml-20">
-                                    <h1 className="inset-0 text-gradient font-serif flex justify-start items-end text-color-1">1</h1>
-                                    <div className="flex-col flex justify-start mt-6 items-start gap-y-4">
+                                    <h1 className="inset-0 text-gradient font-serif flex justify-start items-end text-color-1 md:mr-0 mr-8">1</h1>
+                                    <div className="flex-col flex justify-start mt-6 items-start md:gap-y-4">
                                         <h1 className="font-bold text-xl md:text-2xl">User-Friendly Interface</h1>
-                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] mt-2 text-gray-300">
+                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] md:mt-2 text-gray-300">
                                             Our website is designed with you in mind.
                                             Navigate effortlessly, discover new movies,
                                             and book tickets with just a few clicks. Enjoy
@@ -64,12 +84,12 @@ export default function AboutUs() {
                                 </div>
                             </div>
                             
-                            <div className="flex flex-row justify-end items-start w-full mb-8">
+                            <div className="flex flex-row justify-end items-start w-full mb-8 md:mb-0">
                                 <div className="h-[18rem] flex flex-row justify-between w-full md:w-[50%] mr-0 md:mr-20">
                                     <h1 className="inset-0 text-gradient font-serif flex justify-start items-end text-color-1">2</h1>
-                                    <div className="flex-col flex justify-start mt-6 items-start gap-y-4">
+                                    <div className="flex-col flex justify-start mt-6 items-start md:gap-y-4">
                                         <h1 className="font-bold text-xl md:text-2xl">Extensive Movie Selection</h1>
-                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] mt-2 text-gray-300">
+                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] md:mt-2 text-gray-300">
                                             Our platform boasts a comprehensive catalog of movies
                                             from different genres. Whether you&aposre a fan of action,
                                             romance, comedy, or indie films, we&aposve got something for you.
@@ -78,12 +98,12 @@ export default function AboutUs() {
                                 </div>
                             </div>
 
-                            <div className="flex flex-row justify-start items-start w-full mb-8 ml-0 md:ml-20">
+                            <div className="flex flex-row justify-start items-start w-full mb-8 md:mb-0 ml-0 md:ml-20">
                                 <div className="h-[18rem] flex flex-row justify-between w-full md:w-[50%]">
                                     <h1 className="inset-0 text-gradient font-serif flex justify-start items-end text-color-1">3</h1>
-                                    <div className="flex-col flex justify-start mt-10 items-start gap-y-4">
+                                    <div className="flex-col flex justify-start mt-10 items-start md:gap-y-4">
                                         <h1 className="font-bold text-xl md:text-2xl">Advanced Search Filters</h1>
-                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] mt-2 text-gray-300">
+                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] md:mt-2 text-gray-300">
                                             Easily find your favorite movies with our advanced search
                                             filters. Sort by genre, release date, ratings, and more to
                                             quickly discover the perfect film for your next movie night.
@@ -92,12 +112,12 @@ export default function AboutUs() {
                                 </div>
                             </div>
                         
-                            <div className="flex flex-row justify-end items-start w-full mb-8">
+                            <div className="flex flex-row justify-end items-start w-full mb-8 md:mb-0">
                                 <div className="h-[18rem] flex flex-row justify-between w-full md:w-[50%] mr-0 md:mr-20">
                                     <h1 className="inset-0 text-gradient font-serif flex justify-start items-end text-color-1">4</h1>
-                                    <div className="flex-col flex justify-start mt-6 items-start gap-y-4">
+                                    <div className="flex-col flex justify-start mt-6 items-start md:gap-y-4">
                                         <h1 className="font-bold text-xl md:text-2xl">Secure and Trusted</h1>
-                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] mt-2 text-gray-300">
+                                        <p className="font-normal text-[16px] md:text-[19px] leading-[26px] md:mt-2 text-gray-300">
                                             Your security is our priority. We use trusted payment gateways
                                             and data encryption to ensure your personal information and
                                             payment details are safe and secure.
@@ -112,7 +132,7 @@ export default function AboutUs() {
             </section>
 
             <section>
-                <div className="relative flex justify-start items-start px-4 md:px-20 w-full" style={{height: 'calc(80vh - 80px)'}}>
+                <div className="relative flex justify-start items-start px-8 md:px-20 w-full" style={{height: 'calc(80vh - 80px)'}}>
                     <div className="flex flex-col md:flex-row gap-x-4 justify-between items-center w-full h-full">
                         <div className="flex flex-col justify-center items-start gap-y-4 w-full md:w-[80%]">
                             <h1 className="font-bold text-2xl md:text-3xl">Technology and Security</h1>
@@ -126,7 +146,7 @@ export default function AboutUs() {
                                 <p>3. User Account Security Features</p>
                            </div>
                         </div>
-                        <div className="w-full md:w-1/2 h-[50%] md:h-[80%] rotate-[18deg]">
+                        <div className="w-[80%] md:w-1/2 h-[50%] md:h-[80%] rotate-[18deg] md:mt-0 mt-8">
                             <svg className="w-full h-full" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -147,7 +167,7 @@ export default function AboutUs() {
             </section>
 
             <section className="relative mt-10">
-                <div className="flex justify-start items-start px-4 md:px-20 w-full" style={{height: 'calc(90vh - 80px)'}}>
+                <div className="flex justify-start items-start px-4 md:px-20 w-full h-[calc(75vh-80px)] md:h-[calc(90vh-80px)]">
                     <div className="flex flex-col gap-x-4 justify-between items-start w-full h-full">
                         <div className="flex flex-col justify-center items-start gap-y-8 w-full h-full">
                             <h1 className="font-bold text-2xl md:text-3xl">User Feedbacks</h1>
@@ -168,19 +188,22 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className="relative">
-                <div className="flex justify-start items-start px-4 md:px-20 w-full" style={{height: 'calc(110vh - 80px)'}}>
+            <section className="relative md:mb-0 mb-10">
+                <div className="flex justify-start items-start px-8 md:px-20 w-full h-[calc(80vh-80px)] md:h-[calc(110vh-80px)]">
                     <div className="flex flex-col gap-x-4 justify-between items-start w-full h-full">
                         <div className="flex flex-col justify-start items-start gap-y-8 w-full h-full">
                             <h1 className="font-bold text-2xl md:text-3xl">FAQ</h1>
-                            <div className="w-full px-4 md:px-20">
+                            <div className="w-full md:px-20">
                                 <AccordionComponent />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
         </main>
+        
+        
+        
+        </>
     )
 }

@@ -67,6 +67,7 @@ export default function Places({ selectedSeats }) {
         localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
         localStorage.setItem('Total', CalculatorTotal);
     };
+    
     return (
         <div className="md:h-[400px] h-[800px] md:w-2/3 w-full md:p-8 flex rounded-lg shadow-md mx-auto glass flex-col md:flex-row">
             <div className="md:w-1/2 w-full h-2/3 p-4 md:border-r-2 border-gray-300 flex flex-col md:gap-y-2 ">

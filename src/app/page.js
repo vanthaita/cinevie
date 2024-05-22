@@ -73,7 +73,7 @@ export default function Home() {
         {/* Background */}
         <div className=" w-full absolute h-full z-[-1]"> 
           <div className=" h-[130px] color-2 absolute w-full -skew-y-[10deg] md:top-[calc(90vh-50vh-130px)] top-[calc(75vh-50vh-130px)]"/>
-          <div className=" h-[130px] color-2 absolute w-full skew-y-[10deg] md:top-[calc(90vh-50vh-130px)] top-[calc(100vh-50vh-130px)]" />
+          <div className=" h-[130px] color-2 absolute w-full skew-y-[10deg] md:top-[calc(130vh-50vh-130px)] top-[calc(100vh-50vh-130px)]" />
         </div>
         {/* ----- */}
         <div className=" flex justify-start md:px-20 flex-col z-[4] px-8 ">

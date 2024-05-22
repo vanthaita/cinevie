@@ -1,6 +1,5 @@
 'use client'
 
-
 import { ChevronRightIcon } from "lucide-react"
 export default function Cinemas() {
     
@@ -51,7 +50,7 @@ export default function Cinemas() {
 
                     <div className="flex justify-start flex-col md:mt-6 w-full relative">
                         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
-                            <div className="flex md:space-x-12 gap-x-4">
+                            <div className="flex space-x-4">
                                 <div className="md:w-[380px] w-[360px] rounded-xl md:h-[290px] h-[270px]">
                                     <figure className=" h-full"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4c/9a/6c/caption.jpg?w=1200&h=-1&s=1" alt="" className="rounded-2xl w-full h-full object-cover"/></figure>
                                 </div>
@@ -106,7 +105,7 @@ export default function Cinemas() {
 
                     <div className="flex justify-start flex-col md:mt-6 w-full relative">
                         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
-                            <div className="flex md:space-x-12 gap-x-4">
+                            <div className="flex space-x-4">
                                 <div className="md:w-[380px] w-[360px] rounded-xl md:h-[290px] h-[270px]">
                                     <figure className=" h-full"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4c/9a/6c/caption.jpg?w=1200&h=-1&s=1" alt="" className="rounded-2xl w-full h-full object-cover"/></figure>
                                 </div>
@@ -160,7 +159,7 @@ export default function Cinemas() {
 
                     <div className="flex justify-start flex-col md:mt-6 w-full relative">
                         <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
-                            <div className="flex md:space-x-12 gap-x-4">
+                            <div className="flex space-x-4 ">
                                 <div className="md:w-[380px] w-[360px] rounded-xl md:h-[290px] h-[270px]">
                                     <figure className=" h-full"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/4c/9a/6c/caption.jpg?w=1200&h=-1&s=1" alt="" className="rounded-2xl w-full h-full object-cover"/></figure>
                                 </div>

@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Feedbacks() {
     return (
-        <div className=" w-[420px] h-[250px] bg-white rounded-xl">
+        <div className="md:w-[420px] w-[340px] h-[250px] bg-white rounded-xl">
             <div className="flex flex-col justify-between px-6 py-2 w-full h-full">
                 <div className=" w-full flex flex-row justify-between items-start h-[25%]">
                     <div className=" w-14 h-14 mb-8">
@@ -31,9 +31,9 @@ export default function Feedbacks() {
 
                 </div>
                 <div className=" text-black flex flex-col gap-y-2 w-full  h-2/3 justify-start mb-1">
-                    <p className=" text-gray-700 font-normal text-[15px] mb-2"> &quot;I love how easy Cinevie makes it to plan my movie nights. The interface is so intuitive, and I can quickly find the latest releases and book tickets for my favorite theaters. 
+                    <p className=" text-gray-700 font-normal md:text-[15px] mb-2 text-[13.5px]"> &quot;I love how easy Cinevie makes it to plan my movie nights. The interface is so intuitive, and I can quickly find the latest releases and book tickets for my favorite theaters. 
                     It has become my go-to platform for a seamless movie-going experience!&quot;</p>
-                    <p className="text-[20px]"><span className=" font-bold">Ta Thai</span> - Movie Enthusiast</p>
+                    <p className="md:text-[20px] text-[15px]"><span className=" font-bold">Ta Thai</span> - Movie Enthusiast</p>
                 </div>
             </div>
         </div>
