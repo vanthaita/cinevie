@@ -36,7 +36,7 @@ export default function NavbarSetting() {
         return null; // or handle empty case gracefully
     }
     return (
-        <div className=" h-[85%] w-[20%] bg-[#111111] mt-8 rounded-xl justify-between flex flex-col items-start px-6 py-8">
+        <div className=" md:h-[85%] md:w-[20%] w-full bg-[#111111] mt-8 rounded-xl md:justify-between md:gap-y-0 gap-y-10 flex flex-col items-start md:px-6 px-4 py-8">
             {navItems.map((item, index) => (
                 <Link key={index} href={item.href}>
                     <h2 className={cn(" font-bold text-xl", 
@@ -46,6 +46,5 @@ export default function NavbarSetting() {
             ))}
             <h2 className=" font-bold text-xl cursor-pointer" onClick={handleLogut}>Log out</h2>
         </div>
-        
     )
 }

@@ -20,12 +20,12 @@ export default function ChangePassword() {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <div className="p-10 rounded shadow-md w-1/2">
-                <h2 className="text-2xl font-bold mb-10 text-center">Change Password</h2>
+        <div className="flex flex-col items-center justify-center md:mb-0 mb-8 md:mt-0">
+            <div className="md:p-10 p-4 rounded shadow-md md:w-1/2 w-full">
+                <h2 className="text-2xl font-bold md:mb-10 mb-8 text-center">Change Password</h2>
                 <div className="space-y-5">
                     <div>
-                        <label htmlFor="currentPassword" className="block text-lg font-medium text-gray-300">Current Password:</label>
+                        <label htmlFor="currentPassword" className="block md:text-lg text-xl font-medium text-gray-300">Current Password:</label>
                         <input
                             type="password"
                             id="currentPassword"
@@ -35,7 +35,7 @@ export default function ChangePassword() {
                         />
                     </div>
                     <div>
-                        <label htmlFor="newPassword" className="block text-lg  font-medium text-gray-300 ">New Password:</label>
+                        <label htmlFor="newPassword" className="block md:text-lg text-xl  font-medium text-gray-300 ">New Password:</label>
                         <input
                             type="password"
                             id="newPassword"
@@ -45,7 +45,7 @@ export default function ChangePassword() {
                         />
                     </div>
                     <div className=' w-full flex justify-center'>
-                        <button onClick={handleChangePassword} className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white color-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Change Password</button>
+                        <button onClick={handleChangePassword} className="w-full md:py-2 md:px-4 py-4 px-6 border border-transparent rounded-md shadow-sm text-sm font-medium text-white color-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Change Password</button>
                     </div>
                     {error && <p className="text-red-500 mt-2">{error}</p>}
                 </div>

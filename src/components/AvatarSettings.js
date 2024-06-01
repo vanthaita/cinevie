@@ -5,7 +5,7 @@ import { Pencil } from 'lucide-react';
 
 export default function AvatarSettings() {
     const userInfo = useUserInfo();    
-    return (<div className=" w-full h-[25%] justify-center items-center flex flex-col">
+    return (<div className=" w-full md:h-[25%]  md:pt-0 pt-8 justify-center items-center flex flex-col">
     <div className="rounded-full w-[7rem] h-[7rem] flex justify-center items-center box">
         <div className=" w-1/2 h-1/2 bg-red-950 rounded-full">
             <Avatar>
