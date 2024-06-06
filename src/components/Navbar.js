@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isOpenSearchBox, setIsOpenSearchBox] = useState(false);
   const [search, setSearch] = useState('');
   return (
-    <nav className="h-20 w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">
+    <nav className="h-20 sticky top-0 left-0  bg-[#111111] w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">
       <div className=' flex flex-row justify-start items-center gap-x-8  w-[65%] '>
         <div className=' '>
           <Link href="/" passHref className='flex flex-row gap-x-1'>
@@ -157,7 +157,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-      
     </nav>
   );
 }

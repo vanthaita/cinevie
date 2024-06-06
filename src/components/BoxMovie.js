@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function BoxMovie({ title, genre, image_url }) {
     return (
         <>
@@ -44,7 +46,10 @@ export default function BoxMovie({ title, genre, image_url }) {
                         </div>
                     </div>
                     <div className="w-full md:w-[18%] flex justify-center my-10 md:my-0 md:items-center h-full">
-                        <button className="btn text-white font-medium px-8 w-[80%] py-2 bg-gradient-to-b color-1 border-none rounded-full">Book a session</button>
+                        <Link href="/booking" className=" w-full flex justify-center">
+                            <button className="btn text-white font-medium px-8 w-[80%] py-2 bg-gradient-to-b color-1 border-none rounded-full">Book a session</button>
+                        </Link>
+
                     </div>
                 </div>
                 <div className="border-b-2 border-gray-500 w-full" />
