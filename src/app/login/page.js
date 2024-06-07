@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 'use client'
+import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -8,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
     const router = useRouter();
+    const [checkTerms, setCheckTerms] = useState(false);
     const [formData, setFormData] = useState({
         username: '',
         password: '', // Changed from email to password
@@ -25,14 +27,28 @@ export default function Login() {
         e.preventDefault();
         const userInfoString = window.localStorage.getItem('User-Info');
         console.log(typeof userInfoString); 
-    
+        if(checkTerms !== true) {
+            toast.error("You must accept the terms and conditions.", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            return
+        }
         if (userInfoString) {
             const userInfo = JSON.parse(userInfoString); 
             console.log(typeof userInfo); 
-    
+            
             if (userInfo.username === formData.username && userInfo.password === formData.password) {
                 router.push('/');
-            } else {
+                // revalidatePath('/');
+            }
+             
+            else {
                 toast.error("Login failed", {
                     position: "top-center",
                     autoClose: 3000,
@@ -42,8 +58,10 @@ export default function Login() {
                     draggable: true,
                     progress: undefined,
                 });
+                return;
             }
-        } else {
+        } 
+        else {
             toast.error("User info not found", {
                 position: "top-center",
                 autoClose: 3000,
@@ -53,6 +71,7 @@ export default function Login() {
                 draggable: true,
                 progress: undefined,
             });
+            return
         }
     }
 
@@ -99,7 +118,7 @@ export default function Login() {
                         <div className=" flex-col justify-between items-center w-full gap-y-4 flex">
                             <div className="w-full relative pb-[1.5em]">  
                                 <div className="w-full absolute flex flex-row items-center justify-start gap-x-2 left-0">
-                                    <input type="checkbox" className="checkbox rounded-full border-white w-4 h-4 "/>
+                                    <input type="checkbox" className="checkbox rounded-full border-white w-4 h-4 " onClick={() => {setCheckTerms(!checkTerms)}}/>
                                     <p className=" font-normal text-md text-white"><span className=" text-gray-500">Accept</span> Terms & Conditions</p>
                                 </div>
                             </div>

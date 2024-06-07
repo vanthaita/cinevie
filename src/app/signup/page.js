@@ -2,10 +2,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SignUp() {
     const router = useRouter();
-
+    const [checkTerms, setCheckTerms] = useState(false);
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -22,7 +24,33 @@ export default function SignUp() {
 
     const handleSignUp = async (e) => {
         e.preventDefault();
-        console.log(formData);
+        // Basic validation
+
+        if(checkTerms !== true) {
+            toast.error("You must accept the terms and conditions.", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            return
+        }
+        if (!formData.username || !formData.email || !formData.password) {
+            toast.error("All fields are required.", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            return;
+        }
+
         const userInfo = {
             username: formData.username,
             email: formData.email,
@@ -31,12 +59,12 @@ export default function SignUp() {
 
         await localStorage.setItem('User-Info', JSON.stringify(userInfo));
         router.push('/login');
-
     };
     
 
     return (
         <section>
+            <ToastContainer />
             <div className="relative bg-black flex justify-center items-center" style={{height: 'calc(100vh - 80px)'}}>
                 <div className=" w-full h-full absolute" style={{height: 'calc(100vh - 96px)'}}>
                     <img src="https://cdn.galaxycine.vn/media/2023/11/22/1200_1700638319306.jpg" className=" w-full h-full"/>
@@ -77,7 +105,9 @@ export default function SignUp() {
                         <div className=" flex-col justify-between items-center w-full gap-y-4  flex">
                             <div className="w-full relative pb-[1.5em]">  
                                 <div className="w-full absolute flex flex-row items-center justify-start gap-x-2 left-0">
-                                    <input type="checkbox" className="checkbox rounded-full border-white w-4 h-4 "/>
+                                    <input type="checkbox" className="checkbox rounded-full border-white w-4 h-4 " onClick={() => {
+                                        setCheckTerms(!checkTerms);
+                                    }}/>
                                     <p className=" font-normal text-md text-white"><span className=" text-gray-500">Accept</span> Terms & Conditions</p>
                                 </div>
                             </div>
