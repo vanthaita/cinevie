@@ -80,6 +80,12 @@ const SeatBooking = ({ selectedSeats, setSelectedSeats }) => {
       <div className=" grid grid-cols-10 gap-x-4 gap-y-2">
         {renderSeats()}
       </div>
+      {/* Screen here */}
+      <div className="w-full flex justify-center py-6">
+        <div className="bg-gradient-to-r from-gray-400 to-gray-300 w-[80%] h-4 rounded-t-full flex items-center justify-center text-xs font-semibold text-gray-800">
+          Screen
+        </div>
+      </div>
     </div>
   );
 };

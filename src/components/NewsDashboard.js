@@ -36,6 +36,5 @@ export default function News() {
             
             {newsNumberedList === 4 && <PaginationNews start={start} setStart={setStart} totalPages={Math.ceil(New.length / 4)} endNum={4} />}
         </div>
-
     );
 }

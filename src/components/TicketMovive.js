@@ -33,7 +33,7 @@ export default function TicketMovie() {
                             <p>10:54-12:51</p>
                         </div>
                    </div>
-                    <div className="flex flex-row justify-between items-center w-full mt-4 text-gray-300 hidden">
+                    <div className="md:flex flex-row justify-between items-center w-full mt-4 text-gray-300 hidden">
                         <div className="p-2 border rounded-lg">
                             <p className=" font-medium text-xl ">2D</p>
                         </div>
