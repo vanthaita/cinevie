@@ -29,7 +29,9 @@ export default function Login() {
             console.log(typeof userInfo); 
     
             if (userInfo.username === formData.username && userInfo.password === formData.password) {
+                
                 router.push('/');
+            
             } else {
                 console.log("Login failed");
             }

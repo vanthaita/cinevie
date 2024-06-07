@@ -2,19 +2,6 @@ const news = [
     {
         "source": {
             "id": null,
-            "name": "Entertainment Tonight"
-        },
-        "author": "Miguel A. Melendez",
-        "title": "Britney Spears Exits Chateau Marmont With Friends After Ambulance Called to Hotel - Entertainment Tonight",
-        "description": "The pop star left the famed West Hollywood hotel Chateau Marmont on Wednesday night wrapped in a blanket and holding a pillow.",
-        "url": "https://www.etonline.com/britney-spears-exits-chateau-marmont-with-friends-after-ambulance-called-to-hotel-224589",
-        "urlToImage": "https://www.etonline.com/sites/default/files/styles/1280x720/public/images/2024-05/MK-Britney-Spears-1280-X-720-HERO-1-IMAGE.jpg?h=40a63981",
-        "publishedAt": "2024-05-03T02:21:00Z",
-        "content": "Britney Spears is sparking new concerns over her well-being after she was photographed leaving a famed West Hollywood hotel.\r\nThe 42-year-old pop star was spotted late Wednesday night leaving the Cha… [+5054 chars]"
-    },
-    {
-        "source": {
-            "id": null,
             "name": "Suntimes.com"
         },
         "author": "Richard Roeper",
