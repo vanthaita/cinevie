@@ -14,7 +14,7 @@ export default function Booking() {
                 <BookingMovie />
             </section>
 
-            <section>
+            <section className=" md:mb-[8rem] mb-[2rem]">
                 <BookingCastSection />
             </section>
             <section>

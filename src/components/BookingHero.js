@@ -44,8 +44,8 @@ export default function BookingHero() {
             <VideoPlayer src="/video.mp4"/>
             <div className="absolute top-0 left-0 w-full  flex items-start z-[3] py-10 justify-start px-20 text-white">
                 <div className="md:flex flex-row justify-end hidden items-end gap-x-4 mt-6">
-                    <p className="font-bold text-3xl ">Nobita and the Earth Symphony Orchestra</p>
-                    <p className="font-normal text-xl text-gray-300">| 12+ | EN ,VI</p>
+                    <p className="font-bold text-3xl ">Doraemon: Nobita and the Earth Symphony Orchestra</p>
+                    <p className="font-normal text-xl text-gray-300">| 6+ | JP, SUB</p>
                 </div>
             </div>
         </div>

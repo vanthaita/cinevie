@@ -20,44 +20,44 @@ const SeatBooking = ({ selectedSeats, setSelectedSeats }) => {
   const renderSeats = () => {
     let seatElements = [];
 
-    for (let row = 0; row < rows; row++) {
-      seatElements.push(
-        <div key={`row-number-start-${row}`} className="w-8 h-8 flex items-center justify-center">
-          {row + 1}
-        </div>
-      );
-
-      for (let col = 0; col < cols; col++) {
-        if (row === 8 && (col === 0 || col === 7)) {
-          seatElements.push(
-            <div key={`${row}-${col}`} className="w-8 h-8"></div>
-          );
-        } else {
-          seatElements.push(
-            <div
-              key={`${row}-${col}`}
-              className={`rounded cursor-pointer ${
-                isSeatSelected(row, col)
-                  ? 'bg-[#8B5CF6]'
-                  : 'hover:text-[#8B5CF8]'
-              }`}
-              onClick={() => toggleSeat(row, col)}
-            >
-              <Armchair className="w-8 h-8" />
+    for (let row = 1; row <= rows; row++) {
+        seatElements.push(
+            <div key={`row-number-start-${row}`} className="w-8 h-8 flex items-center justify-center">
+                {row}
             </div>
-          );
-        }
-      }
+        );
 
-      seatElements.push(
-        <div key={`row-number-end-${row}`} className="w-8 h-8 flex items-center justify-center">
-          {row + 1}
-        </div>
-      );
+        for (let col = 1; col <= cols; col++) {
+            if (row === 9 && (col === 1 || col === 8)) {
+                seatElements.push(
+                    <div key={`${row}-${col}`} className="w-8 h-8"></div>
+                );
+            } else {
+                seatElements.push(
+                    <div
+                        key={`${row}-${col}`}
+                        className={`rounded cursor-pointer ${
+                            isSeatSelected(row, col)
+                                ? 'bg-[#8B5CF6]'
+                                : 'hover:text-[#8B5CF8]'
+                            }`}
+                        onClick={() => toggleSeat(row, col)}
+                    >
+                        <Armchair className="w-8 h-8" />
+                    </div>
+                );
+            }
+        }
+
+        seatElements.push(
+            <div key={`row-number-end-${row}`} className="w-8 h-8 flex items-center justify-center">
+                {row}
+            </div>
+        );
     }
 
     return seatElements;
-  };
+};
 
   return (
     <div className=" flex flex-col items-start gap-y-4 ">

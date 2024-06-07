@@ -29,24 +29,24 @@ export default function Hero() {
 
 
 
-     <div className="absolute top-0 left-0 w-full h-full bg-black/[.4] hidden md:block"></div>
+     <div className="absolute top-0 left-0 w-full h-full bg-black/[.8] hidden md:block"></div>
     
     <div className="absolute hidden top-0 left-0 w-full h-full md:flex items-center justify-start px-20 text-white">
           <div className="flex flex-col justify-start items-start gap-5">
             <div className=" flex flex-row gap-2 ">
-              <p className=" font-medium text-ms">October, 20</p>
-              <p className=" font-medium text-ms">Action, Thriller</p> 
+              <p className=" font-medium text-ms">March, 23</p>
+              <p className=" font-medium text-ms">Adventure, Family, Animation</p> 
             </div>
             <div className=" flex flex-col justify-start items-start">
-              <h1 className=" font-extrabold text-5xl">Nobita and the Earth Symphony Orchestra</h1>
+              <h1 className=" font-extrabold text-3xl">Doraemon: Nobita and the Earth Symphony Orchestra</h1>
              
             </div>
-            <p className=" font-normal text-ms">Lorem ipsum doloitis foribus. Sed eveniet,
-                 culpa autem voluptuas ullam?
+            <p className=" font-normal text-ms">
+              Doraemon, Nobita, and their friends embark on a new adventure involving the Earth&apos; 
+              <br/>mysterious symphony. Join them as they uncover secrets, face challenges, 
+              <br/>and learn valuable lessons about friendship and harmony.
             </p>
-            <p className=" font-normal text-ms">Lorem ipsum doloitis foribus. Sed eveniet,
-                 culpa autem voluptuas ullam?
-            </p>
+            
             <div className=" flex flex-row justify-center items-center gap-5">
               <Link href="/booking">
                 <button className="rounded-xl text-white font-medium  px-8 py-4 color-1">Book a session</button>

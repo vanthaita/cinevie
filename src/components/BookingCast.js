@@ -1,11 +1,12 @@
-
 export default function BookingCast() {
     return (
-        <div className="md:w-[280px] w-[180px] rounded-xl mb-24">
-        <figure><img src='https://cdn.britannica.com/36/231936-050-63D849FB/Timothee-Chalamet-2021.jpg' alt="" className=" rounded-2xl w-full h-full cursor-pointer"/></figure>
+        <div className="md:w-[280px] w-[180px] rounded-xl">
+            <div className="w-full h-[280px] md:h-[380px] overflow-hidden rounded-2xl">
+                <img src='https://cdn.myanimelist.net/images/voiceactors/1/53613.jpg' alt="" className="w-full h-full object-cover cursor-pointer"/>
+            </div>
             <div className="flex justify-start flex-col text-white mt-2">
-                <p className=" font-bold text-xl">Timothee Chalemet</p>
-                <p className=" text-gray-500">Willy Wonka</p>
+                <p className="font-bold text-xl">Kazuaki Imai</p>
+                <p className="text-gray-500">Director</p>
             </div>
         </div>
     )

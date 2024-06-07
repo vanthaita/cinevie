@@ -9,9 +9,9 @@ export default function Settings() {
     const [username, setUsername] = useState(userInfo?.username || "Cinevie");
     const [surname, setSurname] = useState(userInfo?.surname || "Cinevie");
     const [email, setEmail] = useState(userInfo?.email || "default@gmail.com");
-    const [phone, setPhone] = useState(userInfo?.phone || "");
-    const [birthday, setBirthday] = useState(userInfo?.birthday || "");
-    const [location, setLocation] = useState(userInfo?.location || "");
+    const [phone, setPhone] = useState(userInfo?.phone || "123 456 789");
+    const [birthday, setBirthday] = useState(userInfo?.birthday || "30/08/2004");
+    const [location, setLocation] = useState(userInfo?.location || "US");
 
     const handleChange = (setter) => (event) => {
       setter(event.target.value);
