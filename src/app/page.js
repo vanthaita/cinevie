@@ -102,9 +102,9 @@ export default function Home() {
           <section className=" relative">
               <div className="w-full md:mb-24 mb-10 px-8 md:px-0">
                   <div className=" flex justify-start md:px-20 flex-col mt-4">
-                    <h1 className=" font-extrabold text-white text-2xl mt-8 mb-8">News</h1>
+                    <h1 className=" font-extrabold text-white text-2xl mt-8 mb-8 ">News</h1>
                   </div>
-                  <News />
+                    <News />
                   <div className="absolute top-[55%] right-2 transform -translate-y-1/2 p-2 rounded-full fa fa-arrow-right hidden md:block">
                     <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
                   </div>

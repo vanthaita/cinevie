@@ -23,7 +23,7 @@ export default function News() {
 
     return (
         <div className={`flex gap-y-8 ${newsNumberedList === 4 && 'flex-col'}`} style={{ overflowX: "auto", scrollbarWidth: "none" }}>
-            <div className="flex md:space-x-4 md:flex-row flex-col space-y-4">
+            <div className="flex md:space-x-4 md:flex-row flex-col space-y-4 items-end">
                 {New.slice(start, start + newsNumberedList).map((news, index) => (
                     <NewsCard
                         key={index + 1}
@@ -36,5 +36,6 @@ export default function News() {
             
             {newsNumberedList === 4 && <PaginationNews start={start} setStart={setStart} totalPages={Math.ceil(New.length / 4)} endNum={4} />}
         </div>
+
     );
 }

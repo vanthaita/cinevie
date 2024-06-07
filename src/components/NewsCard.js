@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function NewsCard({title, image_url, url}) {
     return (
-    <div className="relative md:w-[35rem] w-full h-[18rem] md:h-[25rem] rounded-xl overflow-hidden">
+    <div className="relative md:w-[35rem] w-full h-[18rem] md:h-[25rem] rounded-xl overflow-hidden ">
             <div className="absolute top-0 left-0 w-full h-full bg-black/[.4] hidden md:block" />
             <Link href={url}>
                 <img src={image_url} alt="News image" className="w-full h-full md:object-cover rounded-xl cursor-pointer" />
@@ -15,6 +15,7 @@ export default function NewsCard({title, image_url, url}) {
                         <h3 className="md:text-xl text-sm font-medium mb-2 cursor-pointer hover:underline">{title}</h3>
                     </Link>
                 </div>
+                
                 <button className="flex items-center text-sm text-white">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
