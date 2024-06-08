@@ -1,6 +1,6 @@
 export default function BookingMovie() {
     return (
-        <div className="relative md:px-20 px-8 h-[calc(60vh-80px)] md:h-[calc(100vh-80px)]">
+        <div className="relative md:px-20 px-8 w-full h-full">
             <div className="w-full h-full flex md:flex-row flex-col md:justify-between md:items-center gap-x-4 mt-10 md:mt-0">
                 <div className="md:h-[80%] md:w-[25%] rounded-xl hidden md:block">
                     <img alt="" src="https://animeanime.jp/imgs/p/jtKDOVlKAvjRrNw8SXAVejagI61Nrq_oqaqr/596878.jpg" className="w-full h-full object-cover rounded-xl"/>

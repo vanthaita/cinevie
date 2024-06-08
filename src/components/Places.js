@@ -1,5 +1,5 @@
 'use client';
-import { Armchair } from 'lucide-react';
+import { Armchair, Ticket, Popcorn, Percent,CupSoda } from 'lucide-react'; // Ensure correct import names
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -39,7 +39,6 @@ export default function Places({ selectedSeats }) {
             }
         });
     };
-   
 
     const seatPrices = {
         'Adult': 20,
@@ -56,8 +55,7 @@ export default function Places({ selectedSeats }) {
     const totalFoodDrinkPrice = foodDrinkSelections.reduce((total, item) => total + foodDrinkPrices[item], 0);
     const totalPrice = totalSeatPrice + totalFoodDrinkPrice;
     const discountedPrice = totalPrice * (1 - discount);
-    const CalculatorTotal = isPromocodeApplied ? `${discountedPrice.toFixed(2)}$` : `${totalPrice}$`
-
+    const CalculatorTotal = isPromocodeApplied ? `${discountedPrice.toFixed(2)}$` : `${totalPrice}$`;
 
     const handleApplyToCheckout = () => {
         localStorage.setItem('promocode', promocode);
@@ -67,7 +65,7 @@ export default function Places({ selectedSeats }) {
         localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
         localStorage.setItem('Total', CalculatorTotal);
     };
-    
+
     return (
         <div className="md:h-[400px] h-[800px] md:w-2/3 w-full md:p-8 flex rounded-lg shadow-md mx-auto glass flex-col md:flex-row">
             <div className="md:w-1/2 w-full h-2/3 p-4 md:border-r-2 border-gray-300 flex flex-col md:gap-y-2 ">
@@ -86,7 +84,7 @@ export default function Places({ selectedSeats }) {
                                         checked={ticketType === type}
                                         onChange={handleTicketTypeChange}
                                     />
-                                    {type}
+                                    <Ticket className="mr-2" /> {type}
                                 </label>
                             ))}
                             <label className="block mb-2">Food & Drinks:</label>
@@ -99,20 +97,29 @@ export default function Places({ selectedSeats }) {
                                         onChange={handleFoodDrinkChange}
                                         checked={foodDrinkSelections.includes(item)}
                                     />
+                                        {item === 'Popcorn' ? (
+                                            <Popcorn className="mr-2" />
+                                        ) : (
+                                            <CupSoda className="mr-2" />
+                                        )}
+                                    
                                     {item} - {foodDrinkPrices[item]}$
                                 </label>
                             ))}
                         </div>
                     </div>
                     
-                    <input 
-                        type="text" 
-                        placeholder="Enter promocode" 
-                        className="p-3 w-full rounded-lg bg-transparent border" 
-                        value={promocode}
-                        onChange={handlePromocodeChange}
-                    />
-                    
+                    <div className="relative flex items-center">
+                        <input 
+                            type="text" 
+                            placeholder="Enter promocode" 
+                            className="p-3 w-full rounded-lg bg-transparent border" 
+                            value={promocode}
+                            onChange={handlePromocodeChange}
+                        />
+                        <Percent className="absolute right-3 text-gray-400" />
+                    </div>
+                   
                 </div>
             </div>
             <div className="md:w-1/2 w-full h-full p-4 flex flex-col gap-y-2">
@@ -131,9 +138,10 @@ export default function Places({ selectedSeats }) {
                     <p className="font-bold text-xl">Total:</p>
                     <p className="text-xl">{CalculatorTotal}</p>
                 </div>
+                {/* Handle Login before buy ticket */}
                 <Link href="/booking/ticket/order">
                     <button 
-                        className="color-1 text-white p-3 rounded w-full transition duration-200"
+                        className="color-1 text-white p-3 rounded w-full transition duration-200 "
                         onClick={handleApplyToCheckout}
                     >
                         Apply to Checkout

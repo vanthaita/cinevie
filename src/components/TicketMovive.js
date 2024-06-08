@@ -1,8 +1,6 @@
 import { CalendarDaysIcon, Clock, MapPin } from "lucide-react";
 
 export default function TicketMovie() {
-    
-
     return (
         <div className="relative md:px-20 px-8">
             <div className="w-full h-full flex md:flex-row flex-col justify-start gap-x-8">

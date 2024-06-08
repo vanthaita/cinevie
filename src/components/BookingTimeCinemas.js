@@ -32,7 +32,7 @@ export default function BookingTimeCinemas({ cinema, selectedCinema, selectedTim
                     <div
                         key={index}
                         className={`border rounded-xl md:p-4 md:py-2 flex justify-center items-center cursor-pointer ${
-                            selectedCinema === cinema && selectedTime === time ? 'bg-blue-500 text-white' : ''
+                            selectedCinema === cinema && selectedTime === time ? 'bg-[#8B5CF6] text-white' : ''
                         }`}
                         onClick={() => handleClick(time)}
                     >

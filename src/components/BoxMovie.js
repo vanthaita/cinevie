@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BoxMovie({ title, genre, image_url }) {
+export default function BoxMovie({ title, genre, image_url, checkLast }) {
     return (
         <>
             <div className="w-full flex flex-col gap-2 md:gap-1 ">
@@ -52,7 +52,7 @@ export default function BoxMovie({ title, genre, image_url }) {
 
                     </div>
                 </div>
-                <div className="border-b-2 border-gray-500 w-full" />
+                {!checkLast  && <div className="border-b-2 border-gray-500 w-full" />}
             </div>
         </>
     );

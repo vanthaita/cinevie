@@ -2,8 +2,9 @@ import BoxMovie from "@/components/BoxMovie";
 import movie from "@/constant/movie";
 import DatePicker from "@/components/DatePicker";
 import ShowTimeDropDown from "@/components/ShowtimeDropdown";
-
+import PaginationNews from "@/components/Pagination";
 export default function ShowTimes() {
+    
     return (
         <section>
             <div className=" md:px-20 px-10 md:mt-10 mt-4">
@@ -32,8 +33,10 @@ export default function ShowTimes() {
                             title={movie.Title}
                             genre={movie.Genre}
                             image_url={movie.Poster}
+                            checkLast={index === 5 ? true : false}
                         />
                     ))}
+                    {/* <PaginationNews start={0} setStart={setStart} totalPages={3}/> */}
                 </div>
             </div>
         </section>

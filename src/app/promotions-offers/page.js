@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function PromotionsAndOffers() {
     return (
@@ -33,7 +34,9 @@ export default function PromotionsAndOffers() {
                                 <p className="font-normal text-xs md:text-sm">Each card can buy one ticket.</p>
                             </div>
                             <div className="w-full">
-                                <button className="color-1 px-12 py-4 rounded-lg md:w-1/2 w-full">Book tickets now</button>
+                                <Link href="http://localhost:3000/booking">
+                                    <button className="color-1 px-12 py-4 rounded-lg md:w-1/2 w-full">Book tickets now</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 block md:hidden">
@@ -63,7 +66,9 @@ export default function PromotionsAndOffers() {
                                 <p className="font-normal text-xs md:text-sm">Not valid on holidays or screenings with surcharges from the film distributor.</p>
                             </div>
                             <div className="w-full">
+                            <Link href="http://localhost:3000/booking">
                                 <button className="color-1 px-12 py-4 rounded-lg md:w-1/2 w-full">Book tickets now</button>
+                            </Link>
                             </div>
                         </div>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 block">
@@ -94,7 +99,9 @@ export default function PromotionsAndOffers() {
                                 <p className="font-normal text-xs md:text-sm">Discount applies only to regular screenings. Not valid on holidays or screenings with surcharges from the film distributor.</p>
                             </div>
                             <div className="w-full">
+                            <Link href="http://localhost:3000/booking">
                                 <button className="color-1 px-12 py-4 rounded-lg md:w-1/2 w-full">Book tickets now</button>
+                            </Link>
                             </div>
                         </div>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 block md:hidden">

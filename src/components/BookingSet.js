@@ -12,16 +12,16 @@ export default function BookingSet() {
     const [selectedTime, setSelectedTime] = useState(null);
 
     return (
-        <div className="relative md:px-20 md:mt-10 px-8 h-[calc(80vh-80px)] md:h-[calc(100vh-80px)]">
-            <div className="w-full h-full flex flex-col justify-center items-center gap-y-8">
-                <div className="md:flex flex-row gap-x-4 justify-center items-center w-full hidden">
+        <div className="relative md:px-20 px-8 w-full h-full">
+            <div className="relative w-full h-full flex flex-col justify-center items-center gap-y-8">
+                <div className="relative md:flex flex-row gap-x-4 justify-center items-center w-full hidden">
                     {/* Drop down */}
                     <ShowTimeDropDown title={"Location"} value={['location 1 ', 'location 2']} />
                     <DatePicker />
                     <ScheduleDrop title={"All schedule"} value={['', '']} />
                 </div>
                 
-                <div className="w-full h-full flex flex-col md:gap-y-8">
+                <div className="w-full h-full flex flex-col md:gap-y-8 overflow-hidden"> {/* Adjusted */}
                     <BookingTimeCinemas 
                         cinema="Aeon Mall" 
                         selectedCinema={selectedCinema} 
@@ -55,5 +55,6 @@ export default function BookingSet() {
                 </div>
             </div>
         </div>
+
     );
 }

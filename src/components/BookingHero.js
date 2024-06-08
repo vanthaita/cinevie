@@ -40,7 +40,7 @@ const VideoPlayer = ({ src }) => {
 
 export default function BookingHero() {
     return (
-        <div className="relative md:h-[calc(100vh-80px)] h-[calc(60vh-80px)]">
+        <div className="relative w-full h-full">
             <VideoPlayer src="/video.mp4"/>
             <div className="absolute top-0 left-0 w-full  flex items-start z-[3] py-10 justify-start px-20 text-white">
                 <div className="md:flex flex-row justify-end hidden items-end gap-x-4 mt-6">

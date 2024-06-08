@@ -16,9 +16,10 @@ export default function Hero() {
     }, []);
 
   return (
-    <div className="relative h-[calc(60vh-80px)] md:h-[calc(100vh-80px)]" >
+    <div className="relative w-full h-full" >
       <video className="absolute top-0 left-0 w-full h-full hidden md:block object-fill" src="/video.mp4" autoPlay muted loop />
-        
+      
+      {/* {mobile} */}
       <div className="md:hidden w-full h-full overflow-x-auto scrollbar-hide" ref={scrollRef} style={{ whiteSpace: "nowrap" }}>
           <div className="inline-flex h-[calc(60vh-80px)] w-full">
                 <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/548/images/largeposter.jpg" className="w-full h-full flex-shrink-0" />
@@ -26,10 +27,9 @@ export default function Hero() {
                 <img src="https://ecdn.game4v.com/g4v-content/uploads/2023/07/07230438/Doraemon-43-1-game4v-1688745877-33.jpg" className="w-full h-full flex-shrink-0" />
           </div>
       </div>
+      {/* --- */}
 
-
-
-     <div className="absolute top-0 left-0 w-full h-full bg-black/[.8] hidden md:block"></div>
+     <div className="absolute top-0 left-0 w-full h-full bg-black/[.4] hidden md:block"></div>
     
     <div className="absolute hidden top-0 left-0 w-full h-full md:flex items-center justify-start px-20 text-white">
           <div className="flex flex-col justify-start items-start gap-5">

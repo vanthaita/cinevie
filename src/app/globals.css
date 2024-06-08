@@ -2,7 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underline-custom {
+  @apply relative no-underline cursor-pointer;
+}
+
+.underline-custom::after {
+  content: "";
+  background: rgba(255, 255, 255, var(--tw-text-opacity));
+  @apply absolute left-0 bottom-0 w-full h-1 pt-1 transform scale-x-0 transition-transform duration-200 ease-in-out;
+}
+
+.underline-custom:hover::after,
+.underline-custom:focus::after {
+  @apply transform scale-x-100;
+}
+
   @layer base {
+    
     :root {
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
@@ -76,7 +97,15 @@
     }
   }
 
-
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    max-width: 100%; /* Adjust max-width for responsiveness */
+    margin: 0 auto; /* Center align */
+  }
   
 .bg-glass {
   background: rgba(116, 111, 111, 0.45);
@@ -115,9 +144,12 @@ body {
 
 
 main {
-  max-width: 1496px; /* Giới hạn width tối đa */
+  max-width: 1920px; /* Giới hạn width tối đa */
+  
   /* margin: 0 auto; Căn giữa trang */
 }
+
+
 
 .color-1 {
   background-image: linear-gradient(to right, #ffa84b, #ff8a56, #ff5e69, #B16cea);
@@ -366,4 +398,18 @@ text-align:center;
 
 
 .credits {padding-top:50px; display:block; clear:both;}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
 

@@ -1,15 +1,29 @@
-import { Phone } from 'lucide-react';
+'use client'
+import React, { useState } from 'react';
+import { Phone, SendHorizontal } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Instagram } from 'lucide-react';
 import { Youtube } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 import Link from 'next/link';
+
+
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission, e.g., send email to server
+    console.log('Email submitted:', email);
+    setSubmitted(true);
+  };
   return (
     <footer className=' bg-black px-20 flex flex-col justify-center h-full w-full py-10'>
       <div className='flex flex-row flex-wrap justify-center sm:justify-start items-center gap-x-36 gap-y-12 w-full'>
         <div className='flex flex-col justify-center items-center sm:items-start flex-grow w-full md:w-auto md:flex-initial md:mr-8 gap-y-1'>
+          <Link href="/">
           <svg xmlns="http://www.w3.org/2000/svg" 
               viewBox='0 0 24 24'
               fillRule='evenodd'
@@ -20,14 +34,36 @@ export default function Footer() {
           ><g data-name="36-Ticket"><path d="M27 29H5a5.006 5.006 0 0 1-5-5 1.006 1.006 0 0 1 .168-.555L2 20.7v-6.464L.105 10.447A1 1 0 0 1 0 10a5.006 5.006 0 0 1 5-5h22a5.006 5.006 0 0 1 5 5 1 1 0 0 1-.105.447L30 14.236V20.7l1.832 2.748A1.006 1.006 0 0 1 32 24a5.006 5.006 0 0 1-5 5zM2.014 24.283A3 3 0 0 0 5 27h22a3 3 0 0 0 2.986-2.717l-1.818-2.728A1.006 1.006 0 0 1 28 21v-7a1 1 0 0 1 .105-.447l1.887-3.773A3 3 0 0 0 27 7H5a3 3 0 0 0-2.992 2.78L3.9 13.553A1 1 0 0 1 4 14v7a1.006 1.006 0 0 1-.168.555z"/><circle cx="22" cy="11" r="1"/><circle cx="22" cy="15" r="1"/><circle cx="22" cy="19" r="1"/><circle cx="22" cy="23" r="1"/><path d="M10 21a1 1 0 0 1-1-1v-6a1 1 0 0 1 1.447-.895l6 3a1 1 0 0 1 0 1.79l-6 3A1 1 0 0 1 10 21zm1-5.382v2.764L13.764 17zM29 15h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2zM29 22h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2z"/></g></svg>
 
 
-
-          <p className=' font-bold text-2xl text-white'>Cine<span className=' font-extrabold text-color-1'>Vie</span></p>
+            <p className=' font-bold text-2xl text-white'>Cine<span className=' font-extrabold text-color-1'>Vie</span></p>
+          </Link>
           <p className=' font-medium text-center sm:text-left text-xs text-white'>
             CineVie Ltd.
             <br />
             Providing reliable tech since 2024
           </p>
+          {/* <div className='w-full h-full bg-white mt-4'>
+            <input 
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder='Enter your email'
+              className=' bg-white'
+            />
+          </div> */}
+
         </div>
+{/* 
+<input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder='Enter your email'
+              className="flex-1 p-[0.785rem] pl-10 rounded-xl bg-gray-800 text-gray-300 focus:outline-none"
+              required
+            />
+
+*/}
+
         <div className=' flex flex-row flex-wrap gap-12 items-start justify-between sm:w-[70%]'>
           <div className='flex flex-col justify-center items-center sm:items-start flex-grow w-full gap-y-1 md:w-auto md:flex-initial md:mr-8 text-gray-500'>
             <p className='text-xl text-white font-semibold'>Meet at Cine<span className=' font-extrabold text-color-1'>Vie</span></p>

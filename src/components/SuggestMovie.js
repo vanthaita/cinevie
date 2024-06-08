@@ -25,7 +25,7 @@ function Card({title, image_url, genre, runtime, year}) {
 
 export default function SuggestMovie() {
     return (
-        <div className="relative md:px-20 px-8 mt-20 h-[calc(70vh-80px)] md:h-[calc(110vh-80px)]">
+        <div className="relative md:px-20 px-8 w-full h-full">
         <div className=" w-full h-full flex flex-col justify-start items-start md:gap-x-4">
             <h1 className=" mt-10 font-bold text-3xl">You might also like</h1>
             <div className=" w-full h-full mt-10">

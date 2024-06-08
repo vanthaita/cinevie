@@ -10,7 +10,7 @@ export default function ShowTimeDropDown({ title, value }) {
   };
 
   return (
-    <div className="dropdown dropdown-bottom ">
+    <div className=" dropdown dropdown-bottom ">
       <div
         tabIndex={0}
         role="button"
