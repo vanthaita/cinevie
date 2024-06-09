@@ -1,8 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['c4.wallpaperflare.com'],
-      },    
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       has: [
+  //         {
+  //           type: 'cookie',
+  //           key: 'user-info',
+  //           value: '(.*)',
+  //         },
+  //       ],
+  //       permanent: false,
+  //       destination: '/',
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;

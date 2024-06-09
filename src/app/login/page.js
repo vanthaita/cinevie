@@ -3,12 +3,13 @@
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import useUserInfo from "@/Hooks/useUserInfo";
 export default function Login() {
     const router = useRouter();
+    const { userInfo, updateUserInfo } = useUserInfo(); // Destructure userInfo and updateUserInfo from the hook
     const [checkTerms, setCheckTerms] = useState(false);
     const [formData, setFormData] = useState({
         username: '',
@@ -22,12 +23,11 @@ export default function Login() {
             [name]: value
         });
     };
-  
+
     const handleLogin = (e) => {
         e.preventDefault();
-        const userInfoString = window.localStorage.getItem('User-Info');
-        console.log(typeof userInfoString); 
-        if(checkTerms !== true) {
+
+        if (checkTerms !== true) {
             toast.error("You must accept the terms and conditions.", {
                 position: "top-center",
                 autoClose: 5000,
@@ -37,32 +37,24 @@ export default function Login() {
                 draggable: true,
                 progress: undefined,
             });
-            return
+            return;
         }
-        if (userInfoString) {
-            const userInfo = JSON.parse(userInfoString); 
-            console.log(typeof userInfo); 
-            
-            if (userInfo.username === formData.username && userInfo.password === formData.password) {
-                router.push('/');
-                // revalidatePath('/');
-            }
-             
-            else {
-                toast.error("Login failed", {
-                    position: "top-center",
-                    autoClose: 3000,
-                    hideProgressBar: true,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return;
-            }
-        } 
-        else {
-            toast.error("User info not found", {
+
+        if (!formData.username || !formData.password) {
+            toast.error("All fields are required.", {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+            return;
+        }
+
+        if (userInfo && userInfo.username === formData.username && userInfo.password === formData.password) {
+            toast.success("Login successful!", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: true,
@@ -71,9 +63,20 @@ export default function Login() {
                 draggable: true,
                 progress: undefined,
             });
-            return
+            updateUserInfo(userInfo); // Ensure user info is updated
+            router.push("/")
+        } else {
+            toast.error("Login failed. Invalid username or password.", {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
         }
-    }
+    };
 
     return (
         <section className="relative">
@@ -98,23 +101,23 @@ export default function Login() {
                             </div>
                         </div>
                         <div className=" relative flex flex-row justify-center items-center mt-4 w-full">
-                                <hr className=" absolute border w-[30%] left-0 "/>
-                                <p>or sign in with email</p>
-                                <hr className=" absolute border w-[30%] right-0 "/>
+                            <hr className=" absolute border w-[30%] left-0 "/>
+                            <p>or sign in with email</p>
+                            <hr className=" absolute border w-[30%] right-0 "/>
                         </div>
-                     </div>
-                     <div className=" h-[42%] flex flex-col items-center justify-center w-full gap-y-2">
+                    </div>
+                    <div className=" h-[42%] flex flex-col items-center justify-center w-full gap-y-2">
                         <div className=" flex flex-col justify-center items-center w-full gap-y-6 ">
                             <input name="username" type="text" placeholder="Enter username" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange} />
                             <input name="password" type="password" placeholder="Enter password" className="w-full bg-transparent rounded-xl border shadow-md p-[0.7rem] placeholder-white" onChange={handleInputChange} />
                         </div>
                         <div className=" w-full relative">
                             <Link href="/forgetpwd">
-                            <p className=" font-normal text-md right-0 absolute cursor-pointer hover:underline">Forget Password?</p>
+                                <p className=" font-normal text-md right-0 absolute cursor-pointer hover:underline">Forget Password?</p>
                             </Link> 
                         </div>
-                     </div>
-                     <div className="h-[32%] rounded-b-[2rem] flex flex-col items-center justify-center w-full mt-2">
+                    </div>
+                    <div className="h-[32%] rounded-b-[2rem] flex flex-col items-center justify-center w-full mt-2">
                         <div className=" flex-col justify-between items-center w-full gap-y-4 flex">
                             <div className="w-full relative pb-[1.5em]">  
                                 <div className="w-full absolute flex flex-row items-center justify-start gap-x-2 left-0">
@@ -129,9 +132,9 @@ export default function Login() {
                                 <p className=" text-white text-sm font-normal">New to CineVie? <Link href="/signup"><span className=" cursor-pointer hover:underline text-color-1 font-bold">Join now</span></Link></p>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }

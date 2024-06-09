@@ -1,10 +1,18 @@
+'use client'
+import useUserInfo from "@/Hooks/useUserInfo";
 import BookingCastSection from "@/components/BookingCastSection";
 import BookingHero from "@/components/BookingHero";
 import BookingMovie from "@/components/BookingMovie";
 import BookingSet from "@/components/BookingSet";
 import SuggestMovie from "@/components/SuggestMovie";
-
+import { useRouter } from "next/navigation";
 export default function Booking() {
+  const {userInfo} = useUserInfo();
+  const router = useRouter();
+  if(!userInfo) {
+    router.push("/login")
+  }
+  
   return (
     <main className="flex flex-col md:gap-y-8">
       <section className="md:h-[calc(100vh-80px)] h-[calc(60vh-80px)]">

@@ -5,7 +5,7 @@ import Places from '@/components/Places';
 import TicketMovie from '@/components/TicketMovive';
 export default function Home() {
   const [selectedSeats, setSelectedSeats] = useState([]);
-  
+
   return (
     <>
       <section className="md:mt-10 mt-4">

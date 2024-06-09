@@ -9,14 +9,12 @@ import News from "@/components/NewsDashboard";
 import movie from '@/constant/movie';
 import DropDownButtonCalender from "@/components/DropDownButtonCalender";
 import { ChevronRightIcon } from "lucide-react";
-
 export default function Home() {
   const [selected, setSelected] = useState('Today');
-  
   const handleSelect = (value) => {
     setSelected(value);
   };
-  
+
   return (
     <main className="h-auto">
       <section className="h-[calc(60vh-80px)] md:h-[calc(100vh-80px)]">

@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import { ChevronRightIcon } from 'lucide-react';
+import useUserInfo from "@/Hooks/useUserInfo";
 export default function Hero() {
   const scrollRef = useRef(null);
+  const {userInfo} = useUserInfo()
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -48,7 +50,7 @@ export default function Hero() {
             </p>
             
             <div className=" flex flex-row justify-center items-center gap-5">
-              <Link href="/booking">
+              <Link href={userInfo ? "/booking" : "/login"}>
                 <button className="rounded-xl text-white font-medium  px-8 py-4 color-1">Book a session</button>
               </Link>
             </div>

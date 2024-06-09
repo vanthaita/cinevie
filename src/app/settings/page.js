@@ -5,13 +5,13 @@ import { useState } from "react";
 
 export default function Settings() {
     const userInfo = useUserInfo();
-
-    const [username, setUsername] = useState(userInfo?.username || "Cinevie");
-    const [surname, setSurname] = useState(userInfo?.surname || "Cinevie");
-    const [email, setEmail] = useState(userInfo?.email || "default@gmail.com");
-    const [phone, setPhone] = useState(userInfo?.phone || "123 456 789");
-    const [birthday, setBirthday] = useState(userInfo?.birthday || "30/08/2004");
-    const [location, setLocation] = useState(userInfo?.location || "US");
+    console.log(userInfo.userInfo?.username)
+    const [username, setUsername] = useState(userInfo.userInfo?.username);
+    const [surname, setSurname] = useState(userInfo.userInfo?.surname);
+    const [email, setEmail] = useState(userInfo.userInfo?.email);
+    const [phone, setPhone] = useState(userInfo.userInfo?.phone);
+    const [birthday, setBirthday] = useState(userInfo.userInfo?.birthday || "30/08/2004");
+    const [location, setLocation] = useState(userInfo.userInfo?.location || "US");
 
     const handleChange = (setter) => (event) => {
       setter(event.target.value);

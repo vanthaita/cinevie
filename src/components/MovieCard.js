@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 export default function MovieCard({title, image_url, genre, runtime, year}) {
+    
     if(image_url === undefined) image_url = ''
     return (
         <div className="md:w-[280px] rounded-xl md:mb-24 mb-10">

@@ -1,9 +1,10 @@
 'use client';
-import { Armchair, Ticket, Popcorn, Percent,CupSoda } from 'lucide-react'; // Ensure correct import names
+import { Armchair, Ticket, Popcorn, Percent,CupSoda } from 'lucide-react'; 
 import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function Places({ selectedSeats }) {
+    
     const [promocode, setPromocode] = useState('');
     const [discount, setDiscount] = useState(0);
     const [isPromocodeApplied, setIsPromocodeApplied] = useState(false);
