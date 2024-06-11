@@ -8,7 +8,7 @@ import MovieTopCard from "@/components/MovieTopCard";
 import News from "@/components/NewsDashboard";
 import movie from '@/constant/movie';
 import DropDownButtonCalender from "@/components/DropDownButtonCalender";
-import { ChevronRightIcon } from "lucide-react";
+
 export default function Home() {
   const [selected, setSelected] = useState('Today');
   const handleSelect = (value) => {
@@ -16,7 +16,7 @@ export default function Home() {
   };
 
   return (
-    <main className="h-auto">
+    <main>
       <section className="h-[calc(60vh-80px)] md:h-[calc(100vh-80px)]">
         <Hero />
       </section>
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-4 grid-cols-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {movie.map((movie, index) => (
             <MovieCard
               key={index}
@@ -55,42 +55,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:h-[100vh] h-[65vh] relative z-[1] bg-[#B16CEA]">
+      <section className="relative z-[1] bg-[#B16CEA] md:h-[100vh] h-[65vh]">
         <div className="w-full absolute h-full z-[-1]">
-          <div className="h-[130px] color-2 absolute w-full -skew-y-[10deg] md:top-[calc(90vh-50vh-130px)] top-[calc(75vh-50vh-130px)]"/>
+          <div className="h-[130px] color-2 absolute w-full -skew-y-[10deg] md:top-[calc(90vh-50vh-130px)] top-[calc(75vh-50vh-130px)]" />
           <div className="h-[130px] color-2 absolute w-full skew-y-[10deg] md:top-[calc(130vh-50vh-130px)] top-[calc(100vh-50vh-130px)]" />
         </div>
-        <div className="flex flex-col justify-center md:px-20 px-8 z-[4] w-full h-full">
+        <div className="flex flex-col justify-center w-full h-full md:px-20 px-8 z-[4]">
           <h1 className="text-2xl font-extrabold text-white mt-8 mb-8">For kids</h1>
-            <MovieGrid /> 
+          <MovieGrid />
         </div>
-        {/* <div className="absolute top-[45%] right-2 transform -translate-y-1/2 p-2 rounded-full">
-          <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
-        </div> */}
       </section>
 
-
-      <section className=" bg-black md:h-[100vh] h-[60vh]">
+      <section className="bg-black md:h-[100vh] h-[60vh]">
         <div className="w-full h-full">
-          <div className="flex flex-col justify-center md:px-20 px-8 w-full h-full">
-            <h1 className="text-2xl font-extrabold text-white mt-8 mb-8 ">Top 5 this week</h1>
+          <div className="flex flex-col justify-center w-full h-full md:px-20 px-8">
+            <h1 className="text-2xl font-extrabold text-white mt-8 mb-8">Top 5 this week</h1>
             <MovieTopCard />
           </div>
-          {/* <div className="absolute top-[45%] md:top-[37%] right-2 transform -translate-y-1/2 p-2 rounded-full">
-            <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
-          </div> */}
         </div>
       </section>
 
       <section className="relative bg-[#111111]">
-        <div className="w-full md:mb-24 mb-10 px-8 md:px-0">
+        <div className="w-full px-8 md:px-0 md:mb-24 mb-10">
           <div className="flex flex-col justify-start md:px-20 mt-4">
             <h1 className="text-2xl font-extrabold text-white mt-8 mb-8">News</h1>
           </div>
           <News />
-          {/* <div className="absolute top-[55%] right-2 transform -translate-y-1/2 p-2 rounded-full hidden md:block">
-            <ChevronRightIcon className="w-12 h-12 text-white font-bold" />
-          </div> */}
         </div>
       </section>
     </main>

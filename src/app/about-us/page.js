@@ -1,7 +1,63 @@
+'use client'
 import AccordionComponent from "@/components/Accordian";
 import Feedbacks from "@/components/FeedBack";
+import { useEffect, useRef } from "react";
 
 export default function AboutUs() {
+
+    const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+
+    const handleWheelScroll = (event) => {
+      event.preventDefault();
+      scrollContainer.scrollLeft += event.deltaY;
+    };
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const handleMouseDown = (event) => {
+      isDown = true;
+      scrollContainer.classList.add('active');
+      startX = event.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      scrollContainer.classList.remove('active');
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      scrollContainer.classList.remove('active');
+    };
+
+    const handleMouseMove = (event) => {
+      if (!isDown) return;
+      event.preventDefault();
+      const x = event.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 1;
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    };
+
+    scrollContainer.addEventListener('wheel', handleWheelScroll);
+    scrollContainer.addEventListener('mousedown', handleMouseDown);
+    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+    scrollContainer.addEventListener('mouseup', handleMouseUp);
+    scrollContainer.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      scrollContainer.removeEventListener('wheel', handleWheelScroll);
+      scrollContainer.removeEventListener('mousedown', handleMouseDown);
+      scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
+      scrollContainer.removeEventListener('mouseup', handleMouseUp);
+      scrollContainer.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
     return (
         <>
         <main>
@@ -172,7 +228,7 @@ export default function AboutUs() {
                         <div className="flex flex-col justify-center items-start gap-y-8 w-full h-full">
                             <h1 className="font-bold text-2xl md:text-3xl">User Feedbacks</h1>
                             <div className="flex justify-start flex-col w-full mt-8">
-                                <div className="flex" style={{ overflowX: "auto", scrollbarWidth: "none" }}>
+                                <div className="flex"  ref={scrollContainerRef}  style={{ overflowX: "auto", scrollbarWidth: "none" }}>
                                     <div className="flex space-x-6">
                                         <Feedbacks />
                                         <Feedbacks />

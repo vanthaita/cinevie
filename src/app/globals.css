@@ -3,9 +3,21 @@
 @tailwind utilities;
 
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
+
+.scrollbar-hide.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
 
 .underline-custom {
   @apply relative no-underline cursor-pointer;
@@ -136,15 +148,9 @@
 
 
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
 
 main {
-  max-width: 1920px; /* Giới hạn width tối đa */
+  max-width: 1496px; /* Giới hạn width tối đa */
   
   /* margin: 0 auto; Căn giữa trang */
 }
@@ -403,13 +409,4 @@ text-align:center;
   display: none;
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.scrollbar-hide.active {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-}
 
