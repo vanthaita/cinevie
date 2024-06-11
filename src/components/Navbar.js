@@ -1,16 +1,15 @@
 
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Link from "next/link";
 import { LogOutIcon, Search, SearchIcon } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import useUserInfo from "@/Hooks/useUserInfo";
+import AuthContext from '@/context/AuthContext';
 
 export default function Navbar() {
-  const userInfo = useUserInfo();    
+  const { userInfo } = useContext(AuthContext);   
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
-
 
   return (
     <nav className="h-20 w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">

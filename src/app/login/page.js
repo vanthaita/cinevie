@@ -1,10 +1,14 @@
 'use client'
 import Link from "next/link";
 import { redirect, useRouter } from 'next/navigation';
+import useUserInfo from "@/Hooks/useUserInfo";
+import { useContext } from "react";
+import AuthContext from "@/context/AuthContext";
 
 import { useEffect, useState } from 'react';
 export default function Login() {
     const router = useRouter();
+    const { userInfo, setUserInfo } = useContext(AuthContext)
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -28,8 +32,8 @@ export default function Login() {
             console.log(typeof userInfo); 
     
             if (userInfo.username === formData.username && userInfo.password === formData.password) {
-                redirect('/');
-                // router.push('/');
+                setUserInfo(formData)
+                router.replace('/');
             } else {
                 console.log("Login failed");
             }
