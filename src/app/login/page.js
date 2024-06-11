@@ -7,8 +7,12 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useUserInfo from "@/Hooks/useUserInfo";
+import { useContext } from "react";
+import AuthContext from "@/context/AuthContext";
+
 export default function Login() {
     const router = useRouter();
+    const { setAuthInfo } = useContext(AuthContext)
     const { userInfo, updateUserInfo } = useUserInfo(); // Destructure userInfo and updateUserInfo from the hook
     const [checkTerms, setCheckTerms] = useState(false);
     const [formData, setFormData] = useState({
@@ -64,6 +68,7 @@ export default function Login() {
                 progress: undefined,
             });
             updateUserInfo(userInfo); // Ensure user info is updated
+            setAuthInfo(userInfo)
             router.push("/")
         } else {
             toast.error("Login failed. Invalid username or password.", {

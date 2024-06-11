@@ -1,14 +1,16 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useContext  } from 'react';
 import Link from "next/link";
 import { LogOutIcon, SearchIcon } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import useUserInfo from "@/Hooks/useUserInfo";
 import MovieSearch from './MovieSearch';
 import { usePathname } from "next/navigation";
+import AuthContext from '@/context/AuthContext';
 
 export default function Navbar() {
-  const { userInfo, loading } = useUserInfo(); 
+  const { loading } = useUserInfo(); 
+  const { authInfo } = useContext(AuthContext);   
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -104,7 +106,7 @@ export default function Navbar() {
           <div className='border-t-2' />
 
           <div className='flex flex-row justify-between items-center'>
-            {!loading && userInfo ? (
+            {!loading && authInfo ? (
               <Link href="/settings" passHref>
                 <div className="flex flex-row gap-x-4 items-center w-10 h-10 rounded-full">
                   <Avatar>
@@ -131,7 +133,7 @@ export default function Navbar() {
 
       <div className="items-center gap-4 md:gap-x-8 md:flex hidden">
         <MovieSearch />
-        {!loading && userInfo ? (
+        {!loading && authInfo ? (
           <Link href="/settings" passHref>
             <div className="flex gap-x-2 items-center w-10 h-10 rounded-full">
               <Avatar>
