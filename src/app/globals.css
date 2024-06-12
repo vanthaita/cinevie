@@ -152,7 +152,7 @@
 main {
   max-width: 1496px; /* Giới hạn width tối đa */
   
-  /* margin: 0 auto; Căn giữa trang */
+  margin: 0 auto;
 }
 
 

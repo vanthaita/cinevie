@@ -55,13 +55,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative z-[1] bg-[#B16CEA] md:h-[100vh] h-[65vh]">
+      <section className="relative z-[1] bg-[#B16CEA] md:h-[105vh] h-[65vh]">
         <div className="w-full absolute h-full z-[-1]">
           <div className="h-[130px] color-2 absolute w-full -skew-y-[10deg] md:top-[calc(90vh-50vh-130px)] top-[calc(75vh-50vh-130px)]" />
           <div className="h-[130px] color-2 absolute w-full skew-y-[10deg] md:top-[calc(130vh-50vh-130px)] top-[calc(100vh-50vh-130px)]" />
         </div>
-        <div className="flex flex-col justify-center w-full h-full md:px-20 px-8 z-[4]">
-          <h1 className="text-2xl font-extrabold text-white mt-8 mb-8">For kids</h1>
+        <div className="flex flex-col justify-center w-full h-full md:px-20 px-8 z-[4] md:gap-y-4">
+          <h1 className="text-2xl font-extrabold text-white">For kids</h1>
           <MovieGrid />
         </div>
       </section>

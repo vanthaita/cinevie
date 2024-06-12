@@ -5,11 +5,13 @@ import BookingHero from "@/components/BookingHero";
 import BookingMovie from "@/components/BookingMovie";
 import BookingSet from "@/components/BookingSet";
 import SuggestMovie from "@/components/SuggestMovie";
+import AuthContext from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
+import { useContext } from "react";
 export default function Booking() {
-  const {userInfo} = useUserInfo();
+  const {authInfo} = useContext(AuthContext);
   const router = useRouter();
-  if(!userInfo) {
+  if(!authInfo) {
     router.push("/login")
   }
   

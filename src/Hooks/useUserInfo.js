@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect, useCallback } from 'react';
 
 export default function useUserInfo() {
@@ -21,7 +22,7 @@ export default function useUserInfo() {
     setUserInfo(newUserInfo);
     if (newUserInfo) {
       localStorage.setItem('User-Info', JSON.stringify(newUserInfo));
-      document.cookie = `user-info=${JSON.stringify(newUserInfo)}; path=/; max-age=${60*60*24*7}`;
+      document.cookie = `user-info=${JSON.stringify(newUserInfo)}; path=/; max-age=${60 * 60 * 24 * 7}`;
     } else {
       localStorage.removeItem('User-Info');
       document.cookie = 'user-info=; Max-Age=0; path=/';

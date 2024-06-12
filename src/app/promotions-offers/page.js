@@ -14,8 +14,8 @@ export default function PromotionsAndOffers() {
             </section>
 
 
-            <section className="relative">
-                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
+            <section className="relative h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
+                <div className="relative flex justify-start items-start w-full h-full">
                     <div className="w-full h-full absolute md:px-20 px-8 md:mt-10 mt-6 rounded-xl flex md:flex-row flex-col-reverse md:justify-between justify-center items-center" style={{ height: 'calc(65vh - 80px)' }}>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 md:block hidden">
                             <img src="https://www.shutterstock.com/image-vector/online-cinema-art-movie-watching-600nw-700366096.jpg" className="w-full h-full rounded-xl object-cover" />
@@ -48,8 +48,8 @@ export default function PromotionsAndOffers() {
             
 
             {/* Promotion 2 */}
-            <section className="relative">
-                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
+            <section className="relative h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
+                <div className="relative flex justify-start items-start w-full h-full">
                     <div className="w-full h-full absolute md:px-20 px-8 md:mt-10 mt-6 rounded-xl flex md:flex-row flex-col-reverse md:justify-between justify-center items-center" style={{ height: 'calc(65vh - 80px)' }}>
                         <div className="md:w-[45%] w-full h-full flex flex-col justify-start items-start gap-y-[15px] md:gap-y-[25px]">
                             <div className="flex flex-col gap-y-2">
@@ -79,8 +79,8 @@ export default function PromotionsAndOffers() {
             </section>
 
             {/* Promotion 3 */}
-            <section className="relative">
-                <div className="relative flex justify-start items-start w-full h-[calc(80vh-80px)] md:h-[calc(75vh-80px)]">
+            <section className="relative h-[calc(80vh-80px)] md:h-[calc(75vh-80px)] md:mb-8">
+                <div className="relative flex justify-start items-start w-full h-full">
                     <div className="w-full h-full absolute md:px-20 px-8 md:mt-10 mt-6 rounded-xl flex md:flex-row flex-col-reverse md:justify-between justify-center items-center" style={{ height: 'calc(65vh - 80px)' }}>
                         <div className="md:w-1/2 w-full h-full mb-4 md:mb-0 md:block hidden">
                             <img src="https://img.freepik.com/premium-vector/realistic-popcorn-cinema-movie-watching-concept-online-filmshow-entertainment-3d-cinematic-objects-two-tickets-snack-drink-promotion-flyer-vector-horizontal-isolated-poster_176411-4140.jpg" className="w-full h-full rounded-xl object-cover" />

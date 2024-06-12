@@ -1,17 +1,17 @@
 'use client'
 
+import AuthContext from "@/context/AuthContext";
 import useUserInfo from "../../Hooks/useUserInfo";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export default function Settings() {
-    const userInfo = useUserInfo();
-    console.log(userInfo.userInfo?.username)
-    const [username, setUsername] = useState(userInfo.userInfo?.username);
-    const [surname, setSurname] = useState(userInfo.userInfo?.surname);
-    const [email, setEmail] = useState(userInfo.userInfo?.email);
-    const [phone, setPhone] = useState(userInfo.userInfo?.phone);
-    const [birthday, setBirthday] = useState(userInfo.userInfo?.birthday || "30/08/2004");
-    const [location, setLocation] = useState(userInfo.userInfo?.location || "US");
+    const {authInfo} = useContext(AuthContext)
+    const [username, setUsername] = useState(authInfo?.username);
+    const [surname, setSurname] = useState(authInfo?.surname);
+    const [email, setEmail] = useState(authInfo?.email);
+    const [phone, setPhone] = useState(authInfo?.phone);
+    const [birthday, setBirthday] = useState(authInfo?.birthday || "30/08/2004");
+    const [location, setLocation] = useState(authInfo?.location || "US");
 
     const handleChange = (setter) => (event) => {
       setter(event.target.value);

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useContext  } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Link from "next/link";
 import { LogOutIcon, SearchIcon } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -9,16 +9,22 @@ import { usePathname } from "next/navigation";
 import AuthContext from '@/context/AuthContext';
 
 export default function Navbar() {
-  const { loading } = useUserInfo(); 
-  const { authInfo } = useContext(AuthContext);   
+  const { loading, userInfo } = useUserInfo(); 
+  const { authInfo, setAuthInfo } = useContext(AuthContext);   
+
+  useEffect(() => {
+    if (userInfo && !authInfo) {
+      setAuthInfo(userInfo);
+    }
+  }, [userInfo, authInfo, setAuthInfo]);
+
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
   const isCurrentPath = (path) => pathname === path;
 
   return (
     <nav className="h-20 sticky top-0 left-0 bg-[#111111] w-full flex items-center justify-between px-8 md:px-20 text-white z-[9999] shadow-md">
-      <div className='flex flex-row justify-start items-center gap-x-8 w-[65%]'>
+      <div className='flex flex-row justify-start items-center gap-x-8 w-[70%] '>
         <div>
           <Link href="/" passHref className='flex flex-row gap-x-1'>
             <svg xmlns="http://www.w3.org/2000/svg" 
@@ -33,7 +39,7 @@ export default function Navbar() {
             <p className="font-bold text-3xl">Cine<span className='font-extrabold text-color-1'>Vie</span></p>
           </Link>
         </div>
-        <div className='px-10'>
+        <div className=''>
           <ul className="hidden md:flex md:navbar gap-x-8 cursor-pointer font-medium text-[16.4px]">
             <Link href="/showtimes" passHref>
              <p className={`focus:text-white underline-custom cursor-pointer ${isCurrentPath('/showtimes') ? 'text-[#8B5CF6]' : ''}`}>Showtimes</p>
@@ -113,7 +119,7 @@ export default function Navbar() {
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
-                  <p className='font-bold text-xl'>{userInfo.username}</p>
+                  <p className='font-bold text-xl'>{authInfo?.username}</p>
                 </div>
               </Link>
             ) : (
