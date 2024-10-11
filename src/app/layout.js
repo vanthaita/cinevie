@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Providers } from "./Providers";
 const inter = Inter({ subsets: ["latin"] });
-
+import { Analytics } from "@vercel/analytics/react"
 export const metadata = {
   title: "CineVie",
 };
@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
                 {children}
               <Footer />
             </Providers>
+            <Analytics />
           </main>
       </body>
     </html>
