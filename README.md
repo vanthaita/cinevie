@@ -1,29 +1,81 @@
-### IE 106
-![screencapture-localhost-3000-showtimes-2024-10-11-20_23_39](https://github.com/user-attachments/assets/83f1a4cf-136e-4575-8813-cd31fe3b66e8)
-![screencapture-localhost-3000-cinemas-2024-10-11-20_23_49](https://github.com/user-attachments/assets/42dce045-a8e9-48bd-be00-20f1eab36108)
-![screencapture-localhost-3000-promotions-offers-2024-10-11-20_24_01](https://github.com/user-attachments/assets/8a9f5661-903d-4e1c-b4a1-c502a51cc95e)
-![screencapture-localhost-3000-news-2024-10-11-20_24_10](https://github.com/user-attachments/assets/a0a5b8ff-f96a-459e-9349-5ba09fdb1fb1)
-![screencapture-localhost-3000-about-us-2024-10-11-20_24_20](https://github.com/user-attachments/assets/1f92bda1-d7fc-45e1-b142-5dcaedc09a31)
-![screencapture-localhost-3000-login-2024-10-11-20_24_33](https://github.com/user-attachments/assets/74920fa5-c56f-405c-977f-30b0901d77aa)
-![screencapture-localhost-3000-signup-2024-10-11-20_24_41](https://github.com/user-attachments/assets/37e77b86-484b-4ec7-9292-84bb4ebcefc1)
-![screencapture-localhost-3000-booking-2024-10-11-20_25_40](https://github.com/user-attachments/assets/5a43d2f5-9075-4e80-a6cf-a8fe18c7dcb2)
-![screencapture-localhost-3000-booking-ticket-2024-10-11-20_25_57](https://github.com/user-attachments/assets/6c812f5a-58df-479e-90d7-335f0139b1d7)
-![screencapture-localhost-3000-booking-ticket-order-2024-10-11-20_26_27](https://github.com/user-attachments/assets/e2830a82-e345-4db8-9544-a7cd3b6dde73)
-![screencapture-localhost-3000-booking-ticket-order-2024-10-11-20_26_36](https://github.com/user-attachments/assets/2f2954ad-18f5-4be5-a309-620b48aae537)
-![screencapture-localhost-3000-booking-ticket-order-confirmation-2024-10-11-20_27_01](https://github.com/user-attachments/assets/e7ba796a-72ba-4d27-8043-f2c7d8b349f0)
-![screencapture-localhost-3000-coming-soon-mobile-app-2024-10-11-20_27_11](https://github.com/user-attachments/assets/5ca1f007-f409-408c-831a-45385522f487)
-![screencapture-localhost-3000-coming-soon-mobile-appdwdw-2024-10-11-20_27_19](https://github.com/user-attachments/assets/e33c9015-b391-4da1-a361-ef6aec8a0473)
-![screencapture-localhost-3000-settings-2024-10-11-20_27_38](https://github.com/user-attachments/assets/e41c2dbb-0d37-45d6-adaa-3addd3b9eb0f)
-![screencapture-localhost-3000-settings-order-history-2024-10-11-20_27_46](https://github.com/user-attachments/assets/f5efc033-5f0c-4cd6-b802-8b9f9b96b026)
-![screencapture-localhost-3000-settings-my-cards-2024-10-11-20_27_55](https://github.com/user-attachments/assets/40208726-deca-4458-8a0a-3ef1d595155b)
-![screencapture-localhost-3000-settings-change-password-2024-10-11-20_28_06](https://github.com/user-attachments/assets/ade6e3ca-0a6c-44ac-8026-0e35fef6e42f)
-![screencapture-localhost-3000-coming-soon-2024-10-11-20_28_20](https://github.com/user-attachments/assets/688bb191-4888-4bca-9845-cc8bd4768c90)
-![screencapture-localhost-3000-2024-10-11-20_23_23](https://github.com/user-attachments/assets/fc2fc61e-ef04-43e4-aebc-cfd7b1f0ba3c)
+### IE 106 - UIT - Thiết kế giao diện người dùng
 
+### 1. **Homepage (Image 1)**
+   ![Image](https://github.com/user-attachments/assets/fc2fc61e-ef04-43e4-aebc-cfd7b1f0ba3c)
+   - **Explanation:** This is the homepage where users can explore different sections of the website such as showtimes, cinemas, and more.
 
+### 2. **Showtimes (Image 2)**
+   ![Image](https://github.com/user-attachments/assets/83f1a4cf-136e-4575-8813-cd31fe3b66e8)
+   - **Explanation:** A page displaying the movie showtimes. Users can view available movies and select a screening time.
 
+### 3. **Cinemas (Image 3)**
+   ![Image](https://github.com/user-attachments/assets/42dce045-a8e9-48bd-be00-20f1eab36108)
+   - **Explanation:** The page provides a list of cinema locations where users can choose to watch movies.
 
+### 4. **Promotions and Offers (Image 4)**
+   ![Image](https://github.com/user-attachments/assets/8a9f5661-903d-4e1c-b4a1-c502a51cc95e)
+   - **Explanation:** A section that highlights ongoing promotions and special offers for users to take advantage of.
 
+### 5. **News (Image 5)**
+   ![Image](https://github.com/user-attachments/assets/a0a5b8ff-f96a-459e-9349-5ba09fdb1fb1)
+   - **Explanation:** This section covers news related to the movie industry or cinema updates.
+
+### 6. **About Us (Image 6)**
+   ![Image](https://github.com/user-attachments/assets/1f92bda1-d7fc-45e1-b142-5dcaedc09a31)
+   - **Explanation:** A page providing information about the company or platform, explaining its mission and vision.
+
+### 7. **Login (Image 7)**
+   ![Image](https://github.com/user-attachments/assets/74920fa5-c56f-405c-977f-30b0901d77aa)
+   - **Explanation:** The login screen where users can enter their credentials to access their accounts.
+
+### 8. **Signup (Image 8)**
+   ![Image](https://github.com/user-attachments/assets/37e77b86-484b-4ec7-9292-84bb4ebcefc1)
+   - **Explanation:** The signup page for new users to create an account on the platform.
+
+### 9. **Booking (Image 9)**
+   ![Image](https://github.com/user-attachments/assets/5a43d2f5-9075-4e80-a6cf-a8fe18c7dcb2)
+   - **Explanation:** This page allows users to book tickets by selecting a movie, cinema, and showtime.
+
+### 10. **Booking Ticket (Image 10)**
+   ![Image](https://github.com/user-attachments/assets/6c812f5a-58df-479e-90d7-335f0139b1d7)
+   - **Explanation:** The screen shows the process of selecting seats and confirming movie ticket bookings.
+
+### 11. **Order Ticket (Image 11)**
+   ![Image](https://github.com/user-attachments/assets/e2830a82-e345-4db8-9544-a7cd3b6dde73)
+   ![Image](https://github.com/user-attachments/assets/2f2954ad-18f5-4be5-a309-620b48aae537)
+   - **Explanation:** The order confirmation screen displays booking details such as seats, pricing, and movie information.
+
+### 12. **Order Confirmation (Image 12)**
+   ![Image](https://github.com/user-attachments/assets/e7ba796a-72ba-4d27-8043-f2c7d8b349f0)
+   - **Explanation:** A final confirmation page for movie ticket purchases. Users can review their order before completing the transaction.
+
+### 13. **Mobile App Coming Soon (Image 13)**
+   ![Image](https://github.com/user-attachments/assets/5ca1f007-f409-408c-831a-45385522f487)
+   - **Explanation:** A promotional page announcing the release of a mobile app for the platform.
+
+### 14. **Mobile App Alternate Page (Image 14)**
+   ![Image](https://github.com/user-attachments/assets/e33c9015-b391-4da1-a361-ef6aec8a0473)
+   - **Explanation:** Another variation of the “Coming Soon” page for the mobile app.
+
+### 15. **Settings (Image 15)**
+   ![Image](https://github.com/user-attachments/assets/e41c2dbb-0d37-45d6-adaa-3addd3b9eb0f)
+   - **Explanation:** This page allows users to modify their account settings.
+
+### 16. **Order History (Image 16)**
+   ![Image](https://github.com/user-attachments/assets/f5efc033-5f0c-4cd6-b802-8b9f9b96b026)
+   - **Explanation:** Users can review their previous ticket bookings in this section.
+
+### 17. **My Cards (Image 17)**
+   ![Image](https://github.com/user-attachments/assets/40208726-deca-4458-8a0a-3ef1d595155b)
+   - **Explanation:** A page where users can manage their payment methods, adding or removing cards.
+
+### 18. **Change Password (Image 18)**
+   ![Image](https://github.com/user-attachments/assets/ade6e3ca-0a6c-44ac-8026-0e35fef6e42f)
+   - **Explanation:** This screen allows users to change their account password for better security.
+
+### 19. **Coming Soon (Image 19)**
+   ![Image](https://github.com/user-attachments/assets/688bb191-4888-4bca-9845-cc8bd4768c90)
+   - **Explanation:** A placeholder for upcoming features or services on the platform. 
 
 
 
